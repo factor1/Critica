@@ -1,30 +1,77 @@
 /*-----------------------------------------------------------------------------
   Table of Contents
-  - Vendor
-  - Globals
-  - Plugins
-  - Pages
-  - Parts
+  - Fonts
+  - Variables and Mixins
+  - Vendors
+  - Global Styles
   - Components
+  - Templates
+  - Plugin Overrides
 -----------------------------------------------------------------------------*/
 // import the Sass partials in the order that you need here
 
-// vendor
-@import 'normalize';
-@include normalize();
+// Fonts
+/*
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+*/
 
 // Variables
 @import 'settings/variables';
+
+// Mixins
+@import 'globals/mixins/banners';
+@import 'globals/mixins/breadcrumbs';
+@import 'globals/mixins/buttons';
+@import 'globals/mixins/flexible-content';
+@import 'globals/mixins/forms';
+@import 'globals/mixins/gradients';
+@import 'globals/mixins/grids';
+@import 'globals/mixins/icons';
+@import 'globals/mixins/menus';
+@import 'globals/mixins/sections';
+
+// Font Awesome
+@import 'font-awesome';
+
+// Foundation
+@import 'foundation';
+@include foundation-global-styles;
+@include foundation-grid;
+@include foundation-typography;
+@include foundation-forms;
+@include foundation-button;
+@include foundation-close-button;
+@include foundation-reveal;
+@include foundation-thumbnail;
+@include foundation-visibility-classes;
+@include foundation-float-classes;
+
+// Nifty Nav
+@import 'nifty-nav';
+
+// Flexbile Content
+@import 'flexible-content.scss';
 
 // Global Styles
 @import 'globals/global';
 @import 'globals/wordpress';
 @import 'globals/typography';
+@import 'globals/buttons';
 
 // Components
 @import 'components/social-menu';
+@import 'components/mobile-menu';
+@import 'components/secondary-menu';
 @import 'components/header';
 @import 'components/footer';
+@import 'components/page';
+@import 'components/comments';
+
+// Template Specific Syles
+@import 'templates/home';
+@import 'templates/archive';
+@import 'templates/error_404';
+@import 'templates/login';
 
 // Plugin Overrides
 @import 'plugins/overrides';

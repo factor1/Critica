@@ -2,159 +2,304 @@
   Gulpfile.js
 ------------------------------------------------------------------------------*/
 // Name your theme - this is outputted only when packaging your project.
-var theme        = 'your-theme-name';
-
-// Set the paths you will be working with
-var phpFiles     = ['./**/*.php', './*.php'],
-    htmlFiles    = ['./**/*.html', './*.html'],
-    cssFiles     = ['./assets/css/*.css', '!./assets/css/*.min.css'],
-    sassFiles    = ['./assets/scss/**/*.scss'],
-    styleFiles   = [cssFiles, sassFiles],
-    jsFiles      = ['./assets/js/theme.js'],
-    imageFiles   = ['./assets/img/*.{jpg,png,gif,svg}'],
-    concatFiles  = ['./assets/js/*.js', '!./assets/js/theme.min.js', '!./assets/js/all.js'],
-    url          = 'wp-dev:8888'; // See https://browsersync.io/docs/options/#option-proxy
-
-// Include gulp
-var gulp         = require('gulp');
-
-// Include plugins
-var jshint       = require('gulp-jshint'),
-    sass         = require('gulp-sass'),
-    concat       = require('gulp-concat'),
-    uglify       = require('gulp-uglify'),
-    rename       = require('gulp-rename'),
-    imagemin     = require('gulp-imagemin'),
-    nano         = require('gulp-cssnano'),
-    sourcemaps   = require('gulp-sourcemaps'),
-    autoprefixer = require('gulp-autoprefixer'),
-    browserSync  = require('browser-sync'),
-    plumber      = require('gulp-plumber'),
-    stylish      = require('jshint-stylish'),
-    notify       = require('gulp-notify'),
-    zip          = require('gulp-zip');
+var theme = 'critica';
 
 /*------------------------------------------------------------------------------
-  Development Tasks
+  Variables
 ------------------------------------------------------------------------------*/
-// Launch a development server
-gulp.task( 'serve', function() {
-  browserSync.init({
-    proxy: url
-      // port: 3000
-  });
-});
 
-// Compile Sass
-gulp.task('sass', function() {
-  return gulp.src( sassFiles )
-    .pipe(sourcemaps.init())
-      .pipe(plumber())
-      .pipe(sass({
-        includePaths: [
-          './node_modules/normalize-scss/sass/'
-        ]
-      })
-        .on('error', sass.logError))
-        .on('error', notify.onError("Error compiling SASS!")
-      )
-      .pipe(autoprefixer({
-        browsers: ['last 3 versions', 'Safari > 7'],
-        cascade: false
-      }))
-    .pipe(sourcemaps.write())
-    .pipe(gulp.dest( './assets/css' ))
-    .pipe(browserSync.reload({
-      stream: true
-    }));
-});
+// Global vars
+var app = {
+    production: true,
+    defaultTasks: [
+        'copy',
+        'scss',
+        'scripts'
+    ]
+};
 
-// Lint JavaScript
-gulp.task('lint', function() {
-  return gulp.src( jsFiles )
-    .pipe(sourcemaps.init())
-      .pipe(plumber())
-      .pipe(jshint())
-      .pipe(jshint.reporter(stylish))
-      .pipe(jshint.reporter('fail'))
-      .on('error', notify.onError({ message: 'Error compiling JavaScript!'}))
-    .pipe(sourcemaps.write())
-    .pipe(browserSync.reload({
-      stream: true
-    }));
+// Vendor Distributions
+var vendors = {
+    FontAwesome: 'bower_components/font-awesome',
+    Foundation: 'bower_components/foundation-sites',
+    NiftyNav: 'bower_components/nifty-nav/src',
+    FlexibleContent: 'git_repos/flexible-content',
+    Ginger: 'bower_components/ginger-grid',
+};
+
+// Asset Paths
+var assets = {
+    css: 'assets/css',
+    scss: 'assets/scss',
+    js: 'assets/js',
+    images: 'assets/img',
+    fonts: 'assets/fonts',
+    acfJson: 'acf-json',
+    parts: 'parts',
+    templates: 'templates',
+};
+
+/*------------------------------------------------------------------------------
+  Parameters
+------------------------------------------------------------------------------*/
+
+// Allow passing a theme version to store versions in dist folder
+var theme_version = '';
+var argv1 = process.argv.slice(2,3).join();
+var argv2 = process.argv.slice(3,4).join();
+if((argv1 === 'package' || argv1 === 'build') && argv2 === '--version') {
+    theme_version = 'v'+process.argv.slice(4,5).join();
+    if(!theme_version.match(/\/$/gi)) {
+        theme_version += '/';
+    }
+}
+
+// Allow passing --dev environment
+process.argv.forEach(function(v) {
+    if(v.trim() === '--dev') {
+        app.production = false;
+        app.defaultTasks = ['watch'];
+    }
 });
 
 /*------------------------------------------------------------------------------
-  Production Tasks
+  Dependencies
 ------------------------------------------------------------------------------*/
-// Minimize CSS
-gulp.task('minify-css', ['sass'], function() {
-	return gulp.src( cssFiles )
-  	.pipe(rename({
-      suffix: '.min'
-    }))
-    .pipe(nano({
-      discardComments: {removeAll: true},
-      autoprefixer: false,
-      discardUnused: false,
-      mergeIdents: false,
-      reduceIdents: false,
-      calc: {mediaQueries: true},
-      zindex: false
-    }))
-    .pipe(gulp.dest( './assets/css' ))
-    .pipe(browserSync.reload({
-      stream: true
-    }));
+
+var gulp = require('gulp'),
+     autoprefixer = require('gulp-autoprefixer'),
+     concat = require('gulp-concat'),
+     cssnano = require('gulp-cssnano'),
+     git = require('gulp-git'),
+     imagemin = require('gulp-imagemin'),
+     jshint = require('gulp-jshint'),
+     newer = require('gulp-newer'),
+     notify = require('gulp-notify'),
+     plumber = require('gulp-plumber'),
+     rename = require('gulp-rename'),
+     sass = require('gulp-sass'),
+     sourcemaps = require('gulp-sourcemaps'),
+     stylish = require('jshint-stylish'),
+     uglify = require('gulp-uglify'),
+     zip = require('gulp-zip');
+
+/*------------------------------------------------------------------------------
+  Tasks
+------------------------------------------------------------------------------*/
+
+// Clone vendor repos
+gulp.task('repos',function() {
+
+    var repos = [
+        'git@bitbucket.org:factr1/flexible-content.git'
+    ];
+
+    repos.forEach(function(repo) {
+        git.clone(repo,{
+            cwd: './git_repos'
+        },notify.OnError);
+    });
+
 });
+
+// Copy vendor distribution files
+gulp.task('copy',function() {
+
+    // FontAwesome Fonts
+    gulp.src([
+            vendors.FontAwesome+'/fonts/fontawesome-webfont*.*'
+        ])
+        .pipe(newer(assets.fonts))
+        .pipe(gulp.dest(assets.fonts));
+
+    // FlexibleContent
+    gulp
+        .src([
+            vendors.FlexibleContent+'/flexible-content.json',
+        ])
+        .pipe(rename('group_5734c39eb9287.json'))
+        .pipe(newer(assets.acfJson))
+        .pipe(gulp.dest(assets.acfJson))
+
+    gulp
+        .src([
+            vendors.FlexibleContent+'/templates/*.php',
+        ])
+        .pipe(newer(assets.templates+'/flexible-repeater'))
+        .pipe(gulp.dest(assets.templates+'/flexible-repeater'));
+
+});
+
+// Compile styles
+gulp.task('scss',function() {
+    var task = gulp
+        .src([
+            assets.scss+'/*.scss'
+        ])
+        .pipe(sourcemaps.init())
+        .pipe(plumber())
+        .pipe(
+            sass({
+                outputStyle: app.production ? 'compressed' : 'nested',
+                includePaths: [
+                    vendors.FontAwesome+'/scss/',
+                    vendors.Foundation+'/scss/',
+                    vendors.NiftyNav+'/scss/',
+                    vendors.FlexibleContent+'/',
+                    vendors.Ginger+'/components/',
+                    assets.scss
+                ]
+            })
+            .on('error', sass.logError))
+            .on('error', notify.onError("Error compiling SASS!")
+        )
+        .pipe(autoprefixer({
+            browsers: ['last 2 versions'],
+            cascade: false
+        }))
+        .pipe(rename({
+            extname: '.css'
+        }))
+        .pipe(gulp.dest(assets.css));
+
+    if(app.production) {
+        task.pipe(cssnano({
+            discardComments: {
+                removeAll: true
+            }
+        }));
+    }
+
+    return task
+        .pipe(rename({
+            extname: '.min.css'
+        }))
+        .pipe(gulp.dest(assets.css));
+});
+
+// Aliases for styles
+gulp.task('sass',['scss']);
+gulp.task('styles',['scss']);
 
 // Concatenate & Minify JavaScript
-gulp.task('scripts', ['lint'], function() {
-  return gulp.src( concatFiles )
-    .pipe(concat( 'all.js' ))
-    .pipe(gulp.dest( './assets/js/' ))
-    .pipe(rename('theme.min.js'))
-    .pipe(uglify())
-    .pipe(gulp.dest( './assets/js/' ));
+gulp.task('scripts', function() {
+
+    var task = gulp
+        .src([
+            assets.js+'/src/**/*.js'
+        ])
+        .pipe(plumber())
+        .pipe(jshint())
+        .pipe(jshint.reporter(stylish));
+
+    task = gulp.src([
+            vendors.NiftyNav+'/js/nifty-nav.js',
+            vendors.Ginger+'/js/ginger.js',
+            assets.js+'/src/**/*.js'
+        ])
+        .pipe(plumber())
+        .pipe(concat('theme.js'))
+        .pipe(gulp.dest(assets.js));
+
+    if(app.production) {
+        task.pipe(uglify());
+    }
+
+    return task.pipe(rename({
+        extname: '.min.js'
+    }))
+    .pipe(sourcemaps.init())
+    .pipe(plumber())
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest(assets.js));
 });
 
-// Compress Images
+// Compress images
 gulp.task('images', function() {
-  return gulp.src( imageFiles )
-  .pipe(plumber())
-  .pipe(imagemin())
-  .pipe(gulp.dest( './assets/img/' ));
+    return gulp
+        .src(assets.images+'/*.{jpg,png,gif}')
+        .pipe(plumber())
+        .pipe(imagemin())
+        .pipe(gulp.dest(assets.images));
 });
 
 // Package a zip for theme upload
-gulp.task('package', function() {
-  return gulp.src( [
-    './**/*',
-    '!bower_components',
-    '!node_modules',
-    '!bower_components/**',
-    '!node_modules/**'
-  ] )
-		.pipe(zip( theme + '.zip' ))
-		.pipe(gulp.dest( './' ));
+gulp.task('package',function(cb) {
+
+    gulp.on('task_stop',function(e) {
+        if(e.task !== 'scss') {
+            return;
+        }
+        gulp.start('scripts');
+    });
+
+    gulp.on('task_stop',function(e) {
+        if(e.task !== 'scripts') {
+            return;
+        }
+        gulp.start('images');
+    });
+
+    gulp.on('task_stop',function(e) {
+        if(e.task !== 'images') {
+            return;
+        }
+
+        gulp.src([
+            '*.php',
+            '*.png',
+            '*.css',
+        ])
+        .pipe(gulp.dest( 'dist/' + theme ));
+
+        var folders = [
+            'acf-json',
+            'assets',
+            'inc',
+            'parts',
+            'plugins',
+            'templates',
+        ];
+
+        folders.forEach(function(folder) {
+            gulp.src( folder + '/**').pipe(gulp.dest( 'dist/' + theme + '/' + folder ));
+        });
+
+        cb();
+    });
+
+    gulp.start('scss');
 });
 
-// Build task to run all tasks and and package for distribution
-gulp.task('build', ['sass', 'scripts', 'images', 'package']);
+gulp.task('zip',function(cb) {
 
-// Styles Task - minify-css is the only task we call, because it is dependent upon sass running first.
-gulp.task('styles', ['minify-css']);
+    gulp.on('task_stop',function(e) {
+        if(e.task !== 'package') {
+            return;
+        }
+
+        setTimeout(function() {
+            gulp.src('dist/'+theme+'/**')
+                    .pipe(zip( theme + '.zip' ))
+                    .pipe(gulp.dest( 'dist/' + theme_version ));
+
+            cb();
+        },2000);
+
+    });
+
+    gulp.start('package');
+});
+
+gulp.task('build',['zip']);
 
 /*------------------------------------------------------------------------------
   Default Tasks
 ------------------------------------------------------------------------------*/
-// Default Task
-gulp.task('default', ['sass', 'scripts', 'serve', 'watch']);
 
-// Watch Files For Changes
-gulp.task('watch', function() {
-  gulp.watch( sassFiles, ['styles']);
-  gulp.watch( jsFiles, ['scripts']);
-  gulp.watch( phpFiles, browserSync.reload );
-  gulp.watch( htmlFiles, browserSync.reload );
+gulp.task('watch',function() {
+    gulp.watch(assets.scss+'/**',['scss']);
+    gulp.watch(assets.js+'/src/**',['scripts']);
 });
+
+gulp.task('default',app.defaultTasks);

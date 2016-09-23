@@ -1,0 +1,14 @@
+{
+  "name": "critica",
+  "authors": [
+    "Factor 1, James R. Latham <jamesl@splitconcepts.com>"
+  ],
+  "private": true,
+  "dependencies": {},
+  "devDependencies": {
+    "font-awesome": "~4.6.3",
+    "foundation-sites": "~6.2.3",
+    "nifty-nav": "~2.2.0",
+    "ginger-grid": "~1.1.4"
+  }
+}

@@ -1,3 +1,62 @@
 /*----------------------------------------------------------------------------
   Variables
 ----------------------------------------------------------------------------*/
+
+// Fonts
+$theme-font-path: "../fonts";
+$Proxima: 'Proxima Nova', sans-serif;
+$FontAwesome: "FontAwesome";
+
+// Colors
+$theme-black: #000000;
+$theme-white: #FFFFFF;
+$theme-green: #82bc00;
+
+// Images
+$theme-image-path: "../img";
+$theme-login-logo: $theme-image-path + "/login-logo.png";
+
+// Font-Awesome
+$fa-font-path: $theme-font-path;
+
+// Foundation
+$grid-row-width: 1200px;
+$grid-column-count: 24 !default;
+$grid-column-gutter: 0;
+
+// Ginger
+$row-max-width: $grid-row-width;
+$col-padding: 0.80rem;
+$flex-basis: auto;
+$small-breakpoint: 40em;
+
+// Header
+$theme-header-height: 100px;
+$theme-header-small-height: 100px;
+$theme-header-logo-width: 200px;
+$theme-header-logo-height: 50px;
+$theme-header-logo-small-width: 200px;
+$theme-header-logo-small-height: 50px;
+
+// Banners
+$theme-banner-image-opacity: 0;
+
+// Footer
+$theme-footer-logo-width: 200px;
+$theme-footer-logo-height: 50px;
+
+// Nifty Nav
+$header-index: 8999 !default;
+$panel-color: $theme-white;
+$panel-top-distance: $theme-header-small-height;
+$panel-width: 100% !default;
+$panel-index: 8999 !default;
+$mask-color: rgba(0,0,0,0.8);
+$mask-index: 8998 !default;
+$hamburger-color: $theme-black;
+$hamburger-color-active: $theme-black;
+$hamburger-position-top: 15px !default;
+$hamburger-position-x: 15px !default;
+$hamburger-position-left: 'true' !default;
+
+// Grids

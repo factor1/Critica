@@ -1,50 +1,48 @@
 <?php
-  /**
-   * The archive template.
-   *
-   * Used when a category, author, or date is queried.
-   */
-  get_header();
+/**
+* The archive template.
+*
+* Used when a category, author, or date is queried.
+*/
+
+get_header();
+
+$p = get_queried_object();
+
+if ( have_posts() ) {
+    $post = $posts[0];
+    if(is_category()) {
+        $title = 'Archive for the "'.$p->name.'" Category';
+    } else if(is_tag()) {
+        $title = 'Posts Tagged "'.$p->name.'"';
+    } else if(is_day()) {
+        $title = 'Archive for '.get_the_time( 'F jS, Y' );
+    } else if(is_month()) {
+        $title = 'Archive for '.get_the_time( 'F, Y' );
+    } else if(is_year()) {
+        $title = 'Archive for '.get_the_time( 'Y' );
+    } else if(is_author()) {
+        $title = 'Author Archive';
+    } else if( isset($_GET[ 'paged' ]) && !empty($_GET[ 'paged' ]) ) {
+        $title = 'Blog Archives';
+    } else if(is_post_type_archive()) {
+        $title = $p->label;
+    }
+}
+
+if(!isset($p->post_title)) {
+    $p->post_title = $title;
+}
+
 ?>
 
-  <section>
-    <?php if ( have_posts() ) : ?>
-      <?php $post = $posts[ 0 ]; ?>
+<section class="page archive">
 
-      <div>
-        <?php if ( is_category() ) : ?>
-          <h2>Archive for the &#8216;<?php single_cat_title(); ?>&#8217; Category</h2>
-        <?php elseif ( is_tag() ) : ?>
-          <h2>Posts Tagged &#8216;<?php single_tag_title(); ?>&#8217;</h2>
-        <?php elseif ( is_day() ) : ?>
-          <h2>Archive for <?php the_time( 'F jS, Y' ); ?></h2>
-        <?php elseif ( is_month() ) : ?>
-          <h2>Archive for <?php the_time( 'F, Y' ); ?></h2>
-        <?php elseif ( is_year() ) : ?>
-          <h2 class="pagetitle">Archive for <?php the_time( 'Y' ); ?></h2>
-        <?php elseif ( is_author() ) : ?>
-          <h2 class="pagetitle">Author Archive</h2>
-        <?php elseif ( isset($_GET[ 'paged' ]) && !empty($_GET[ 'paged' ]) ) : ?>
-          <h2 class="pagetitle">Blog Archives</h2>
-        <?php endif; ?>
+    <?php get_template_part("parts/featured-image"); ?>
+    <?php get_template_part('parts/archive-grid'); ?>
 
-        <?php while ( have_posts() ) : the_post(); ?>
-          <div <?php post_class(); ?>>
-            <h2 id="post-<?php the_ID(); ?>"><a
-                href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-            <?php
-              get_template_part( 'parts/meta' );
-              the_content();
-            ?>
-          </div>
-        <?php endwhile; ?>
-
-        <?php the_posts_pagination( array('mid_size' => 2) ); ?>
-      </div>
-    <?php else : ?>
-      <h2>Nothing found</h2>
-    <?php endif; ?>
-  </section>
+</section>
 
 <?php
-  get_footer();
+
+get_footer();
