@@ -1,0 +1,6 @@
+.DS_Store
+**/*/.DS_Store
+node_modules/
+bower_components/
+git_repos/
+dist/
