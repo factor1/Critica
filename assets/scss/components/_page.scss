@@ -1,0 +1,60 @@
+/*------------------------------------------------------------------------------
+  Global Page Components
+------------------------------------------------------------------------------*/
+
+section.page
+{
+    min-height: 450px;
+
+    section.page-title
+    {
+        @include theme-page-title;
+    }
+    
+    section.featured-image
+    {
+        @include theme-featured-image;   
+    }
+    
+    section.hero
+    {
+        @include theme-hero-banner;
+    }
+    
+    section.breadcrumbs
+    {
+        @include theme-breadcrumbs; 
+    }
+    
+    section.content
+    {
+        @include theme-section-padding;
+        padding-top: 40px;
+    }
+    
+    section.flexible-content
+    {
+        @import 'container';
+        @import 'row';
+        @import 'columns';
+        @import 'offsets';
+        @import 'extras';    
+        @include theme-flexible-content;
+    }   
+ 
+    section.comments
+    {
+        background-color: $theme-blue10;
+    }
+    
+    section.pagination
+    {
+        @include theme-paginator;    
+    }
+    
+    section.block[data-href]
+    {
+        cursor: pointer;
+    }
+ 
+}

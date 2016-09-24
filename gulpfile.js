@@ -22,6 +22,7 @@ var app = {
 var vendors = {
     FontAwesome: 'bower_components/font-awesome',
     Foundation: 'bower_components/foundation-sites',
+    SlickCarousel: 'bower_components/slick-carousel/slick',
     NiftyNav: 'bower_components/nifty-nav/src',
     FlexibleContent: 'git_repos/flexible-content',
     Ginger: 'bower_components/ginger-grid',
@@ -105,12 +106,21 @@ gulp.task('repos',function() {
 // Copy vendor distribution files
 gulp.task('copy',function() {
 
-    // FontAwesome Fonts
+    // Fonts
     gulp.src([
-            vendors.FontAwesome+'/fonts/fontawesome-webfont*.*'
+            vendors.FontAwesome+'/fonts/fontawesome-webfont*.*',
+            vendors.SlickCarousel+'/fonts/*'
         ])
         .pipe(newer(assets.fonts))
         .pipe(gulp.dest(assets.fonts));
+
+    // SlickCarousel Loader Image
+    gulp
+        .src([
+            vendors.SlickCarousel+'/ajax-loader.gif'
+        ])
+        .pipe(newer(assets.images))
+        .pipe(gulp.dest(assets.images));
 
     // FlexibleContent
     gulp
@@ -144,6 +154,7 @@ gulp.task('scss',function() {
                 includePaths: [
                     vendors.FontAwesome+'/scss/',
                     vendors.Foundation+'/scss/',
+                    vendors.SlickCarousel+'/',
                     vendors.NiftyNav+'/scss/',
                     vendors.FlexibleContent+'/',
                     vendors.Ginger+'/components/',
@@ -193,6 +204,7 @@ gulp.task('scripts', function() {
         .pipe(jshint.reporter(stylish));
 
     task = gulp.src([
+            vendors.SlickCarousel+'/slick.js',
             vendors.NiftyNav+'/js/nifty-nav.js',
             vendors.Ginger+'/js/ginger.js',
             assets.js+'/src/**/*.js'

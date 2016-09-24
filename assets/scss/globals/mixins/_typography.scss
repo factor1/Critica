@@ -1,0 +1,17 @@
+/*------------------------------------------------------------------------------
+  Typography Mixins
+------------------------------------------------------------------------------*/
+
+@mixin theme-heading-rule-above
+{
+    &:before
+    {
+        display: inline-block;
+        content: " ";
+        width: 60px;
+        height: 4px;
+        padding: 0;
+        margin: 0px auto 40px auto;
+        background-color: $theme-gold;
+    }   
+}

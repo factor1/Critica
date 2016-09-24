@@ -1,0 +1,86 @@
+/*----------------------------------------------------------------------------
+  Banners
+----------------------------------------------------------------------------*/
+
+@mixin theme-banner-mask
+{
+    &:before
+    {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $theme-navy;
+        opacity: $theme-banner-image-opacity;
+        z-index: 1;
+    }
+
+    > .row
+    {
+        position: relative;
+        z-index: 2;
+    }
+}
+
+@mixin theme-hero-banner
+{
+    @include theme-section-padding;
+    position: relative;
+    min-height: 400px;
+    background-color: $theme-navy;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    color: $theme-white;
+
+    > .row
+    {
+        text-align: center;
+        position: relative;
+        z-index: 2;
+
+    } // row    
+    
+    @include theme-banner-mask;
+    
+}
+
+@mixin theme-page-title
+{
+    position: relative;
+    min-height: 150px;
+    @include theme-section-padding;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-color: $theme-navy;
+    background-image: none;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat; 
+    
+    > .row
+    {
+        > .columns
+        {            
+            > h1
+            {
+                color: $theme-white;
+            }
+            
+            p
+            {
+                text-align: center;
+                color: $theme-white;
+            }
+        }
+    }
+}
+
+@mixin theme-featured-image
+{
+    @include theme-page-title;
+    @include theme-banner-mask;
+}

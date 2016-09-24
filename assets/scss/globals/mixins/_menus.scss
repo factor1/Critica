@@ -1,0 +1,262 @@
+/*----------------------------------------------------------------------------
+  Menus
+----------------------------------------------------------------------------*/
+
+@mixin theme-header-menu
+{
+    vertical-align: middle;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    overflow: visible;
+    position: relative;
+    
+    a
+    {
+        text-decoration: none;
+        font-family: $Proxima;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: $theme-gold;
+    }    
+    
+    > li
+    {
+        position: relative;
+        display: inline-block;
+        line-height: 14px; 
+        vertical-align: middle;
+        
+        ul
+        {
+            display: none;
+        }
+        
+        ul.sub-menu
+        {
+            list-style-type: none;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            padding-top: 5px;
+            
+            > li
+            {
+                background-color: $theme-gold;
+                padding: 5px 10px 5px 10px;
+                border-bottom: 1px solid $theme-blue10;
+                text-align: right;
+                border-left: 1px solid $theme-blue10;
+                border-right: 1px solid $theme-blue10;
+                
+                > a
+                {
+                    white-space: nowrap;
+                    color: $theme-navy;
+                    padding: 0px 10px;
+                    
+                    &:hover
+                    {
+                        color: $theme-white;
+                    }
+                }
+
+            }
+            
+            > li:first-child
+            {
+                border-top-left-radius: 10px;
+                border-top: 1px solid $theme-blue10;
+            }
+            
+            > li:last-child
+            {
+                border-bottom-right-radius: 10px;
+                border-bottom: 1px solid $theme-blue10;
+            }            
+        }
+        
+        > a
+        {
+            font-size: 14px;
+        }
+        
+        &:hover
+        {
+            > a
+            {
+                color: $theme-white;
+            }
+            
+            > ul.sub-menu
+            {
+                display: block;
+            }
+        }
+        
+        + li
+        {
+            margin-left: 8px;
+            
+            &:before
+            {
+                content: "|";
+                display: inline-block;
+                line-height: 1;
+                font-size: 80%;
+                vertical-align: middle;
+                margin-right: 16px;
+                color: $theme-blue;
+                position: relative;
+                top: 1px;
+            }
+        }
+    }    
+}
+
+@mixin theme-secondary-menu
+{
+
+}
+
+@mixin theme-dropdown-menu
+{
+
+}
+
+@mixin theme-mobile-menu
+{
+    top: $panel-top-distance;
+    overflow: auto;
+    max-height: 70%;
+    -ms-overflow-style: auto;
+    color: $theme-gold;
+    padding: 20px 10px;
+    background-color: $panel-color;
+
+    a
+    {
+        text-decoration: none;
+    }
+
+    ul
+    {
+        list-style-type: none;
+        margin: 0;
+        padding: 20px 0px;    
+
+        > li
+        {                
+            > a
+            {
+                display: block;
+                text-align: center;
+                line-height: 1;
+            }
+        }
+
+        > li.active
+        {
+            ul.sub-menu
+            {
+                display: block;
+            }
+        }
+    }
+
+    ul.menu
+    {
+        > li
+        {
+            padding: 20px;
+
+            > a
+            {
+                color: $theme-gold;
+                text-transform: uppercase;
+                font-family: $Proxima;
+                font-size: 1.2rem;
+                font-weight: 400;
+                line-height: 1;
+
+                &:hover
+                {
+                    color: $theme-white;
+                }                
+
+            }
+        }
+
+        > li:last-child
+        {
+            border-bottom: 0px;
+        }
+
+    }
+
+    ul.sub-menu
+    {
+        display: none;
+        padding: 20px 0px 0px 0px;
+
+        > li
+        {
+            display: block;
+            padding-bottom: 8px;
+
+            > a
+            {
+                font-size: .9rem;
+                font-weight: 500;
+                color: $theme-gold;
+                line-height: 1.5;
+
+                &:hover
+                {
+                    color: $theme-white;
+                }
+            }
+        }
+    }
+}
+
+@mixin theme-mobile-menu-icon
+{
+    a
+    {
+        position: relative;
+        top: 0;
+        z-index: 9999;
+        background-color: transparent;
+        color: $hamburger-color;
+        font-size: 40px;
+        padding: 0px;
+        text-decoration: none;
+
+        &:hover
+        {
+            color: $theme-white;
+        }
+    }
+
+    .fa-bars.active
+    {
+
+        &:before
+        {
+            display: none;
+        }
+
+        &:after
+        {
+            display: inline;
+            font-family: $FontAwesome;
+            content: $fa-var-times;
+        }
+    }
+}
+
+@mixin theme-footer-menu
+{
+
+}

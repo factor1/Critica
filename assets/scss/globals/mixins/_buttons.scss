@@ -1,0 +1,74 @@
+/*----------------------------------------------------------------------------
+  Buttons
+----------------------------------------------------------------------------*/
+
+@mixin theme-button-base
+{
+    @include button-base;
+    font-family: $Proxima;
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 1;
+    letter-spacing: 0.2em;
+    text-align: center;
+    text-transform: uppercase;    
+    margin: auto;
+    padding: 11px 40px 10px 40px;
+    background-color: transparent;
+    border: 1px solid $theme-gold;
+    border-radius: 0px;
+    text-decoration: none;
+    color: $theme-gold;
+    
+    > .fa
+    {
+        margin-left: 5px;
+        position: relative;
+        top: 0px;
+    }
+    
+    @include breakpoint(small down)
+    {
+        padding: 8px 30px 7px 30px;
+    }    
+}
+
+@mixin theme-button-white
+{
+    @include theme-button-base;
+    background-color: $theme-white;
+    
+    &:hover
+    {
+        background-color: $theme-gold;
+        color: $theme-white;
+    }
+}
+
+@mixin theme-button-gold
+{
+    @include theme-button-base;
+    background-color: $theme-gold;
+    color: $theme-white;
+    border-color: $theme-gold;
+    
+    &:hover
+    {
+        background-color: $theme-white;
+        color: $theme-gold;
+    }
+}
+
+@mixin theme-button-navy
+{
+    @include theme-button-base;
+    background-color: $theme-navy;
+    color: $theme-gold;
+    border-color: $theme-navy;
+    
+    &:hover
+    {
+        color: $theme-white;
+    }
+}
+

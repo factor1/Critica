@@ -1,3 +1,107 @@
 /*------------------------------------------------------------------------------
   Header
 ------------------------------------------------------------------------------*/
+
+header
+{
+    position: relative;
+    background-color: $theme-navy;
+    padding: 0;
+    margin: 0;
+    
+    .row
+    {
+        line-height: 1;
+    }
+    
+    @include breakpoint(medium down)
+    { 
+        .row
+        {
+            padding: 0px 20px;
+        }
+    }       
+    
+    .columns
+    {
+        padding: 0px;
+        
+        > *
+        {
+            display: inline-block;
+            line-height: 1;
+            vertical-align: middle;
+        }
+    }
+
+    a.logo
+    {
+        display: inline-block;
+        width: $theme-header-logo-width;
+        height: $theme-header-logo-height;
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+        background-position: left center;
+        line-height: 1;
+        font-size: 0px;
+        color: $theme-white;
+        
+        @include breakpoint(small down)
+        {
+            width: $theme-header-logo-small-width;
+            height: $theme-header-logo-small-height;             
+        }
+    }
+    
+    > .row
+    {
+        min-height: $theme-header-height;
+
+        > .columns
+        {
+            height: $theme-header-height;
+            line-height: $theme-header-height;
+        }
+        
+        > .columns:first-child
+        {
+            text-align: left;
+        }            
+        
+        > .columns:nth-child(2)
+        {
+            text-align: right;
+            
+            > nav
+            {   
+                > div
+                {
+                    > ul
+                    {
+                        @include theme-header-menu;
+                    }
+                }    
+            }
+        }
+        
+        > .columns:last-child
+        {
+            text-align: right;
+
+            > nav
+            {                   
+                ul
+                {
+                    list-style-type: none;
+                    
+                    > li:last-child
+                    {             
+                        @include theme-mobile-menu-icon; 
+                    }
+                }
+            }
+        } // columns:last-child         
+        
+    }    
+    
+}

@@ -5,12 +5,18 @@
 // Fonts
 $theme-font-path: "../fonts";
 $Proxima: 'Proxima Nova', sans-serif;
+$TimesNewRoman: 'Times New Roman', sans-serif;
 $FontAwesome: "FontAwesome";
 
 // Colors
 $theme-black: #000000;
 $theme-white: #FFFFFF;
-$theme-green: #82bc00;
+$theme-navy: #081F2C;
+$theme-navy80: #394C56;
+$theme-gold: #C5B783;
+$theme-blue: #074F71;
+$theme-blue50: #83A7B8;
+$theme-blue10: #E6EDF1;
 
 // Images
 $theme-image-path: "../img";
@@ -33,10 +39,10 @@ $small-breakpoint: 40em;
 // Header
 $theme-header-height: 100px;
 $theme-header-small-height: 100px;
-$theme-header-logo-width: 200px;
-$theme-header-logo-height: 50px;
-$theme-header-logo-small-width: 200px;
-$theme-header-logo-small-height: 50px;
+$theme-header-logo-width: 260px;
+$theme-header-logo-height: 70px;
+$theme-header-logo-small-width: 260px;
+$theme-header-logo-small-height: 70px;
 
 // Banners
 $theme-banner-image-opacity: 0;

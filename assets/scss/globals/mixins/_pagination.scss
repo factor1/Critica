@@ -1,0 +1,61 @@
+/*------------------------------------------------------------------------------
+  Pagination Mixins
+------------------------------------------------------------------------------*/
+
+@mixin theme-paginator
+{
+    background-color: $theme-white;
+    padding: 25px 0px;
+    text-align: center;
+    font-family: $Proxima;
+    font-weight: 400;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    color: $theme-navy;
+
+    >.row.column
+    {
+        line-height: 20px;
+
+        > *
+        {
+            display: inline-block;
+            vertical-align: middle;
+            line-height: 1;
+        }
+
+        > a.page
+        {
+            border-radius: 50%;
+            color: $theme-navy;
+            text-align: left;
+            width: 20px;
+            height: 20px;
+            padding-top: 4px;
+            text-align: center;
+
+            &:hover
+            {
+                background-color: $theme-blue50;
+            }
+
+        }
+
+        > a.page.active
+        {
+            background-color: $theme-blue50;
+        }
+
+        > span
+        {
+            padding: 0px 5px;
+        }
+
+        .fa
+        {
+            color: $theme-navy;
+            font-size: 1.25rem;
+            line-height: 1;
+        }
+    }  
+}
