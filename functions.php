@@ -115,3 +115,8 @@ require __DIR__ . '/inc/shortcodes.php';
 * Load ACF options
 */
 require __DIR__ . '/inc/acf.php';
+
+/**
+* Load added post functions
+*/
+require __DIR__ . '/inc/posts.php';

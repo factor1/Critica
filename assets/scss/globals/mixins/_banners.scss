@@ -84,3 +84,155 @@
     @include theme-page-title;
     @include theme-banner-mask;
 }
+
+@mixin theme-hero-slider-banner
+{
+    > div.slider
+    {
+        height: 700px;
+        margin: 0;
+        
+        > div
+        {
+            height: 100%;
+        }
+        
+        @include breakpoint(small down)
+        { 
+
+        }       
+    }
+    
+    .slick-list, .slick-track, .slick-slide
+    {
+        height: 100%;
+    }
+
+    section
+    {
+        @include theme-hero-banner;
+        @include theme-section-padding;
+        height: 100%;
+        line-height: 540px;
+        text-align: center;
+        z-index: 9999;
+
+        > .row
+        {
+            margin: auto;
+            display: inline-block;
+            line-height: 1;
+            vertical-align: middle;
+            padding: 0px 20px;
+
+            > h1
+            {
+                margin: 0;
+                color: $theme-white;
+                text-shadow: 0px 0px 10px $theme-black;
+                text-align: center;
+                padding: 0px 5px;
+                
+                &:before
+                {
+                    display: none;
+                }
+                
+                @include breakpoint(small down)
+                { 
+ 
+                }                 
+            }
+
+            p
+            {
+                font-family: $TimesNewRoman;
+                font-size: 30px;
+                line-height: 32px;
+                font-weight: 400;
+                font-style: italic;            
+                color: $theme-white;
+                text-shadow: 0px 0px 10px $theme-black;
+                padding: 0px 5px;
+                text-rendering: auto;
+                text-align: center;
+                margin: auto;
+
+                strong
+                {
+                    font-weight: 800;
+                    color: $theme-white;
+                }
+                
+                @include breakpoint(small down)
+                { 
+
+                }                
+            }
+
+            > div
+            {
+                margin: 20px 0px 0px 0px;
+                text-align: center;
+                
+                > p:last-child
+                {
+                    font-style: normal;
+                    text-align: center;
+                    margin-top: 40px;
+                }
+            }
+
+        } //row
+    } //section
+
+    .slick-prev, .slick-next
+    {
+        display: none;
+    }
+
+    ul.slick-dots
+    {
+        top: auto;
+        bottom: 20px;
+
+        > li
+        {
+
+            > button
+            {
+                opacity: 0.9;
+                color: $theme-gold;
+                
+                &:before
+                {
+                    display: inline-block;
+                    font-family: $FontAwesome;
+                    content: $fa-var-circle-o;
+                    color: $theme-gold;
+                    font-weight: 300;
+                    width: 24px;
+                    height: 24px;
+                    font-size: 24px;
+                    line-height: 1;
+                }
+                
+            }
+        }
+
+        > li.slick-active
+        {
+            > button
+            {     
+                opacity: 1;
+
+                &:before
+                {
+                    content: $fa-var-circle;
+                }
+
+            }
+        }
+
+    } // ul    
+}

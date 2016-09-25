@@ -22,6 +22,14 @@ h1
     padding: 0;
     margin: auto;
     @include theme-heading-rule-above;
+    
+    + h1, + h2
+    {
+        &:before
+        {
+            display: none;
+        }
+    }
 }
 
 h2
@@ -35,6 +43,22 @@ h2
     padding: 0;
     margin: auto;
     @include theme-heading-rule-above;
+    
+    + h1, + h2
+    {
+        &:before
+        {
+            display: none;
+        }
+    }    
+}
+
+h1.text-center ,h2.text-center
+{
+    &:before
+    {
+        margin-left: auto;
+    }
 }
 
 h3

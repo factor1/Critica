@@ -27,7 +27,7 @@ function get_featured_image_url($size = 'large',$post = null) {
     }
 
     // No post or no feature image, bail
-    if(!$post || !has_post_thumbnail($post)) {
+    if(!$post || !has_post_thumbnail($post->ID)) {
         return '';
     }
 

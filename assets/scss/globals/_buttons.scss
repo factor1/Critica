@@ -2,22 +2,27 @@
   Buttons
 ------------------------------------------------------------------------------*/
 
-.button
+.button, .dark .button
 {
     @include theme-button-base;
 }
 
-.button.white
+.button.white, .dark .button.white
 {
     @include theme-button-white;
 }
 
-.button.gold
+.button.gold, .dark .button.gold
 {
     @include theme-button-gold;
 }
 
-.button.navy
+.button.navy, .dark .button.navy
 {
     @include theme-button-navy;
+}
+
+.button.thin
+{
+    padding: 11px 15px 10px 15px;
 }

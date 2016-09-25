@@ -4601,6 +4601,202 @@ html.is-reveal-open body {
 .clearfix::after {
   clear: both; }
 
+/* Slider */
+.slick-slider {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent; }
+
+.slick-list {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  margin: 0;
+  padding: 0; }
+  .slick-list:focus {
+    outline: none; }
+  .slick-list.dragging {
+    cursor: pointer;
+    cursor: hand; }
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  transform: translate3d(0, 0, 0); }
+
+.slick-track {
+  position: relative;
+  left: 0;
+  top: 0;
+  display: block; }
+  .slick-track:before, .slick-track:after {
+    content: "";
+    display: table; }
+  .slick-track:after {
+    clear: both; }
+  .slick-loading .slick-track {
+    visibility: hidden; }
+
+.slick-slide {
+  float: left;
+  height: 100%;
+  min-height: 1px;
+  display: none; }
+  [dir="rtl"] .slick-slide {
+    float: right; }
+  .slick-slide img {
+    display: block; }
+  .slick-slide.slick-loading img {
+    display: none; }
+  .slick-slide.dragging img {
+    pointer-events: none; }
+  .slick-initialized .slick-slide {
+    display: block; }
+  .slick-loading .slick-slide {
+    visibility: hidden; }
+  .slick-vertical .slick-slide {
+    display: block;
+    height: auto;
+    border: 1px solid transparent; }
+
+.slick-arrow.slick-hidden {
+  display: none; }
+
+/* Slider */
+.slick-loading .slick-list {
+  background: #fff url("./ajax-loader.gif") center center no-repeat; }
+
+/* Icons */
+@font-face {
+  font-family: "slick";
+  src: url("./fonts/slick.eot");
+  src: url("./fonts/slick.eot?#iefix") format("embedded-opentype"), url("./fonts/slick.woff") format("woff"), url("./fonts/slick.ttf") format("truetype"), url("./fonts/slick.svg#slick") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+/* Arrows */
+.slick-prev,
+.slick-next {
+  position: absolute;
+  display: block;
+  height: 20px;
+  width: 20px;
+  line-height: 0px;
+  font-size: 0px;
+  cursor: pointer;
+  background: transparent;
+  color: transparent;
+  top: 50%;
+  transform: translate(0, -50%);
+  padding: 0;
+  border: none;
+  outline: none; }
+  .slick-prev:hover, .slick-prev:focus,
+  .slick-next:hover,
+  .slick-next:focus {
+    outline: none;
+    background: transparent;
+    color: transparent; }
+    .slick-prev:hover:before, .slick-prev:focus:before,
+    .slick-next:hover:before,
+    .slick-next:focus:before {
+      opacity: 1; }
+  .slick-prev.slick-disabled:before,
+  .slick-next.slick-disabled:before {
+    opacity: 0.25; }
+  .slick-prev:before,
+  .slick-next:before {
+    font-family: "slick";
+    font-size: 20px;
+    line-height: 1;
+    color: white;
+    opacity: 0.75;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+
+.slick-prev {
+  left: -25px; }
+  [dir="rtl"] .slick-prev {
+    left: auto;
+    right: -25px; }
+  .slick-prev:before {
+    content: "←"; }
+    [dir="rtl"] .slick-prev:before {
+      content: "→"; }
+
+.slick-next {
+  right: -25px; }
+  [dir="rtl"] .slick-next {
+    left: -25px;
+    right: auto; }
+  .slick-next:before {
+    content: "→"; }
+    [dir="rtl"] .slick-next:before {
+      content: "←"; }
+
+/* Dots */
+.slick-dotted.slick-slider {
+  margin-bottom: 30px; }
+
+.slick-dots {
+  position: absolute;
+  bottom: -25px;
+  list-style: none;
+  display: block;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  width: 100%; }
+  .slick-dots li {
+    position: relative;
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    margin: 0 5px;
+    padding: 0;
+    cursor: pointer; }
+    .slick-dots li button {
+      border: 0;
+      background: transparent;
+      display: block;
+      height: 20px;
+      width: 20px;
+      outline: none;
+      line-height: 0px;
+      font-size: 0px;
+      color: transparent;
+      padding: 5px;
+      cursor: pointer; }
+      .slick-dots li button:hover, .slick-dots li button:focus {
+        outline: none; }
+        .slick-dots li button:hover:before, .slick-dots li button:focus:before {
+          opacity: 1; }
+      .slick-dots li button:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: "•";
+        width: 20px;
+        height: 20px;
+        font-family: "slick";
+        font-size: 6px;
+        line-height: 20px;
+        text-align: center;
+        color: black;
+        opacity: 0.25;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale; }
+    .slick-dots li.slick-active button:before {
+      color: black;
+      opacity: 0.75; }
+
 /*
 Nifty Nav
 By Eric Stout / Factor1
@@ -4779,7 +4975,6 @@ body {
   font: 100%/1.25 arial, helvetica, sans-serif;
   min-height: 100%;
   overflow-y: scroll;
-  /* has to be scroll, not auto */
   -webkit-overflow-scrolling: touch; }
 
 p:empty {
@@ -4928,13 +5123,17 @@ h1 {
   padding: 0;
   margin: auto; }
   h1:before {
-    display: inline-block;
+    display: block;
     content: " ";
     width: 60px;
     height: 4px;
     padding: 0;
-    margin: 0px auto 40px auto;
+    margin: 0;
+    margin-right: auto;
+    margin-bottom: 40px;
     background-color: #C5B783; }
+  h1 + h1:before, h1 + h2:before {
+    display: none; }
 
 h2 {
   font-family: "Times New Roman", sans-serif;
@@ -4946,13 +5145,20 @@ h2 {
   padding: 0;
   margin: auto; }
   h2:before {
-    display: inline-block;
+    display: block;
     content: " ";
     width: 60px;
     height: 4px;
     padding: 0;
-    margin: 0px auto 40px auto;
+    margin: 0;
+    margin-right: auto;
+    margin-bottom: 40px;
     background-color: #C5B783; }
+  h2 + h1:before, h2 + h2:before {
+    display: none; }
+
+h1.text-center:before, h2.text-center:before {
+  margin-left: auto; }
 
 h3 {
   font-family: "Times New Roman", sans-serif;
@@ -5015,7 +5221,7 @@ nav a {
 /*------------------------------------------------------------------------------
   Buttons
 ------------------------------------------------------------------------------*/
-.button {
+.button, .dark .button {
   display: inline-block;
   text-align: center;
   line-height: 1;
@@ -5038,21 +5244,24 @@ nav a {
   margin: auto;
   padding: 11px 40px 10px 40px;
   background-color: transparent;
-  border: 1px solid #C5B783;
-  border-radius: 0px;
+  border: 2px solid #C5B783;
+  border-radius: 3px;
   text-decoration: none;
   color: #C5B783; }
-  [data-whatinput='mouse'] .button {
+  [data-whatinput='mouse'] .button, [data-whatinput='mouse'] .dark .button {
     outline: 0; }
-  .button > .fa {
+  .button > .fa, .dark .button > .fa {
     margin-left: 5px;
     position: relative;
     top: 0px; }
+  .button:hover, .dark .button:hover {
+    background-color: #C5B783;
+    color: #FFFFFF; }
   @media screen and (max-width: 39.9375em) {
-    .button {
+    .button, .dark .button {
       padding: 8px 30px 7px 30px; } }
 
-.button.white {
+.button.white, .dark .button.white {
   display: inline-block;
   text-align: center;
   line-height: 1;
@@ -5075,25 +5284,28 @@ nav a {
   margin: auto;
   padding: 11px 40px 10px 40px;
   background-color: transparent;
-  border: 1px solid #C5B783;
-  border-radius: 0px;
+  border: 2px solid #C5B783;
+  border-radius: 3px;
   text-decoration: none;
   color: #C5B783;
   background-color: #FFFFFF; }
-  [data-whatinput='mouse'] .button.white {
+  [data-whatinput='mouse'] .button.white, [data-whatinput='mouse'] .dark .button.white {
     outline: 0; }
-  .button.white > .fa {
+  .button.white > .fa, .dark .button.white > .fa {
     margin-left: 5px;
     position: relative;
     top: 0px; }
+  .button.white:hover, .dark .button.white:hover {
+    background-color: #C5B783;
+    color: #FFFFFF; }
   @media screen and (max-width: 39.9375em) {
-    .button.white {
+    .button.white, .dark .button.white {
       padding: 8px 30px 7px 30px; } }
-  .button.white:hover {
+  .button.white:hover, .dark .button.white:hover {
     background-color: #C5B783;
     color: #FFFFFF; }
 
-.button.gold {
+.button.gold, .dark .button.gold {
   display: inline-block;
   text-align: center;
   line-height: 1;
@@ -5116,27 +5328,30 @@ nav a {
   margin: auto;
   padding: 11px 40px 10px 40px;
   background-color: transparent;
-  border: 1px solid #C5B783;
-  border-radius: 0px;
+  border: 2px solid #C5B783;
+  border-radius: 3px;
   text-decoration: none;
   color: #C5B783;
   background-color: #C5B783;
   color: #FFFFFF;
   border-color: #C5B783; }
-  [data-whatinput='mouse'] .button.gold {
+  [data-whatinput='mouse'] .button.gold, [data-whatinput='mouse'] .dark .button.gold {
     outline: 0; }
-  .button.gold > .fa {
+  .button.gold > .fa, .dark .button.gold > .fa {
     margin-left: 5px;
     position: relative;
     top: 0px; }
+  .button.gold:hover, .dark .button.gold:hover {
+    background-color: #C5B783;
+    color: #FFFFFF; }
   @media screen and (max-width: 39.9375em) {
-    .button.gold {
+    .button.gold, .dark .button.gold {
       padding: 8px 30px 7px 30px; } }
-  .button.gold:hover {
+  .button.gold:hover, .dark .button.gold:hover {
     background-color: #FFFFFF;
     color: #C5B783; }
 
-.button.navy {
+.button.navy, .dark .button.navy {
   display: inline-block;
   text-align: center;
   line-height: 1;
@@ -5159,24 +5374,30 @@ nav a {
   margin: auto;
   padding: 11px 40px 10px 40px;
   background-color: transparent;
-  border: 1px solid #C5B783;
-  border-radius: 0px;
+  border: 2px solid #C5B783;
+  border-radius: 3px;
   text-decoration: none;
   color: #C5B783;
   background-color: #081F2C;
   color: #C5B783;
   border-color: #081F2C; }
-  [data-whatinput='mouse'] .button.navy {
+  [data-whatinput='mouse'] .button.navy, [data-whatinput='mouse'] .dark .button.navy {
     outline: 0; }
-  .button.navy > .fa {
+  .button.navy > .fa, .dark .button.navy > .fa {
     margin-left: 5px;
     position: relative;
     top: 0px; }
-  @media screen and (max-width: 39.9375em) {
-    .button.navy {
-      padding: 8px 30px 7px 30px; } }
-  .button.navy:hover {
+  .button.navy:hover, .dark .button.navy:hover {
+    background-color: #C5B783;
     color: #FFFFFF; }
+  @media screen and (max-width: 39.9375em) {
+    .button.navy, .dark .button.navy {
+      padding: 8px 30px 7px 30px; } }
+  .button.navy:hover, .dark .button.navy:hover {
+    color: #FFFFFF; }
+
+.button.thin {
+  padding: 11px 15px 10px 15px; }
 
 /*----------------------------------------------------------------------------
 Converts WP nav menus into social icons menu, just wrap 
@@ -5504,7 +5725,7 @@ section.page {
       width: 100%;
       height: 100%;
       background-color: #081F2C;
-      opacity: 0;
+      opacity: 0.5;
       z-index: 1; }
     section.page section.featured-image > .row {
       position: relative;
@@ -5537,7 +5758,7 @@ section.page {
       width: 100%;
       height: 100%;
       background-color: #081F2C;
-      opacity: 0;
+      opacity: 0.5;
       z-index: 1; }
     section.page section.hero > .row {
       position: relative;
@@ -6008,8 +6229,8 @@ section.page {
     margin: auto;
     padding: 11px 40px 10px 40px;
     background-color: transparent;
-    border: 1px solid #C5B783;
-    border-radius: 0px;
+    border: 2px solid #C5B783;
+    border-radius: 3px;
     text-decoration: none;
     color: #C5B783; }
     [data-whatinput='mouse'] #respond input[type=submit] {
@@ -6018,9 +6239,187 @@ section.page {
       margin-left: 5px;
       position: relative;
       top: 0px; }
+    #respond input[type=submit]:hover {
+      background-color: #C5B783;
+      color: #FFFFFF; }
     @media screen and (max-width: 39.9375em) {
       #respond input[type=submit] {
         padding: 8px 30px 7px 30px; } }
+
+/*------------------------------------------------------------------------------
+  Home Template
+------------------------------------------------------------------------------*/
+.home section.hero-slider > div.slider {
+  height: 700px;
+  margin: 0; }
+  .home section.hero-slider > div.slider > div {
+    height: 100%; }
+
+.home section.hero-slider .slick-list, .home section.hero-slider .slick-track, .home section.hero-slider .slick-slide {
+  height: 100%; }
+
+.home section.hero-slider section {
+  padding: 20px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  position: relative;
+  min-height: 400px;
+  background-color: #081F2C;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  color: #FFFFFF;
+  padding: 20px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  height: 100%;
+  line-height: 540px;
+  text-align: center;
+  z-index: 9999; }
+  @media screen and (max-width: 39.9375em) {
+    .home section.hero-slider section {
+      padding-top: 40px;
+      padding-bottom: 40px; } }
+  .home section.hero-slider section > .row {
+    text-align: center;
+    position: relative;
+    z-index: 2; }
+  .home section.hero-slider section:before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #081F2C;
+    opacity: 0.5;
+    z-index: 1; }
+  .home section.hero-slider section > .row {
+    position: relative;
+    z-index: 2; }
+  @media screen and (max-width: 39.9375em) {
+    .home section.hero-slider section {
+      padding-top: 40px;
+      padding-bottom: 40px; } }
+  .home section.hero-slider section > .row {
+    margin: auto;
+    display: inline-block;
+    line-height: 1;
+    vertical-align: middle;
+    padding: 0px 20px; }
+    .home section.hero-slider section > .row > h1 {
+      margin: 0;
+      color: #FFFFFF;
+      text-shadow: 0px 0px 10px #000000;
+      text-align: center;
+      padding: 0px 5px; }
+      .home section.hero-slider section > .row > h1:before {
+        display: none; }
+    .home section.hero-slider section > .row p {
+      font-family: "Times New Roman", sans-serif;
+      font-size: 30px;
+      line-height: 32px;
+      font-weight: 400;
+      font-style: italic;
+      color: #FFFFFF;
+      text-shadow: 0px 0px 10px #000000;
+      padding: 0px 5px;
+      text-rendering: auto;
+      text-align: center;
+      margin: auto; }
+      .home section.hero-slider section > .row p strong {
+        font-weight: 800;
+        color: #FFFFFF; }
+    .home section.hero-slider section > .row > div {
+      margin: 20px 0px 0px 0px;
+      text-align: center; }
+      .home section.hero-slider section > .row > div > p:last-child {
+        font-style: normal;
+        text-align: center;
+        margin-top: 40px; }
+
+.home section.hero-slider .slick-prev, .home section.hero-slider .slick-next {
+  display: none; }
+
+.home section.hero-slider ul.slick-dots {
+  top: auto;
+  bottom: 20px; }
+  .home section.hero-slider ul.slick-dots > li > button {
+    opacity: 0.9;
+    color: #C5B783; }
+    .home section.hero-slider ul.slick-dots > li > button:before {
+      display: inline-block;
+      font-family: "FontAwesome";
+      content: "";
+      color: #C5B783;
+      font-weight: 300;
+      width: 24px;
+      height: 24px;
+      font-size: 24px;
+      line-height: 1; }
+  .home section.hero-slider ul.slick-dots > li.slick-active > button {
+    opacity: 1; }
+    .home section.hero-slider ul.slick-dots > li.slick-active > button:before {
+      content: ""; }
+
+.home section.featured-post {
+  padding: 20px;
+  padding-top: 80px;
+  padding-bottom: 80px; }
+  @media screen and (max-width: 39.9375em) {
+    .home section.featured-post {
+      padding-top: 40px;
+      padding-bottom: 40px; } }
+  .home section.featured-post .columns > h3 {
+    margin-bottom: 20px; }
+  .home section.featured-post .columns > p:last-child {
+    margin-top: 40px; }
+  .home section.featured-post .columns:first-child {
+    padding-right: 20px; }
+  .home section.featured-post img {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    margin-top: 20px; }
+
+.home section.meet-the-authors > .row {
+  height: 550px; }
+  .home section.meet-the-authors > .row > .columns {
+    height: 100%;
+    padding: 50px 80px; }
+  .home section.meet-the-authors > .row > .columns:first-child {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat; }
+  .home section.meet-the-authors > .row > .columns:last-child {
+    background-color: #081F2C;
+    line-height: 450px; }
+    .home section.meet-the-authors > .row > .columns:last-child > div {
+      display: inline-block;
+      line-height: 1;
+      vertical-align: middle;
+      text-align: left; }
+      .home section.meet-the-authors > .row > .columns:last-child > div > p:last-child {
+        margin-top: 60px; }
+
+.home section.featured-statement {
+  padding: 20px;
+  padding-top: 80px;
+  padding-bottom: 80px; }
+  @media screen and (max-width: 39.9375em) {
+    .home section.featured-statement {
+      padding-top: 40px;
+      padding-bottom: 40px; } }
+  .home section.featured-statement > .row {
+    max-width: 750px; }
+    .home section.featured-statement > .row > .columns {
+      text-align: center; }
+      .home section.featured-statement > .row > .columns > h1 {
+        margin-bottom: 40px; }
+      .home section.featured-statement > .row > .columns > p:last-child {
+        margin-top: 60px; }
 
 /*----------------------------------------------------------------------------
   Plugin Overrides

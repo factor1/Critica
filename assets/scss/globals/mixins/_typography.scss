@@ -6,12 +6,14 @@
 {
     &:before
     {
-        display: inline-block;
+        display: block;
         content: " ";
         width: 60px;
         height: 4px;
         padding: 0;
-        margin: 0px auto 40px auto;
+        margin: 0;
+        margin-right: auto;
+        margin-bottom: 40px;
         background-color: $theme-gold;
     }   
 }
