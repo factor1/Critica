@@ -32,6 +32,18 @@ section.page
         padding-top: 40px;
     }
     
+    section.callout
+    {
+        @include theme-section-padding;
+        background-color: $theme-navy;
+        
+        p
+        {
+            text-align: center;
+            padding: 40px 0px 0px 0px;
+        }
+    }
+    
     section.flexible-content
     {
         @import 'container';

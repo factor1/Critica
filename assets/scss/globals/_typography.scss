@@ -10,6 +10,7 @@ body
     line-height: 24px;
     letter-spacing: 0em;
     color: $theme-navy80;
+    padding-top: $theme-header-height;    
 }
 
 h1
@@ -159,5 +160,8 @@ nav
 // Small adjustments
 @include breakpoint(small down)
 {
-
+    body
+    {
+        padding-top: $theme-header-small-height;  
+    }
 }

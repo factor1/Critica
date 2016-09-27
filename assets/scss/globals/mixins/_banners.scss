@@ -55,7 +55,8 @@
     @include theme-section-padding;
     padding-top: 100px;
     padding-bottom: 100px;
-    background-color: $theme-navy;
+    background-color: $theme-blue;
+    color: $theme-white;
     background-image: none;
     background-size: cover;
     background-position: center center;
@@ -68,6 +69,12 @@
             > h1
             {
                 color: $theme-white;
+                text-align: center;
+                
+                &:before
+                {
+                    margin-left: auto;
+                }
             }
             
             p

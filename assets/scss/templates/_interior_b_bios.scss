@@ -1,0 +1,32 @@
+/*------------------------------------------------------------------------------
+  Interior B - Bios Template
+------------------------------------------------------------------------------*/
+
+section.page.interior-b.bios
+{
+    section.flexible-content
+    {
+        padding-top: 30px;
+        padding-bottom: 0px;
+    }
+    
+    section.bios-grid
+    {
+        @include theme-section-padding;
+        padding-top: 0px;        
+        
+        .block
+        {
+            padding: 0px 40px;
+            
+            > div:first-child
+            {
+                height: 400px;
+                background-size: cover;
+                background-position: center center;
+                background-repeat: no-repeat;
+            }
+        }
+    }
+    
+}

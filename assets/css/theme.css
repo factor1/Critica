@@ -5105,7 +5105,8 @@ body {
   font-size: 18px;
   line-height: 24px;
   letter-spacing: 0em;
-  color: #394C56; }
+  color: #394C56;
+  padding-top: 80px; }
 
 h1 {
   font-family: "Times New Roman", sans-serif;
@@ -5210,6 +5211,10 @@ nav a {
 
 .dark h1, .dark h2, .dark h3, .dark p, .dark a {
   color: #FFFFFF; }
+
+@media screen and (max-width: 39.9375em) {
+  body {
+    padding-top: 50px; } }
 
 /*------------------------------------------------------------------------------
   Buttons
@@ -5530,7 +5535,10 @@ body > .nifty-mask {
   Header
 ------------------------------------------------------------------------------*/
 header {
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   background-color: #081F2C;
   padding: 0;
   margin: 0; }
@@ -5560,10 +5568,10 @@ header {
         width: 148px;
         height: 40px; } }
   header > .row {
-    min-height: 100px; }
+    min-height: 80px; }
     header > .row > .columns {
-      height: 100px;
-      line-height: 100px; }
+      height: 80px;
+      line-height: 80px; }
     @media screen and (max-width: 39.9375em) {
       header > .row {
         min-height: 50px; }
@@ -5662,6 +5670,9 @@ header {
           header > .row > .columns:last-child > nav ul > li:last-child a {
             top: -2px;
             font-size: 34px; } }
+
+body.admin-bar header {
+  top: 32px; }
 
 /*------------------------------------------------------------------------------
   Footer
@@ -5852,7 +5863,8 @@ section.page {
     padding-bottom: 80px;
     padding-top: 100px;
     padding-bottom: 100px;
-    background-color: #081F2C;
+    background-color: #074F71;
+    color: #FFFFFF;
     background-image: none;
     background-size: cover;
     background-position: center center;
@@ -5862,7 +5874,10 @@ section.page {
         padding-top: 40px;
         padding-bottom: 40px; } }
     section.page section.page-title > .row > .columns > h1 {
-      color: #FFFFFF; }
+      color: #FFFFFF;
+      text-align: center; }
+      section.page section.page-title > .row > .columns > h1:before {
+        margin-left: auto; }
     section.page section.page-title > .row > .columns p {
       text-align: center;
       color: #FFFFFF; }
@@ -5874,7 +5889,8 @@ section.page {
     padding-bottom: 80px;
     padding-top: 100px;
     padding-bottom: 100px;
-    background-color: #081F2C;
+    background-color: #074F71;
+    color: #FFFFFF;
     background-image: none;
     background-size: cover;
     background-position: center center;
@@ -5884,7 +5900,10 @@ section.page {
         padding-top: 40px;
         padding-bottom: 40px; } }
     section.page section.featured-image > .row > .columns > h1 {
-      color: #FFFFFF; }
+      color: #FFFFFF;
+      text-align: center; }
+      section.page section.featured-image > .row > .columns > h1:before {
+        margin-left: auto; }
     section.page section.featured-image > .row > .columns p {
       text-align: center;
       color: #FFFFFF; }
@@ -5959,6 +5978,18 @@ section.page {
       section.page section.content {
         padding-top: 40px;
         padding-bottom: 40px; } }
+  section.page section.callout {
+    padding: 20px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background-color: #081F2C; }
+    @media screen and (max-width: 39.9375em) {
+      section.page section.callout {
+        padding-top: 40px;
+        padding-bottom: 40px; } }
+    section.page section.callout p {
+      text-align: center;
+      padding: 40px 0px 0px 0px; }
   section.page section.flexible-content {
     padding: 20px;
     padding-top: 80px;
@@ -6332,6 +6363,15 @@ section.page {
     @media screen and (max-width: 39.9375em) {
       section.page section.flexible-content {
         padding: 10px 20px; } }
+    section.page section.flexible-content h1, section.page section.flexible-content h2 {
+      text-align: center;
+      margin-bottom: 25px; }
+      section.page section.flexible-content h1:before, section.page section.flexible-content h2:before {
+        margin-left: auto; }
+    section.page section.flexible-content p {
+      max-width: 620px;
+      margin-left: auto;
+      margin-right: auto; }
   section.page section.comments {
     background-color: #E6EDF1; }
   section.page section.pagination {
@@ -6702,6 +6742,68 @@ body.login {
   body.login div#login p#backtoblog {
     padding: 0;
     margin-top: 20px; }
+
+/*------------------------------------------------------------------------------
+  Interior B - Bios Template
+------------------------------------------------------------------------------*/
+section.page.interior-b.bios section.flexible-content {
+  padding-top: 30px;
+  padding-bottom: 0px; }
+
+section.page.interior-b.bios section.bios-grid {
+  padding: 20px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  padding-top: 0px; }
+  @media screen and (max-width: 39.9375em) {
+    section.page.interior-b.bios section.bios-grid {
+      padding-top: 40px;
+      padding-bottom: 40px; } }
+  section.page.interior-b.bios section.bios-grid .block {
+    padding: 0px 40px; }
+    section.page.interior-b.bios section.bios-grid .block > div:first-child {
+      height: 400px;
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat; }
+
+/*------------------------------------------------------------------------------
+  Interior B - Book Template
+------------------------------------------------------------------------------*/
+section.page.interior-b.book section.callout.purchase p.links {
+  line-height: 50px;
+  height: 50px; }
+  section.page.interior-b.book section.callout.purchase p.links a {
+    display: inline-block;
+    padding: 0px 20px;
+    line-height: 1;
+    vertical-align: midle;
+    max-height: 50px; }
+    section.page.interior-b.book section.callout.purchase p.links a > img {
+      max-height: 100%; }
+
+section.page.interior-b.book section.flexible-content {
+  padding-top: 30px;
+  padding-bottom: 0px; }
+  section.page.interior-b.book section.flexible-content p {
+    margin-bottom: 30px; }
+
+section.page.interior-b.book section.testimonials {
+  padding: 20px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  padding-top: 0px;
+  padding-bottom: 20px; }
+  @media screen and (max-width: 39.9375em) {
+    section.page.interior-b.book section.testimonials {
+      padding-top: 40px;
+      padding-bottom: 40px; } }
+  section.page.interior-b.book section.testimonials h2:before {
+    margin-left: auto; }
+  section.page.interior-b.book section.testimonials p {
+    text-align: center;
+    padding: 20px 0px;
+    margin-bottom: 80px; }
 
 /*----------------------------------------------------------------------------
   Plugin Overrides
