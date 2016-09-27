@@ -55,13 +55,24 @@ header
     
     > .row
     {
-        min-height: $theme-header-height;
+        min-height: $theme-header-height;     
 
         > .columns
         {
             height: $theme-header-height;
             line-height: $theme-header-height;
         }
+        
+        @include breakpoint(small down)
+        {
+            min-height: $theme-header-small-height;     
+
+            > .columns
+            {
+                height: $theme-header-small-height;
+                line-height: $theme-header-small-height;
+            }      
+        }        
         
         > .columns:first-child
         {
@@ -96,7 +107,7 @@ header
                     
                     > li:last-child
                     {             
-                        @include theme-mobile-menu-icon; 
+                        @include theme-mobile-menu-icon;
                     }
                 }
             }

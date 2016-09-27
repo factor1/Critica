@@ -87,5 +87,10 @@
     a[href^="#phone"]:before
     {
         content: $fa-var-phone;
+    }
+    
+    a[href*="medium.com"]:before
+    {
+        content: $fa-var-medium;
     }    
 }  

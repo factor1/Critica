@@ -6,5 +6,160 @@ footer
 {
     @include theme-section-padding;
     
+    background-color: $theme-blue;
+    color: $theme-blue50;
+    
+    .dark
+    {
+        p, address
+        {
+            color: $theme-blue50;
+        }    
+    }    
+    
+    h2
+    {
+        margin-bottom: 60px;
+        
+        &:before
+        {
+            display: none;
+        }
+    }
+    
+    address
+    {
+        font-style: normal;
+        margin-bottom: 20px;
+    }
+    
+    nav.social
+    {
+        padding: 40px 0px;
+        
+        ul
+        {
+            > li
+            {    
+                text-align: left;
+                
+                a
+                {
+                    height: 50px;
+                    width: auto;
+                    font-size: 0px;
+                
+                    &:before
+                    {
+                        line-height: 40px;
+                        width: auto;
+                        height: 40px;
+                        font-size: 40px;
+                    }
+
+                }
+                
+                + li
+                {
+                    margin-left: 30px;
+                }                
+            }
+        }    
+    }
+    
+    .copyright
+    {
+        p
+        {
+            margin: 0;
+            padding: 0;
+            font-size: 80%;
+            line-height: 1.4;
+            
+            a
+            {
+                color: $theme-blue50;
+                
+                &:hover
+                {
+                    color: $theme-white;
+                }
+            }
+        }
+    }
+    
+    nav.purchase
+    {
+        ul
+        {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+
+            > li
+            {
+                display: block;
+                padding-bottom: 40px;
+
+                a
+                {
+                    opacity: .5;
+
+                    &:hover
+                    {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+
+    .gform_wrapper, .gf_browser_ie.gform_wrapper
+    {
+        @include theme-gravity-form-settings;
+        position: relative;
+        top: -4px;
+        
+        .gform_heading
+        {
+            display: none;
+        }
+        
+        .gform_footer
+        {        
+            input.button, input[type=submit]
+            {
+                padding: 11px 20px 10px 20px;
+            }
+        }    
+        
+        ul.top_label
+        {
+            > li.gfield
+            {
+                margin-bottom: 10px;
+                
+                .gfield_label
+                {
+                    font-size: 14px;
+                    text-transform: uppercase;
+                }
+                
+                input, textarea
+                {
+                    background-color: #20617f;
+                    color: $theme-blue10;
+                }
+            }
+        }    
+    } 
+    
+    > .row
+    {
+        > .columns:first-child
+        {
+            float: right;
+        }
+    }
     
 }    
