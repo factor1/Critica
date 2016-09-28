@@ -4,8 +4,8 @@
 
 @mixin theme-paginator
 {
+    @include theme-section-padding;
     background-color: $theme-white;
-    padding: 25px 0px;
     text-align: center;
     font-family: $Proxima;
     font-weight: 400;
@@ -13,49 +13,33 @@
     line-height: 1.5rem;
     color: $theme-navy;
 
+    .button
+    {
+        .fa
+        {
+            top: 1px;
+        }
+        
+        margin: 0px 20px;
+    }
+
     >.row.column
     {
-        line-height: 20px;
-
         > *
         {
             display: inline-block;
             vertical-align: middle;
             line-height: 1;
         }
-
+        
         > a.page
         {
-            border-radius: 50%;
-            color: $theme-navy;
-            text-align: left;
-            width: 20px;
-            height: 20px;
-            padding-top: 4px;
-            text-align: center;
-
-            &:hover
-            {
-                background-color: $theme-blue50;
-            }
-
+            padding: 0px 10px;
         }
-
+        
         > a.page.active
         {
-            background-color: $theme-blue50;
+            color: $theme-gold;
         }
-
-        > span
-        {
-            padding: 0px 5px;
-        }
-
-        .fa
-        {
-            color: $theme-navy;
-            font-size: 1.25rem;
-            line-height: 1;
-        }
-    }  
+    }    
 }

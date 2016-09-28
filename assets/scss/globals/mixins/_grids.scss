@@ -1,3 +1,57 @@
 /*----------------------------------------------------------------------------
   Grids
 ----------------------------------------------------------------------------*/
+
+@mixin theme-posts-grid
+{    
+    > .row
+    {
+        > .column
+        {
+            padding: 50px 0px 25px 0px;
+        }
+    }    
+  
+    .columns
+    {
+        padding: 0px 40px 0px 80px;
+        
+        > h2
+        {
+            &:before
+            {
+                display: none;
+            }
+        }
+        
+        > div
+        {
+            padding: 5px 0px 20px 0px;
+            
+            a
+            {
+                text-decoration: underline;
+            }
+        }
+    }
+    
+    .columns:first-child
+    {
+        height: 200px;
+        background-color: $theme-blue10;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+    
+    
+}
+
+@mixin theme-archive-grid
+{
+    background-color: $theme-white;
+    @include theme-section-padding;
+    padding-top: 40px;
+    padding-bottom: 40px;  
+    @include theme-posts-grid; 
+}    

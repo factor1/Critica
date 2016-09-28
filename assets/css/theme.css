@@ -5925,11 +5925,14 @@ section.page {
     padding: 20px;
     padding-top: 80px;
     padding-bottom: 80px;
+    padding-top: 0px;
+    padding-bottom: 0px;
     position: relative;
-    min-height: 400px;
+    height: 700px;
+    overflow: hidden;
     background-color: #081F2C;
     background-size: cover;
-    background-position: center center;
+    background-position: center bottom;
     background-repeat: no-repeat;
     color: #FFFFFF; }
     @media screen and (max-width: 39.9375em) {
@@ -5940,6 +5943,18 @@ section.page {
       text-align: center;
       position: relative;
       z-index: 2; }
+    section.page section.hero h1, section.page section.hero h2 {
+      margin-bottom: 15px; }
+      section.page section.hero h1:before, section.page section.hero h2:before {
+        display: none; }
+    section.page section.hero .button {
+      margin-top: 40px; }
+    section.page section.hero > .row > .columns {
+      line-height: 600px; }
+      section.page section.hero > .row > .columns > div {
+        display: inline-block;
+        line-height: 1;
+        vertical-align: middle; }
     section.page section.hero:before {
       content: ' ';
       display: block;
@@ -5954,6 +5969,8 @@ section.page {
     section.page section.hero > .row {
       position: relative;
       z-index: 2; }
+    section.page section.hero:before {
+      opacity: 0.5; }
   section.page section.breadcrumbs .columns {
     padding: 10px; }
   section.page section.breadcrumbs a, section.page section.breadcrumbs span {
@@ -6375,40 +6392,61 @@ section.page {
   section.page section.comments {
     background-color: #E6EDF1; }
   section.page section.pagination {
+    padding: 20px;
+    padding-top: 80px;
+    padding-bottom: 80px;
     background-color: #FFFFFF;
-    padding: 25px 0px;
     text-align: center;
     font-family: "Proxima Nova", sans-serif;
     font-weight: 400;
     font-size: 1.25rem;
     line-height: 1.5rem;
     color: #081F2C; }
-    section.page section.pagination > .row.column, section.page section.pagination > .row.columns {
-      line-height: 20px; }
-      section.page section.pagination > .row.column > *, section.page section.pagination > .row.columns > * {
-        display: inline-block;
-        vertical-align: middle;
-        line-height: 1; }
-      section.page section.pagination > .row.column > a.page, section.page section.pagination > .row.columns > a.page {
-        border-radius: 50%;
-        color: #081F2C;
-        text-align: left;
-        width: 20px;
-        height: 20px;
-        padding-top: 4px;
-        text-align: center; }
-        section.page section.pagination > .row.column > a.page:hover, section.page section.pagination > .row.columns > a.page:hover {
-          background-color: #83A7B8; }
-      section.page section.pagination > .row.column > a.page.active, section.page section.pagination > .row.columns > a.page.active {
-        background-color: #83A7B8; }
-      section.page section.pagination > .row.column > span, section.page section.pagination > .row.columns > span {
-        padding: 0px 5px; }
-      section.page section.pagination > .row.column .fa, section.page section.pagination > .row.columns .fa {
-        color: #081F2C;
-        font-size: 1.25rem;
-        line-height: 1; }
+    @media screen and (max-width: 39.9375em) {
+      section.page section.pagination {
+        padding-top: 40px;
+        padding-bottom: 40px; } }
+    section.page section.pagination .button {
+      margin: 0px 20px; }
+      section.page section.pagination .button .fa {
+        top: 1px; }
+    section.page section.pagination > .row.column > *, section.page section.pagination > .row.columns > * {
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1; }
+    section.page section.pagination > .row.column > a.page, section.page section.pagination > .row.columns > a.page {
+      padding: 0px 10px; }
+    section.page section.pagination > .row.column > a.page.active, section.page section.pagination > .row.columns > a.page.active {
+      color: #C5B783; }
   section.page section.block[data-href] {
     cursor: pointer; }
+  section.page section.archive-grid {
+    background-color: #FFFFFF;
+    padding: 20px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    padding-top: 40px;
+    padding-bottom: 40px; }
+    @media screen and (max-width: 39.9375em) {
+      section.page section.archive-grid {
+        padding-top: 40px;
+        padding-bottom: 40px; } }
+    section.page section.archive-grid > .row > .column, section.page section.archive-grid > .row > .columns {
+      padding: 50px 0px 25px 0px; }
+    section.page section.archive-grid .columns {
+      padding: 0px 40px 0px 80px; }
+      section.page section.archive-grid .columns > h2:before {
+        display: none; }
+      section.page section.archive-grid .columns > div {
+        padding: 5px 0px 20px 0px; }
+        section.page section.archive-grid .columns > div a {
+          text-decoration: underline; }
+    section.page section.archive-grid .columns:first-child {
+      height: 200px;
+      background-color: #E6EDF1;
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat; }
 
 /*----------------------------------------------------------------------------
     Comments
@@ -6474,11 +6512,14 @@ section.page {
   padding: 20px;
   padding-top: 80px;
   padding-bottom: 80px;
+  padding-top: 0px;
+  padding-bottom: 0px;
   position: relative;
-  min-height: 400px;
+  height: 700px;
+  overflow: hidden;
   background-color: #081F2C;
   background-size: cover;
-  background-position: center center;
+  background-position: center bottom;
   background-repeat: no-repeat;
   color: #FFFFFF;
   padding: 20px;
@@ -6496,6 +6537,18 @@ section.page {
     text-align: center;
     position: relative;
     z-index: 2; }
+  .home section.hero-slider section h1, .home section.hero-slider section h2 {
+    margin-bottom: 15px; }
+    .home section.hero-slider section h1:before, .home section.hero-slider section h2:before {
+      display: none; }
+  .home section.hero-slider section .button {
+    margin-top: 40px; }
+  .home section.hero-slider section > .row > .columns {
+    line-height: 600px; }
+    .home section.hero-slider section > .row > .columns > div {
+      display: inline-block;
+      line-height: 1;
+      vertical-align: middle; }
   .home section.hero-slider section:before {
     content: ' ';
     display: block;
@@ -6510,6 +6563,8 @@ section.page {
   .home section.hero-slider section > .row {
     position: relative;
     z-index: 2; }
+  .home section.hero-slider section:before {
+    opacity: 0.5; }
   @media screen and (max-width: 39.9375em) {
     .home section.hero-slider section {
       padding-top: 40px;
@@ -6804,6 +6859,65 @@ section.page.interior-b.book section.testimonials {
     text-align: center;
     padding: 20px 0px;
     margin-bottom: 80px; }
+
+/*------------------------------------------------------------------------------
+  Interior C - Archives
+------------------------------------------------------------------------------*/
+.page.interior-c section.post-filters {
+  padding: 20px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #074F71;
+  color: #FFFFFF; }
+  @media screen and (max-width: 39.9375em) {
+    .page.interior-c section.post-filters {
+      padding-top: 40px;
+      padding-bottom: 40px; } }
+  .page.interior-c section.post-filters > .row {
+    max-width: 800px; }
+    .page.interior-c section.post-filters > .row > .columns {
+      padding: 0px 20px; }
+  .page.interior-c section.post-filters .dropdown {
+    position: relative; }
+    .page.interior-c section.post-filters .dropdown > span {
+      display: block;
+      color: #C5B783;
+      border: 1px solid #C5B783;
+      padding: 10px 15px;
+      text-transform: uppercase;
+      position: relative;
+      font-size: 14px;
+      line-height: 20px;
+      letter-spacing: 1px; }
+      .page.interior-c section.post-filters .dropdown > span:after {
+        display: block;
+        position: absolute;
+        top: 9px;
+        right: 15px;
+        font-size: 38px;
+        content: "";
+        font-family: "FontAwesome"; }
+    .page.interior-c section.post-filters .dropdown ul {
+      display: none;
+      background-color: #FFFFFF;
+      list-style-type: none;
+      position: absolute;
+      top: 100%;
+      left: 0%;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      border: 1px solid #C5B783; }
+      .page.interior-c section.post-filters .dropdown ul > li > a {
+        display: block;
+        padding: 10px 15px;
+        color: #C5B783; }
+        .page.interior-c section.post-filters .dropdown ul > li > a:hover {
+          background-color: #E6EDF1; }
+    .page.interior-c section.post-filters .dropdown:hover ul {
+      display: block; }
 
 /*----------------------------------------------------------------------------
   Plugin Overrides

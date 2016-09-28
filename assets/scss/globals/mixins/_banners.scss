@@ -28,11 +28,14 @@
 @mixin theme-hero-banner
 {
     @include theme-section-padding;
+    padding-top: 0px;
+    padding-bottom: 0px;
     position: relative;
-    min-height: 400px;
+    height: 700px;
+    overflow: hidden;
     background-color: $theme-navy;
     background-size: cover;
-    background-position: center center;
+    background-position: center bottom;
     background-repeat: no-repeat;
     color: $theme-white;
 
@@ -44,7 +47,42 @@
 
     } // row    
     
+    h1, h2
+    {
+        margin-bottom: 15px;
+        
+        &:before
+        {
+            display: none;
+        }
+    }
+    
+    .button
+    {
+        margin-top: 40px;
+    }
+    
+    > .row
+    {
+        > .columns
+        {
+            line-height: 600px;
+            
+            > div
+            {
+                display: inline-block;
+                line-height: 1;
+                vertical-align: middle;
+            }
+        }
+    }
+    
     @include theme-banner-mask;
+    
+    &:before
+    {
+        opacity: 0.5;
+    }
     
 }
 
