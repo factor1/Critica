@@ -1,0 +1,32 @@
+/*------------------------------------------------------------------------------
+  Interior E - Contact Form Template
+------------------------------------------------------------------------------*/
+
+section.page.interior-e
+{
+    section.contact-form
+    {
+        @include theme-section-padding;
+        padding-top: 40px;
+        
+        .gform_wrapper, .gf_browser_ie.gform_wrapper
+        {
+            @include theme-gravity-form-settings;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            
+            .gform_heading
+            {
+                display: none;
+            }
+
+            .gform_footer
+            {
+                text-align: center;
+            }
+            
+        }    
+    }
+    
+}

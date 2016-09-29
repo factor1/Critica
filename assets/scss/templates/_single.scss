@@ -1,0 +1,81 @@
+/*------------------------------------------------------------------------------
+  Single Template
+------------------------------------------------------------------------------*/
+
+.page.single
+{
+    
+    section.post-header
+    {
+        @include theme-section-padding;
+        padding-top: 60px;
+        padding-bottom: 0px;        
+        text-align: center;
+    }
+    
+    section.flexible-content
+    {
+        + .share-links
+        {
+            padding-top: 0px;
+            padding-bottom: 80px;
+        }
+    }
+    
+    section.share-links
+    {
+        @include theme-section-padding;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        text-align: center;
+        
+        nav.social
+        {
+            ul
+            {
+                > li
+                {
+                    font-size: 30px;
+                    line-height: 40px;
+                    
+                    > span
+                    {
+                        display: inline-block;
+                        line-height: 1;
+                        vertical-align: middle;
+                        text-transform: uppercase;
+                        font-size: 66.66%;
+                        margin-top: 4px;
+                    }
+                    
+                    > a
+                    {
+                        width: auto;
+                        height: auto;  
+                        font-size: inherit;
+                        line-height: 1;
+                        
+                        &:before
+                        {
+                            width: auto;
+                            height: auto;                        
+                            font-size: inherit;
+                            line-height: 1;
+                        }
+                        
+                        &:hover
+                        {
+                            color: $theme-gold;
+                        }                        
+                    }
+                    
+                    + li
+                    {
+                        margin-left: 25px;
+                    }                    
+                }
+            }
+        }    
+    }
+    
+}

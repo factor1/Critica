@@ -28,8 +28,7 @@ section.page
     
     section.content
     {
-        @include theme-section-padding;
-        padding-top: 40px;
+        @include theme-content;
     }
     
     section.callout
@@ -56,7 +55,7 @@ section.page
  
     section.comments
     {
-        background-color: $theme-blue10;
+ 
     }
     
     section.pagination

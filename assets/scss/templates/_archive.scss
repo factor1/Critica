@@ -1,0 +1,92 @@
+/*------------------------------------------------------------------------------
+  Archive Template
+------------------------------------------------------------------------------*/
+
+.page.archive
+{
+    section.post-filters
+    {
+        @include theme-section-padding;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        background-color: $theme-blue;
+        color: $theme-white;
+        
+        > .row
+        {
+            max-width: 800px;
+            
+            > .columns
+            {
+                padding: 0px 20px;
+            }
+        }
+      
+        .dropdown
+        {
+            position: relative;
+            
+            > span
+            {
+                display: block;
+                color: $theme-gold;
+                border: 1px solid $theme-gold;
+                padding: 10px 15px;
+                text-transform: uppercase;
+                position: relative;
+                font-size: 14px;
+                line-height: 20px;
+                letter-spacing: 1px;
+                
+                &:after
+                {
+                    display: block;
+                    position: absolute;
+                    top: 9px;
+                    right: 15px;
+                    font-size: 38px;
+                    content: $fa-var-angle-down;
+                    font-family: $FontAwesome;
+                }
+            }
+            
+            ul
+            {
+                display: none;
+                background-color: $theme-white;
+                list-style-type: none;                
+                position: absolute;
+                top: 100%;
+                left: 0%;
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                border: 1px solid $theme-gold;
+                
+                > li
+                {
+                    > a
+                    {
+                        display: block;
+                        padding: 10px 15px;
+                        color: $theme-gold;
+                        
+                        &:hover
+                        {
+                            background-color: $theme-blue10;
+                        }
+                    }
+                }
+            }
+            
+            &:hover
+            {
+                ul
+                {
+                    display: block;
+                }
+            }
+        }
+    }
+    
+}

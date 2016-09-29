@@ -71,7 +71,8 @@
         input.button, input[type=submit]
         {
             @include theme-button-base;         
-        }
+            padding: 11px 20px 10px 20px;
+        }        
     }
     
     ul.top_label
@@ -80,10 +81,12 @@
         {
             display: inline-block;
             width: 100%;
+            margin-bottom: 10px;
         
             .gfield_label
             {
-                font-size: 12px;
+                font-size: 14px;
+                text-transform: uppercase;
                 font-weight: bold;
                 letter-spacing: 0.2em;
                 color: $theme-blue50;

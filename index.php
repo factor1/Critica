@@ -6,7 +6,7 @@
 get_header();
 
 ?>
-<section class="page interior-c">
+<section class="page archive">
 
     <?php get_template_part('parts/post-banner'); ?>
     <?php get_template_part('parts/post-filters'); ?>

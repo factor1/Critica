@@ -5789,7 +5789,8 @@ footer {
       border: 2px solid #C5B783;
       border-radius: 3px;
       text-decoration: none;
-      color: #C5B783; }
+      color: #C5B783;
+      padding: 11px 20px 10px 20px; }
       [data-whatinput='mouse'] footer .gform_wrapper .gform_footer input.button, [data-whatinput='mouse'] footer .gform_wrapper .gform_footer input[type=submit], [data-whatinput='mouse'] footer .gf_browser_ie.gform_wrapper .gform_footer input.button, [data-whatinput='mouse'] footer .gf_browser_ie.gform_wrapper .gform_footer input[type=submit] {
         outline: 0; }
       footer .gform_wrapper .gform_footer input.button > .fa, footer .gform_wrapper .gform_footer input[type=submit] > .fa, footer .gf_browser_ie.gform_wrapper .gform_footer input.button > .fa, footer .gf_browser_ie.gform_wrapper .gform_footer input[type=submit] > .fa {
@@ -5804,9 +5805,11 @@ footer {
           padding: 8px 30px 7px 30px; } }
     footer .gform_wrapper ul.top_label > li.gfield, footer .gf_browser_ie.gform_wrapper ul.top_label > li.gfield {
       display: inline-block;
-      width: 100%; }
+      width: 100%;
+      margin-bottom: 10px; }
       footer .gform_wrapper ul.top_label > li.gfield .gfield_label, footer .gf_browser_ie.gform_wrapper ul.top_label > li.gfield .gfield_label {
-        font-size: 12px;
+        font-size: 14px;
+        text-transform: uppercase;
         font-weight: bold;
         letter-spacing: 0.2em;
         color: #83A7B8;
@@ -5837,16 +5840,9 @@ footer {
       color: #C5B783; }
     footer .gform_wrapper .gform_heading, footer .gf_browser_ie.gform_wrapper .gform_heading {
       display: none; }
-    footer .gform_wrapper .gform_footer input.button, footer .gform_wrapper .gform_footer input[type=submit], footer .gf_browser_ie.gform_wrapper .gform_footer input.button, footer .gf_browser_ie.gform_wrapper .gform_footer input[type=submit] {
-      padding: 11px 20px 10px 20px; }
-    footer .gform_wrapper ul.top_label > li.gfield, footer .gf_browser_ie.gform_wrapper ul.top_label > li.gfield {
-      margin-bottom: 10px; }
-      footer .gform_wrapper ul.top_label > li.gfield .gfield_label, footer .gf_browser_ie.gform_wrapper ul.top_label > li.gfield .gfield_label {
-        font-size: 14px;
-        text-transform: uppercase; }
-      footer .gform_wrapper ul.top_label > li.gfield input, footer .gform_wrapper ul.top_label > li.gfield textarea, footer .gf_browser_ie.gform_wrapper ul.top_label > li.gfield input, footer .gf_browser_ie.gform_wrapper ul.top_label > li.gfield textarea {
-        background-color: #20617f;
-        color: #E6EDF1; }
+    footer .gform_wrapper ul.top_label > li.gfield input, footer .gform_wrapper ul.top_label > li.gfield textarea, footer .gf_browser_ie.gform_wrapper ul.top_label > li.gfield input, footer .gf_browser_ie.gform_wrapper ul.top_label > li.gfield textarea {
+      background-color: #20617f;
+      color: #E6EDF1; }
   footer > .row > .columns:first-child {
     float: right; }
 
@@ -5856,57 +5852,51 @@ footer {
 section.page {
   min-height: 450px; }
   section.page section.page-title {
-    position: relative;
-    min-height: 150px;
     padding: 20px;
     padding-top: 80px;
     padding-bottom: 80px;
-    padding-top: 100px;
-    padding-bottom: 100px;
-    background-color: #074F71;
-    color: #FFFFFF;
-    background-image: none;
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat; }
+    padding-bottom: 40px;
+    text-align: center; }
     @media screen and (max-width: 39.9375em) {
       section.page section.page-title {
         padding-top: 40px;
         padding-bottom: 40px; } }
-    section.page section.page-title > .row > .columns > h1 {
-      color: #FFFFFF;
-      text-align: center; }
-      section.page section.page-title > .row > .columns > h1:before {
-        margin-left: auto; }
-    section.page section.page-title > .row > .columns p {
-      text-align: center;
-      color: #FFFFFF; }
+    section.page section.page-title h1:before {
+      margin-left: auto; }
   section.page section.featured-image {
-    position: relative;
-    min-height: 150px;
     padding: 20px;
     padding-top: 80px;
     padding-bottom: 80px;
-    padding-top: 100px;
-    padding-bottom: 100px;
-    background-color: #074F71;
-    color: #FFFFFF;
-    background-image: none;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    position: relative;
+    height: 700px;
+    overflow: hidden;
+    background-color: #081F2C;
     background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat; }
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    color: #FFFFFF; }
     @media screen and (max-width: 39.9375em) {
       section.page section.featured-image {
         padding-top: 40px;
         padding-bottom: 40px; } }
-    section.page section.featured-image > .row > .columns > h1 {
-      color: #FFFFFF;
-      text-align: center; }
-      section.page section.featured-image > .row > .columns > h1:before {
-        margin-left: auto; }
-    section.page section.featured-image > .row > .columns p {
+    section.page section.featured-image > .row {
       text-align: center;
-      color: #FFFFFF; }
+      position: relative;
+      z-index: 2; }
+    section.page section.featured-image h1, section.page section.featured-image h2 {
+      margin-bottom: 15px; }
+      section.page section.featured-image h1:before, section.page section.featured-image h2:before {
+        display: none; }
+    section.page section.featured-image .button {
+      margin-top: 40px; }
+    section.page section.featured-image > .row > .columns {
+      line-height: 600px; }
+      section.page section.featured-image > .row > .columns > div {
+        display: inline-block;
+        line-height: 1;
+        vertical-align: middle; }
     section.page section.featured-image:before {
       content: ' ';
       display: block;
@@ -5921,6 +5911,8 @@ section.page {
     section.page section.featured-image > .row {
       position: relative;
       z-index: 2; }
+    section.page section.featured-image:before {
+      opacity: 0.5; }
   section.page section.hero {
     padding: 20px;
     padding-top: 80px;
@@ -5990,11 +5982,36 @@ section.page {
     padding: 20px;
     padding-top: 80px;
     padding-bottom: 80px;
-    padding-top: 40px; }
+    padding-top: 0px;
+    padding-bottom: 0px; }
     @media screen and (max-width: 39.9375em) {
       section.page section.content {
         padding-top: 40px;
         padding-bottom: 40px; } }
+    @media screen and (max-width: 39.9375em) {
+      section.page section.content {
+        padding: 10px 20px; } }
+    section.page section.content h1, section.page section.content h2 {
+      text-align: center;
+      margin-bottom: 25px; }
+      section.page section.content h1:before, section.page section.content h2:before {
+        margin-left: auto; }
+    section.page section.content blockquote, section.page section.content blockquote > p {
+      width: auto;
+      max-width: 100%;
+      font-family: "Times New Roman", sans-serif;
+      font-size: 30px;
+      line-height: 32px;
+      font-weight: 400;
+      font-style: italic;
+      color: #074F71;
+      padding: 0;
+      margin: auto;
+      border: 0; }
+    section.page section.content p {
+      max-width: 620px;
+      margin-left: auto;
+      margin-right: auto; }
   section.page section.callout {
     padding: 20px;
     padding-top: 80px;
@@ -6011,8 +6028,8 @@ section.page {
     padding: 20px;
     padding-top: 80px;
     padding-bottom: 80px;
-    padding-top: 40px;
-    padding-bottom: 40px; }
+    padding-top: 0px;
+    padding-bottom: 0px; }
     section.page section.flexible-content .container {
       position: relative;
       width: 100%;
@@ -6385,12 +6402,24 @@ section.page {
       margin-bottom: 25px; }
       section.page section.flexible-content h1:before, section.page section.flexible-content h2:before {
         margin-left: auto; }
+    section.page section.flexible-content blockquote, section.page section.flexible-content blockquote > p {
+      width: auto;
+      max-width: 100%;
+      font-family: "Times New Roman", sans-serif;
+      font-size: 30px;
+      line-height: 32px;
+      font-weight: 400;
+      font-style: italic;
+      color: #074F71;
+      padding: 0;
+      margin: auto;
+      border: 0; }
     section.page section.flexible-content p {
       max-width: 620px;
       margin-left: auto;
       margin-right: auto; }
-  section.page section.comments {
-    background-color: #E6EDF1; }
+    section.page section.flexible-content .container + .container {
+      padding-top: 0px; }
   section.page section.pagination {
     padding: 20px;
     padding-top: 80px;
@@ -6664,6 +6693,120 @@ section.page {
         margin-top: 60px; }
 
 /*------------------------------------------------------------------------------
+  Archive Template
+------------------------------------------------------------------------------*/
+.page.archive section.post-filters {
+  padding: 20px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #074F71;
+  color: #FFFFFF; }
+  @media screen and (max-width: 39.9375em) {
+    .page.archive section.post-filters {
+      padding-top: 40px;
+      padding-bottom: 40px; } }
+  .page.archive section.post-filters > .row {
+    max-width: 800px; }
+    .page.archive section.post-filters > .row > .columns {
+      padding: 0px 20px; }
+  .page.archive section.post-filters .dropdown {
+    position: relative; }
+    .page.archive section.post-filters .dropdown > span {
+      display: block;
+      color: #C5B783;
+      border: 1px solid #C5B783;
+      padding: 10px 15px;
+      text-transform: uppercase;
+      position: relative;
+      font-size: 14px;
+      line-height: 20px;
+      letter-spacing: 1px; }
+      .page.archive section.post-filters .dropdown > span:after {
+        display: block;
+        position: absolute;
+        top: 9px;
+        right: 15px;
+        font-size: 38px;
+        content: "";
+        font-family: "FontAwesome"; }
+    .page.archive section.post-filters .dropdown ul {
+      display: none;
+      background-color: #FFFFFF;
+      list-style-type: none;
+      position: absolute;
+      top: 100%;
+      left: 0%;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      border: 1px solid #C5B783; }
+      .page.archive section.post-filters .dropdown ul > li > a {
+        display: block;
+        padding: 10px 15px;
+        color: #C5B783; }
+        .page.archive section.post-filters .dropdown ul > li > a:hover {
+          background-color: #E6EDF1; }
+    .page.archive section.post-filters .dropdown:hover ul {
+      display: block; }
+
+/*------------------------------------------------------------------------------
+  Single Template
+------------------------------------------------------------------------------*/
+.page.single section.post-header {
+  padding: 20px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  padding-top: 60px;
+  padding-bottom: 0px;
+  text-align: center; }
+  @media screen and (max-width: 39.9375em) {
+    .page.single section.post-header {
+      padding-top: 40px;
+      padding-bottom: 40px; } }
+
+.page.single section.flexible-content + .share-links {
+  padding-top: 0px;
+  padding-bottom: 80px; }
+
+.page.single section.share-links {
+  padding: 20px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center; }
+  @media screen and (max-width: 39.9375em) {
+    .page.single section.share-links {
+      padding-top: 40px;
+      padding-bottom: 40px; } }
+  .page.single section.share-links nav.social ul > li {
+    font-size: 30px;
+    line-height: 40px; }
+    .page.single section.share-links nav.social ul > li > span {
+      display: inline-block;
+      line-height: 1;
+      vertical-align: middle;
+      text-transform: uppercase;
+      font-size: 66.66%;
+      margin-top: 4px; }
+    .page.single section.share-links nav.social ul > li > a {
+      width: auto;
+      height: auto;
+      font-size: inherit;
+      line-height: 1; }
+      .page.single section.share-links nav.social ul > li > a:before {
+        width: auto;
+        height: auto;
+        font-size: inherit;
+        line-height: 1; }
+      .page.single section.share-links nav.social ul > li > a:hover {
+        color: #C5B783; }
+    .page.single section.share-links nav.social ul > li + li {
+      margin-left: 25px; }
+
+/*------------------------------------------------------------------------------
   Login Page Template
 ------------------------------------------------------------------------------*/
 body.login {
@@ -6836,63 +6979,129 @@ section.page.interior-b.book section.testimonials {
     margin-bottom: 80px; }
 
 /*------------------------------------------------------------------------------
-  Interior C - Archives
+  Interior E - Contact Form Template
 ------------------------------------------------------------------------------*/
-.page.interior-c section.post-filters {
+section.page.interior-e section.contact-form {
   padding: 20px;
   padding-top: 80px;
   padding-bottom: 80px;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  background-color: #074F71;
-  color: #FFFFFF; }
+  padding-top: 40px; }
   @media screen and (max-width: 39.9375em) {
-    .page.interior-c section.post-filters {
+    section.page.interior-e section.contact-form {
       padding-top: 40px;
       padding-bottom: 40px; } }
-  .page.interior-c section.post-filters > .row {
-    max-width: 800px; }
-    .page.interior-c section.post-filters > .row > .columns {
-      padding: 0px 20px; }
-  .page.interior-c section.post-filters .dropdown {
-    position: relative; }
-    .page.interior-c section.post-filters .dropdown > span {
-      display: block;
-      color: #C5B783;
-      border: 1px solid #C5B783;
-      padding: 10px 15px;
+  section.page.interior-e section.contact-form .gform_wrapper, section.page.interior-e section.contact-form .gf_browser_ie.gform_wrapper {
+    margin: 0;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto; }
+    section.page.interior-e section.contact-form .gform_wrapper > form *::-webkit-input-placeholder, section.page.interior-e section.contact-form .gf_browser_ie.gform_wrapper > form *::-webkit-input-placeholder {
+      font-family: "Proxima Nova", sans-serif;
+      font-size: 1rem;
+      font-weight: 400;
+      color: #FFFFFF;
+      line-height: 1;
+      text-transform: uppercase; }
+    section.page.interior-e section.contact-form .gform_wrapper > form *:-moz-placeholder, section.page.interior-e section.contact-form .gf_browser_ie.gform_wrapper > form *:-moz-placeholder {
+      font-family: "Proxima Nova", sans-serif;
+      font-size: 1rem;
+      font-weight: 400;
+      color: #FFFFFF;
+      line-height: 1;
+      text-transform: uppercase; }
+    section.page.interior-e section.contact-form .gform_wrapper > form *::-moz-placeholder, section.page.interior-e section.contact-form .gf_browser_ie.gform_wrapper > form *::-moz-placeholder {
+      font-family: "Proxima Nova", sans-serif;
+      font-size: 1rem;
+      font-weight: 400;
+      color: #FFFFFF;
+      line-height: 1;
+      text-transform: uppercase; }
+    section.page.interior-e section.contact-form .gform_wrapper > form *:-ms-input-placeholder, section.page.interior-e section.contact-form .gf_browser_ie.gform_wrapper > form *:-ms-input-placeholder {
+      font-family: "Proxima Nova", sans-serif;
+      font-size: 1rem;
+      font-weight: 400;
+      color: #FFFFFF;
+      line-height: 1;
+      text-transform: uppercase; }
+    section.page.interior-e section.contact-form .gform_wrapper .gform_footer input.button, section.page.interior-e section.contact-form .gform_wrapper .gform_footer input[type=submit], section.page.interior-e section.contact-form .gf_browser_ie.gform_wrapper .gform_footer input.button, section.page.interior-e section.contact-form .gf_browser_ie.gform_wrapper .gform_footer input[type=submit] {
+      display: inline-block;
+      text-align: center;
+      line-height: 1;
+      cursor: pointer;
+      -webkit-appearance: none;
+      transition: background-color 0.25s ease-out, color 0.25s ease-out;
+      vertical-align: middle;
+      border: 1px solid transparent;
+      border-radius: 0;
+      padding: 0.85em 1em;
+      margin: 0 0 1rem 0;
+      font-size: 0.9rem;
+      font-family: "Proxima Nova", sans-serif;
+      font-size: 1rem;
+      font-weight: bold;
+      line-height: 1;
+      letter-spacing: 0.2em;
+      text-align: center;
       text-transform: uppercase;
-      position: relative;
-      font-size: 14px;
-      line-height: 20px;
-      letter-spacing: 1px; }
-      .page.interior-c section.post-filters .dropdown > span:after {
-        display: block;
-        position: absolute;
-        top: 9px;
-        right: 15px;
-        font-size: 38px;
-        content: "";
-        font-family: "FontAwesome"; }
-    .page.interior-c section.post-filters .dropdown ul {
-      display: none;
-      background-color: #FFFFFF;
-      list-style-type: none;
-      position: absolute;
-      top: 100%;
-      left: 0%;
-      margin: 0;
-      padding: 0;
+      margin: auto;
+      padding: 11px 40px 10px 40px;
+      background-color: transparent;
+      border: 2px solid #C5B783;
+      border-radius: 3px;
+      text-decoration: none;
+      color: #C5B783;
+      padding: 11px 20px 10px 20px; }
+      [data-whatinput='mouse'] section.page.interior-e section.contact-form .gform_wrapper .gform_footer input.button, [data-whatinput='mouse'] section.page.interior-e section.contact-form .gform_wrapper .gform_footer input[type=submit], [data-whatinput='mouse'] section.page.interior-e section.contact-form .gf_browser_ie.gform_wrapper .gform_footer input.button, [data-whatinput='mouse'] section.page.interior-e section.contact-form .gf_browser_ie.gform_wrapper .gform_footer input[type=submit] {
+        outline: 0; }
+      section.page.interior-e section.contact-form .gform_wrapper .gform_footer input.button > .fa, section.page.interior-e section.contact-form .gform_wrapper .gform_footer input[type=submit] > .fa, section.page.interior-e section.contact-form .gf_browser_ie.gform_wrapper .gform_footer input.button > .fa, section.page.interior-e section.contact-form .gf_browser_ie.gform_wrapper .gform_footer input[type=submit] > .fa {
+        margin-left: 5px;
+        position: relative;
+        top: 0px; }
+      section.page.interior-e section.contact-form .gform_wrapper .gform_footer input.button:hover, section.page.interior-e section.contact-form .gform_wrapper .gform_footer input[type=submit]:hover, section.page.interior-e section.contact-form .gf_browser_ie.gform_wrapper .gform_footer input.button:hover, section.page.interior-e section.contact-form .gf_browser_ie.gform_wrapper .gform_footer input[type=submit]:hover {
+        background-color: #C5B783;
+        color: #FFFFFF; }
+      @media screen and (max-width: 39.9375em) {
+        section.page.interior-e section.contact-form .gform_wrapper .gform_footer input.button, section.page.interior-e section.contact-form .gform_wrapper .gform_footer input[type=submit], section.page.interior-e section.contact-form .gf_browser_ie.gform_wrapper .gform_footer input.button, section.page.interior-e section.contact-form .gf_browser_ie.gform_wrapper .gform_footer input[type=submit] {
+          padding: 8px 30px 7px 30px; } }
+    section.page.interior-e section.contact-form .gform_wrapper ul.top_label > li.gfield, section.page.interior-e section.contact-form .gf_browser_ie.gform_wrapper ul.top_label > li.gfield {
+      display: inline-block;
       width: 100%;
-      border: 1px solid #C5B783; }
-      .page.interior-c section.post-filters .dropdown ul > li > a {
-        display: block;
-        padding: 10px 15px;
-        color: #C5B783; }
-        .page.interior-c section.post-filters .dropdown ul > li > a:hover {
-          background-color: #E6EDF1; }
-    .page.interior-c section.post-filters .dropdown:hover ul {
-      display: block; }
+      margin-bottom: 10px; }
+      section.page.interior-e section.contact-form .gform_wrapper ul.top_label > li.gfield .gfield_label, section.page.interior-e section.contact-form .gf_browser_ie.gform_wrapper ul.top_label > li.gfield .gfield_label {
+        font-size: 14px;
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: 0.2em;
+        color: #83A7B8;
+        margin: 0; }
+        section.page.interior-e section.contact-form .gform_wrapper ul.top_label > li.gfield .gfield_label + .ginput_container, section.page.interior-e section.contact-form .gf_browser_ie.gform_wrapper ul.top_label > li.gfield .gfield_label + .ginput_container {
+          margin: auto; }
+      section.page.interior-e section.contact-form .gform_wrapper ul.top_label > li.gfield input, section.page.interior-e section.contact-form .gform_wrapper ul.top_label > li.gfield textarea, section.page.interior-e section.contact-form .gf_browser_ie.gform_wrapper ul.top_label > li.gfield input, section.page.interior-e section.contact-form .gf_browser_ie.gform_wrapper ul.top_label > li.gfield textarea {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+        background-color: #E6EDF1;
+        border: 1px solid transparent;
+        margin: auto; }
+    section.page.interior-e section.contact-form .gform_wrapper ul.top_label > li.gfield.gfield_error, section.page.interior-e section.contact-form .gf_browser_ie.gform_wrapper ul.top_label > li.gfield.gfield_error {
+      width: 100%;
+      background-color: transparent;
+      border: 0px;
+      margin: 0 !important; }
+      section.page.interior-e section.contact-form .gform_wrapper ul.top_label > li.gfield.gfield_error input, section.page.interior-e section.contact-form .gf_browser_ie.gform_wrapper ul.top_label > li.gfield.gfield_error input {
+        width: 100%; }
+    section.page.interior-e section.contact-form .gform_wrapper div.validation_error, section.page.interior-e section.contact-form .gf_browser_ie.gform_wrapper div.validation_error {
+      font-size: inherit;
+      padding: 20px;
+      line-height: 1.6; }
+    section.page.interior-e section.contact-form .gform_wrapper div.validation_message, section.page.interior-e section.contact-form .gf_browser_ie.gform_wrapper div.validation_message {
+      color: #C5B783; }
+    section.page.interior-e section.contact-form .gform_wrapper .gform_confirmation_wrapper, section.page.interior-e section.contact-form .gf_browser_ie.gform_wrapper .gform_confirmation_wrapper {
+      color: #C5B783; }
+    section.page.interior-e section.contact-form .gform_wrapper .gform_heading, section.page.interior-e section.contact-form .gf_browser_ie.gform_wrapper .gform_heading {
+      display: none; }
+    section.page.interior-e section.contact-form .gform_wrapper .gform_footer, section.page.interior-e section.contact-form .gf_browser_ie.gform_wrapper .gform_footer {
+      text-align: center; }
 
 /*----------------------------------------------------------------------------
   Plugin Overrides
