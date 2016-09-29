@@ -4,7 +4,11 @@
 *
 */
 
-// Pull last featured post to remain constant
+// Shouldn't occur but if main query missing, bail
+if(!isset($wp_query)) {
+    return;
+}
+
 $featured = get_posts([
     'post_type' => get_query_var('post_type'),
     'post_status' => 'publish',
@@ -19,6 +23,12 @@ $featured_post = ($featured) ? $featured[0] : null;
 if(!$featured_post) {
     return;
 }
+
+// Filter the featured from the posts if present
+$wp_query->posts = array_filter($wp_query->posts,function($post) use($featured_post) {
+    return $post->ID != $featured_post->ID;
+});
+
 
 ?>
 <section class="hero dark"<?php echo get_theme_background_image_style(get_featured_image_url('full',$featured_post)); ?>>

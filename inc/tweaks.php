@@ -153,3 +153,11 @@ add_action('wp_head',function() {
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
     <?php
 });
+
+// Add localized script for ajax tokens
+add_action( 'wp_enqueue_scripts', function() {
+    wp_localize_script('prelude-js',THEME_SLUG.'_ajax',[
+        'url' => admin_url( 'admin-ajax.php' ),
+        'nonce' => wp_create_nonce( THEME_SLUG ),
+    ]);
+} );

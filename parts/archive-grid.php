@@ -82,6 +82,7 @@ if(!$blocks) {
     </div>
     <?php } ?>
 
+    <?php get_template_part('parts/pagination'); ?>
+
 </section>
 
-<?php get_template_part('parts/pagination'); ?>

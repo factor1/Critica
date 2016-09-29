@@ -155,8 +155,18 @@
 
     section
     {
-        @include theme-hero-banner;
         @include theme-section-padding;
+        
+        position: relative;
+        min-height: 400px;
+        background-color: $theme-navy;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        color: $theme-white;
+  
+        @include theme-banner-mask;
+
         height: 100%;
         line-height: 540px;
         text-align: center;
@@ -164,6 +174,9 @@
 
         > .row
         {
+            text-align: center;
+            position: relative;
+            z-index: 2;        
             margin: auto;
             display: inline-block;
             line-height: 1;

@@ -6512,19 +6512,13 @@ section.page {
   padding: 20px;
   padding-top: 80px;
   padding-bottom: 80px;
-  padding-top: 0px;
-  padding-bottom: 0px;
   position: relative;
-  height: 700px;
-  overflow: hidden;
+  min-height: 400px;
   background-color: #081F2C;
   background-size: cover;
-  background-position: center bottom;
+  background-position: center center;
   background-repeat: no-repeat;
   color: #FFFFFF;
-  padding: 20px;
-  padding-top: 80px;
-  padding-bottom: 80px;
   height: 100%;
   line-height: 540px;
   text-align: center;
@@ -6533,22 +6527,6 @@ section.page {
     .home section.hero-slider section {
       padding-top: 40px;
       padding-bottom: 40px; } }
-  .home section.hero-slider section > .row {
-    text-align: center;
-    position: relative;
-    z-index: 2; }
-  .home section.hero-slider section h1, .home section.hero-slider section h2 {
-    margin-bottom: 15px; }
-    .home section.hero-slider section h1:before, .home section.hero-slider section h2:before {
-      display: none; }
-  .home section.hero-slider section .button {
-    margin-top: 40px; }
-  .home section.hero-slider section > .row > .columns {
-    line-height: 600px; }
-    .home section.hero-slider section > .row > .columns > div {
-      display: inline-block;
-      line-height: 1;
-      vertical-align: middle; }
   .home section.hero-slider section:before {
     content: ' ';
     display: block;
@@ -6563,13 +6541,10 @@ section.page {
   .home section.hero-slider section > .row {
     position: relative;
     z-index: 2; }
-  .home section.hero-slider section:before {
-    opacity: 0.5; }
-  @media screen and (max-width: 39.9375em) {
-    .home section.hero-slider section {
-      padding-top: 40px;
-      padding-bottom: 40px; } }
   .home section.hero-slider section > .row {
+    text-align: center;
+    position: relative;
+    z-index: 2;
     margin: auto;
     display: inline-block;
     line-height: 1;
