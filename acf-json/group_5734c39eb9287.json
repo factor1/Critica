@@ -618,18 +618,6 @@
         ],
         [
             {
-                "param": "page_template",
-                "operator": "==",
-                "value": "page-interior-b-bios.php"
-            },
-            {
-                "param": "post_type",
-                "operator": "==",
-                "value": "page"
-            }
-        ],
-        [
-            {
                 "param": "post_type",
                 "operator": "==",
                 "value": "post"
@@ -646,5 +634,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1475167001
+    "modified": 1475175087
 }

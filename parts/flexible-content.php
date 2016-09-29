@@ -1,7 +1,7 @@
 <?php if( have_rows('flexible_content') ): ?>
 <section class="flexible-content">
     <div class="row">
-        <div class="small-centered small-24 medium-20 large-16 columns">
+        <div class="small-centered small-24 medium-20 large-18 columns">
             <?php
 
                 while( have_rows('flexible_content') ): the_row();

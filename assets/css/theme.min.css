@@ -5911,8 +5911,6 @@ section.page {
     section.page section.featured-image > .row {
       position: relative;
       z-index: 2; }
-    section.page section.featured-image:before {
-      opacity: 0.5; }
   section.page section.hero {
     padding: 20px;
     padding-top: 80px;
@@ -5961,8 +5959,6 @@ section.page {
     section.page section.hero > .row {
       position: relative;
       z-index: 2; }
-    section.page section.hero:before {
-      opacity: 0.5; }
   section.page section.breadcrumbs .columns {
     padding: 10px; }
   section.page section.breadcrumbs a, section.page section.breadcrumbs span {
@@ -6642,6 +6638,9 @@ section.page {
     .home section.featured-post {
       padding-top: 40px;
       padding-bottom: 40px; } }
+  .home section.featured-post > .row {
+    padding-left: 80px;
+    padding-right: 80px; }
   .home section.featured-post .columns > h3 {
     margin-bottom: 20px; }
   .home section.featured-post .columns > p:last-child {
@@ -6765,6 +6764,10 @@ section.page {
     .page.single section.post-header {
       padding-top: 40px;
       padding-bottom: 40px; } }
+  .page.single section.post-header .author a {
+    text-decoration: underline; }
+  .page.single section.post-header + .share-links {
+    display: none; }
 
 .page.single section.flexible-content + .share-links {
   padding-top: 0px;
@@ -6789,8 +6792,8 @@ section.page {
       line-height: 1;
       vertical-align: middle;
       text-transform: uppercase;
-      font-size: 66.66%;
-      margin-top: 4px; }
+      font-size: 50%;
+      margin-top: 5px; }
     .page.single section.share-links nav.social ul > li > a {
       width: auto;
       height: auto;
@@ -6927,7 +6930,7 @@ section.page.interior-b.bios section.bios-grid {
   padding: 20px;
   padding-top: 80px;
   padding-bottom: 80px;
-  padding-top: 0px; }
+  padding-top: 40px; }
   @media screen and (max-width: 39.9375em) {
     section.page.interior-b.bios section.bios-grid {
       padding-top: 40px;
@@ -6961,12 +6964,16 @@ section.page.interior-b.book section.flexible-content {
   section.page.interior-b.book section.flexible-content p {
     margin-bottom: 30px; }
 
+section.page.interior-b.book section.flexible-content.blue {
+  background-color: #E6EDF1; }
+
 section.page.interior-b.book section.testimonials {
   padding: 20px;
   padding-top: 80px;
   padding-bottom: 80px;
   padding-top: 0px;
-  padding-bottom: 20px; }
+  padding-bottom: 20px;
+  background-color: #E6EDF1; }
   @media screen and (max-width: 39.9375em) {
     section.page.interior-b.book section.testimonials {
       padding-top: 40px;

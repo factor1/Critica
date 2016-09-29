@@ -26,7 +26,7 @@ if($section['button_type'] === 'internal' && is_object($section['button_post']))
 <section class="featured-statement">
     <div class="row">
         <div class="small-24 columns">
-            <h1 class="text-center"><?php echo nl2br(esc_html($section['heading'])); ?></h1>
+            <h1 class="text-center"><?php echo get_sanitized_heading($section['heading']); ?></h1>
             <div>
                 <?php echo apply_filters('the_content',$section['content']); ?>
             </div>

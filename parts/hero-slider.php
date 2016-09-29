@@ -53,7 +53,7 @@ $slides = array_filter(array_map(function($slide) {
                 <div class="row columns">
                     <?php if($slide['heading']) { ?>
                     <h1>
-                        <?php echo nl2br(esc_html($slide['heading'])); ?>
+                        <?php echo get_sanitized_heading($slide['heading']); ?>
                     </h1>
                     <?php } ?>
                     <div>

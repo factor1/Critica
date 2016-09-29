@@ -14,6 +14,12 @@
     {
         @include theme-section-padding;
         
+        > .row
+        {
+            padding-left: 80px;
+            padding-right: 80px;
+        }
+        
         .columns
         {            
             > h3

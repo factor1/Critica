@@ -13,7 +13,7 @@ get_header();
         <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
         <article id="post-<?php the_ID(); ?>" class="post">
 
-            <?php get_template_part('parts/flexible-content'); ?>
+            <?php get_template_part('parts/page-title'); ?>
             <?php get_template_part('parts/bios-grid'); ?>
             <?php get_template_part('parts/callout'); ?>
 

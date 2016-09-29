@@ -28,7 +28,7 @@ if($section['button_type'] === 'internal' && is_object($section['button_post']))
         <div class="large-12 columns dark">
             <div>
                 <h2>
-                    <?php echo nl2br(esc_html($section['content'])); ?>
+                    <?php echo get_sanitized_heading($section['content']); ?>
                 </h2>
                 <?php if($section['button_url'] && $section['button_text']) { ?>
                 <p>

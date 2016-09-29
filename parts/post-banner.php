@@ -40,7 +40,7 @@ $wp_query->posts = array_filter($wp_query->posts,function($post) use($featured_p
                 <h1><?php echo get_the_title($featured_post); ?></h1>
 
                 <?php if($subtitle=get_field('subtitle',$featured_post->ID)) { ?>
-                <h2><?php echo nl2br(esc_html($subtitle)); ?></h2>
+                <h2><?php echo get_sanitized_heading($subtitle); ?></h2>
                 <?php } ?>
 
                 <p>

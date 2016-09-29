@@ -120,3 +120,8 @@ require __DIR__ . '/inc/acf.php';
 * Load added post functions
 */
 require __DIR__ . '/inc/posts.php';
+
+/**
+* Load added formatting functions
+*/
+require __DIR__ . '/inc/formatting.php';

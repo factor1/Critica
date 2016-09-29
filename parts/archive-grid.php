@@ -52,7 +52,7 @@ if(!$blocks) {
                 <div class="large-16 columns">
 
                     <h2>
-                        <?php echo nl2br(esc_html($block['title'])); ?>
+                        <?php echo get_sanitized_heading($block['title']); ?>
                     </h2>
 
                     <?php if($block['author']) { ?>

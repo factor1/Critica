@@ -15,7 +15,6 @@ get_header();
 
             <?php get_template_part('parts/flexible-content'); ?>
             <?php get_template_part('parts/callout-purchase'); ?>
-            <?php get_template_part('parts/flexible-content-2'); ?>
             <?php get_template_part('parts/testimonials'); ?>
 
         </article>

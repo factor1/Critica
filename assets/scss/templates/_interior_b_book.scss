@@ -38,11 +38,17 @@ section.page.interior-b.book
         }
     }
     
+    section.flexible-content.blue
+    {
+        background-color: $theme-blue10;
+    }
+    
     section.testimonials
     {
         @include theme-section-padding;
         padding-top: 0px;
         padding-bottom: 20px;
+        background-color: $theme-blue10;
                
         h2
         {
