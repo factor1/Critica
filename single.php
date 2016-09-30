@@ -13,7 +13,14 @@ get_header();
 
     <?php get_template_part("parts/featured-image"); ?>
     <?php get_template_part("parts/post-header"); ?>
-    <?php get_template_part("parts/flexible-content"); ?>
+    <section class="flexible-content">
+    <div class="row">
+        <div class="small-centered small-24 medium-20 large-18 columns">
+		<?php the_content(); ?>
+        </div>
+    </div>
+    </section>
+    
     <?php get_template_part("parts/share-links"); ?>
     <?php get_template_part("parts/comments"); ?>
 
