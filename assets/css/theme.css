@@ -6913,6 +6913,90 @@ section.page {
       margin-left: 0px; } }
 
 /*------------------------------------------------------------------------------
+  Error 404 Template
+------------------------------------------------------------------------------*/
+section.page.error-404 {
+  background-color: #FFFFFF;
+  padding: 20px;
+  padding-top: 80px;
+  padding-bottom: 80px; }
+  @media screen and (max-width: 39.9375em) {
+    section.page.error-404 {
+      padding-top: 40px;
+      padding-bottom: 40px; } }
+  section.page.error-404 > .row > form *::-webkit-input-placeholder {
+    font-family: "Proxima Nova", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #FFFFFF;
+    line-height: 1;
+    text-transform: uppercase; }
+  section.page.error-404 > .row > form *:-moz-placeholder {
+    font-family: "Proxima Nova", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #FFFFFF;
+    line-height: 1;
+    text-transform: uppercase; }
+  section.page.error-404 > .row > form *::-moz-placeholder {
+    font-family: "Proxima Nova", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #FFFFFF;
+    line-height: 1;
+    text-transform: uppercase; }
+  section.page.error-404 > .row > form *:-ms-input-placeholder {
+    font-family: "Proxima Nova", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #FFFFFF;
+    line-height: 1;
+    text-transform: uppercase; }
+  section.page.error-404 > .row > form input.search-field {
+    width: 100%;
+    height: auto; }
+  section.page.error-404 > .row > form input.search-submit {
+    display: inline-block;
+    text-align: center;
+    line-height: 1;
+    cursor: pointer;
+    -webkit-appearance: none;
+    transition: background-color 0.25s ease-out, color 0.25s ease-out;
+    vertical-align: middle;
+    border: 1px solid transparent;
+    border-radius: 0;
+    padding: 0.85em 1em;
+    margin: 0 0 1rem 0;
+    font-size: 0.9rem;
+    font-family: "Proxima Nova", sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 1;
+    letter-spacing: 0.2em;
+    text-align: center;
+    text-transform: uppercase;
+    margin: auto;
+    padding: 11px 40px 10px 40px;
+    background-color: transparent;
+    border: 2px solid #C5B783;
+    border-radius: 3px;
+    text-decoration: none;
+    color: #C5B783; }
+    [data-whatinput='mouse'] section.page.error-404 > .row > form input.search-submit {
+      outline: 0; }
+    section.page.error-404 > .row > form input.search-submit > .fa {
+      margin-left: 5px;
+      position: relative;
+      top: 0px; }
+    section.page.error-404 > .row > form input.search-submit:hover {
+      background-color: #C5B783;
+      color: #FFFFFF; }
+    @media screen and (max-width: 39.9375em) {
+      section.page.error-404 > .row > form input.search-submit {
+        padding: 16px 30px 15px 30px;
+        font-size: 1.25rem; } }
+
+/*------------------------------------------------------------------------------
   Login Page Template
 ------------------------------------------------------------------------------*/
 body.login {
