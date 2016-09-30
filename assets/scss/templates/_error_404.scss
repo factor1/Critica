@@ -1,0 +1,29 @@
+/*------------------------------------------------------------------------------
+  Error 404 Template
+------------------------------------------------------------------------------*/   
+
+section.page.error-404
+{
+    background-color: $theme-white;
+    @include theme-section-padding;
+    
+    > .row
+    {
+        > form
+        {
+            @include theme-form-placeholder;
+            
+            input.search-field
+            {
+                width: 100%;
+                height: auto;   
+            }
+            
+            input.search-submit
+            {
+                @include theme-button-base;             
+            }
+        }        
+    }    
+    
+} 
