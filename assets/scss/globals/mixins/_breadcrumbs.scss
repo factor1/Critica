@@ -1,0 +1,36 @@
+/*----------------------------------------------------------------------------
+  Breadcrumbs
+----------------------------------------------------------------------------*/
+
+@mixin theme-breadcrumbs
+{    
+    .columns
+    {
+        padding: 10px;
+    }
+
+    a, span
+    {
+        line-height: 1;
+        font-weight: 800;
+        color: $theme-gold;
+        text-transform: uppercase;
+        letter-spacing: .15rem;
+        text-decoration: none;
+        
+        &:hover
+        {
+            color: $theme-navy;
+        }
+    }
+    
+    a + span
+    {
+        padding: 0px 5px;
+    }
+    
+    span.breadcrumb_last
+    {
+        color: $theme-navy;
+    } 
+}

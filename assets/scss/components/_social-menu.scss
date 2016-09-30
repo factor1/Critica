@@ -1,0 +1,64 @@
+/*----------------------------------------------------------------------------
+Converts WP nav menus into social icons menu, just wrap 
+wp_nav_menu() with nav.social
+----------------------------------------------------------------------------*/
+
+nav.social
+{
+    ul
+    {
+        list-style-type: none;
+        margin: auto;
+        padding: 0;
+        line-height: 1;
+        
+        > li
+        {
+            display: inline-block;
+            line-height: 1;
+            text-align: center;
+            
+            a
+            {
+                height: 30px;
+                width: 30px;
+                font-weight: 600;            
+                display: inline-block;
+                line-height: 30px;
+                color: $theme-blue50;
+                vertical-align: middle;
+                overflow: hidden;
+                
+                &:before
+                {
+                    display: inline-block;
+                    line-height: 18px;
+                    width: 18px;
+                    height: 18px;
+                    text-align: center;
+                    font-family: 'FontAwesome';
+                    font-size: 18px;
+                    color: inherit;
+                    vertical-align: middle;
+                    margin: auto;
+                    content: $fa-var-external-link;
+                    overflow: hidden;
+                }
+                
+                &:hover
+                {
+                    color: $theme-white;
+                }
+            }
+            
+            + li
+            {
+                margin-left: 10px;
+            }
+            
+            @include theme-social-link-icons;
+            
+        } // li
+        
+    } // ul
+} // nav  

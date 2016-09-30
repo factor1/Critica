@@ -1,0 +1,144 @@
+/*----------------------------------------------------------------------------
+  Forms
+----------------------------------------------------------------------------*/
+
+@mixin theme-form-placeholder-settings
+{
+    font-family: $Proxima;
+    font-size: 1rem;
+    font-weight: 400;
+    color: $theme-white;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+@mixin theme-gravity-form-placeholder-settings
+{
+    @include theme-form-placeholder-settings;
+}
+
+@mixin theme-form-placeholder
+{
+    *::-webkit-input-placeholder
+    {
+        @include theme-form-placeholder-settings;
+    }
+    *:-moz-placeholder
+    {
+        @include theme-form-placeholder-settings;
+    }
+    *::-moz-placeholder
+    {
+        @include theme-form-placeholder-settings;
+    }
+    *:-ms-input-placeholder
+    {
+        @include theme-form-placeholder-settings;
+    }
+}
+
+@mixin theme-gravity-form-placeholder
+{
+    *::-webkit-input-placeholder
+    {
+        @include theme-gravity-form-placeholder-settings;
+    }
+    *:-moz-placeholder
+    {
+        @include theme-gravity-form-placeholder-settings;
+    }
+    *::-moz-placeholder
+    {
+        @include theme-gravity-form-placeholder-settings;
+    }
+    *:-ms-input-placeholder
+    {
+        @include theme-gravity-form-placeholder-settings;
+    }
+}
+
+@mixin theme-gravity-form-settings
+{
+    margin: 0;
+    
+    > form
+    {
+        @include theme-gravity-form-placeholder;
+    } 
+    
+    .gform_footer
+    {        
+        input.button, input[type=submit]
+        {
+            @include theme-button-base;         
+            padding: 11px 20px 10px 20px;
+        }        
+    }
+    
+    ul.top_label
+    {
+        > li.gfield
+        {
+            display: inline-block;
+            width: 100%;
+            margin-bottom: 10px;
+        
+            .gfield_label
+            {
+                font-size: 14px;
+                text-transform: uppercase;
+                font-weight: bold;
+                letter-spacing: 0.2em;
+                color: $theme-blue50;
+                margin: 0;
+                
+                + .ginput_container
+                {
+                    margin: auto;
+                }
+            }
+
+            input, textarea
+            {
+                width: 100%;
+                height: auto;
+                padding: 10px;
+                background-color: $theme-blue10;
+                border: 1px solid transparent;
+                margin: auto;
+            }
+        } //li
+
+        > li.gfield.gfield_error
+        {
+            width: 100%;
+            background-color: transparent;
+            border: 0px;
+            margin: 0 !important;
+
+            input
+            {
+                width: 100%;
+            }
+        } // gfield_error
+
+    } // ul     
+    
+    div.validation_error
+    {
+        font-size: inherit;
+        padding: 20px;
+        line-height: 1.6;
+    }
+    
+    div.validation_message
+    {
+        color: $theme-gold;
+    }
+
+    .gform_confirmation_wrapper
+    {
+        color: $theme-gold;
+    }     
+    
+} 

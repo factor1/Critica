@@ -1,0 +1,96 @@
+/*----------------------------------------------------------------------------
+  Icons
+----------------------------------------------------------------------------*/
+
+@mixin fa-icon
+{
+    display: inline-block;
+    font: normal normal normal #{$fa-font-size-base}/#{$fa-line-height-base} FontAwesome; // shortening font declaration
+    font-size: inherit; // can't have font-size inherit on line above, so need to override
+    text-rendering: auto; // optimizelegibility throws things off #1094
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin theme-social-link-icons
+{
+    a[href*="facebook.com"]:before
+    {
+        content: $fa-var-facebook;
+    }
+
+    a[href*="twitter.com"]:before
+    {
+        content: $fa-var-twitter;
+    }
+
+    a[href*="instagram.com"]:before
+    {
+        content: $fa-var-instagram;
+    }
+
+    a[href*="dribbble.com"]:before
+    {
+        content: $fa-var-dribbble;
+    }
+
+    a[href*="plus.google.com"]:before
+    {
+        content: $fa-var-google-plus;
+    }
+
+    a[href*="pinterest.com"]:before
+    {
+        content: $fa-var-pinterest;
+    }
+
+    a[href*="github.com"]:before
+    {
+        content: $fa-var-github;
+    }
+
+    a[href*="tumblr.com"]:before
+    {
+        content: $fa-var-tumblr;
+    }     
+
+    a[href*="youtube.com"]:before
+    {
+        content: $fa-var-youtube;
+    } 
+
+    a[href*="flickr.com"]:before
+    {
+        content: $fa-var-flickr;
+    }
+
+    a[href*="vimeo.com"]:before
+    {
+        content: $fa-var-vimeo;
+    }  
+
+    a[href*="linkedin.com"]:before
+    {
+        content: $fa-var-linkedin;
+    }
+
+    a[href*="mailto:"]:before
+    {
+        content: $fa-var-envelope;
+    }
+    
+    a[href$="/feed/"]:before
+    {
+        content: $fa-var-rss;
+    }
+    
+    a[href^="#phone"]:before
+    {
+        content: $fa-var-phone;
+    }
+    
+    a[href*="medium.com"]:before
+    {
+        content: $fa-var-medium;
+    }    
+}  

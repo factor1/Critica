@@ -1,0 +1,45 @@
+/*------------------------------------------------------------------------------
+  Pagination Mixins
+------------------------------------------------------------------------------*/
+
+@mixin theme-paginator
+{
+    @include theme-section-padding;
+    background-color: $theme-white;
+    text-align: center;
+    font-family: $Proxima;
+    font-weight: 400;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    color: $theme-navy;
+
+    .button
+    {
+        .fa
+        {
+            top: 1px;
+        }
+        
+        margin: 0px 20px;
+    }
+
+    >.row.column
+    {
+        > *
+        {
+            display: inline-block;
+            vertical-align: middle;
+            line-height: 1;
+        }
+        
+        > a.page
+        {
+            padding: 0px 10px;
+        }
+        
+        > a.page.active
+        {
+            color: $theme-gold;
+        }
+    }    
+}

@@ -1,0 +1,16 @@
+/*----------------------------------------------------------------------------
+  Sections
+----------------------------------------------------------------------------*/
+
+@mixin theme-section-padding
+{
+    padding: 20px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    
+     @include breakpoint(small down)
+    {
+        padding-top: 40px;
+        padding-bottom: 40px;                  
+    }    
+}

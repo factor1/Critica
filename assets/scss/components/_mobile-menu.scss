@@ -1,0 +1,22 @@
+/*----------------------------------------------------------------------------
+    Mobile Menu
+----------------------------------------------------------------------------*/
+
+body
+{
+    > a#nifty-nav-toggle
+    {
+        display: none;
+    }
+    
+    
+    > .nifty-panel
+    {
+        @include theme-mobile-menu;
+    }
+    
+    > .nifty-mask
+    {
+        margin-top: $theme-header-small-height;
+    }    
+}    

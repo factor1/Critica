@@ -1,0 +1,81 @@
+/*----------------------------------------------------------------------------
+  Flexible Content
+----------------------------------------------------------------------------*/
+
+@mixin theme-content
+{
+    @include theme-section-padding;
+    padding-top: 0px;
+    padding-bottom: 0px;
+
+    @include breakpoint(small down)
+    { 
+        padding: 10px 20px;
+    }
+    
+    h1, h2
+    {
+        text-align: center;
+        margin-bottom: 25px;
+        
+        &:before
+        {
+            margin-left: auto;
+        }
+    }
+    
+    blockquote, blockquote > p
+    {
+        width: auto;
+        max-width: 100%;
+        font-family: $TimesNewRoman;
+        font-size: 30px;
+        line-height: 32px;
+        font-weight: 400;
+        font-style: italic;
+        color: $theme-blue;
+        padding: 0;
+        margin: auto;
+        border: 0;
+    }
+    
+    p
+    {
+        max-width: 620px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@mixin theme-flexible-content
+{
+    @include theme-content;
+    
+    .container
+    {
+        + .container
+        {
+            padding-top: 0px;
+        }
+    }
+
+}
+
+@mixin theme-flex-video
+{
+    position: relative; 
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    height: auto;
+
+    iframe, object, embed, video
+    {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;                
+    }       
+}

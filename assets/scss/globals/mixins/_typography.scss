@@ -1,0 +1,24 @@
+/*------------------------------------------------------------------------------
+  Typography Mixins
+------------------------------------------------------------------------------*/
+
+@mixin theme-heading-rule-above
+{
+    &:before
+    {
+        display: block;
+        content: " ";
+        width: 60px;
+        height: 4px;
+        padding: 0;
+        margin: 0;
+        margin-right: auto;
+        margin-bottom: 40px;
+        background-color: $theme-gold;
+        
+        @include breakpoint(small down)
+        {
+            height: 6px;
+        }        
+    }    
+}
