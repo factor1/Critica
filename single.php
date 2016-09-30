@@ -16,7 +16,11 @@ get_header();
     <section class="flexible-content">
     <div class="row">
         <div class="small-centered small-24 medium-20 large-18 columns">
-		<?php the_content(); ?>
+	        
+		<?php if ( have_posts() ) {
+			while ( have_posts() ): 
+			the_content();
+			end while; endif; ?>
         </div>
     </div>
     </section>
