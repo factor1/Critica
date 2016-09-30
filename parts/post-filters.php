@@ -13,7 +13,7 @@ $authors = get_users([
 ?>
 <section class="post-filters dark">
     <div class="row">
-        <div class="small-12 columns">
+        <div class="medium-12 columns">
             <div class="dropdown category" data-query-var="cat">
                 <span>Filter by Category</span>
                 <ul>
@@ -24,7 +24,7 @@ $authors = get_users([
                 </ul>
             </div>
         </div>
-         <div class="small-12 columns">
+         <div class="medium-12 columns">
             <div class="dropdown author" data-query-var="author">
                 <span>Filter by Author</span>
                 <ul>

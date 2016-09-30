@@ -7,7 +7,7 @@ body
     font-family: $Proxima;
     font-weight: 400;
     font-size: 18px;
-    line-height: 24px;
+    line-height: 1.333333;
     letter-spacing: 0em;
     color: $theme-navy80;
     padding-top: $theme-header-height;    
@@ -101,7 +101,7 @@ p
     font-family: $Proxima;
     font-weight: 400;
     font-size: 18px;
-    line-height: 24px;
+    line-height: 1.333333;
     letter-spacing: 0em;
     color: $theme-navy80;
     
@@ -117,6 +117,7 @@ p
             padding: 0px 0px 5px 0px;
         }
     }
+
 }
 
 a
@@ -163,5 +164,11 @@ nav
     body
     {
         padding-top: $theme-header-small-height;  
+        font-size: 22px;
+    }
+    
+    p
+    {
+        font-size: 22px;
     }
 }

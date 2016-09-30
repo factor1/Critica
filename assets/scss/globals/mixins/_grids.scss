@@ -44,7 +44,29 @@
         background-repeat: no-repeat;
     }
     
+    @include breakpoint(medium down)
+    {
+        .columns
+        {
+            padding: 0px 25px 0px 40px;
+        }    
+    }
     
+    @include breakpoint(small down)
+    {
+        > .row
+        {
+            > .column
+            {
+                padding: 40px 0px 25px 0px;
+            }
+        }
+    
+        .columns
+        {
+            padding: 25px 15px 25px 15px;
+        }    
+    }    
 }
 
 @mixin theme-archive-grid

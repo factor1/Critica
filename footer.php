@@ -6,7 +6,7 @@
             <div class="large-16 columns">
                 <div class="row">
 
-                    <div class="large-12 columns">
+                    <div class="medium-12 columns">
                         <h2>Purchase</h2>
                         <nav class="purchase">
                             <ul>
@@ -23,7 +23,7 @@
                         </nav>
                     </div>
 
-                    <div class="large-12 columns">
+                    <div class="medium-12 columns">
                         <h2>Newsletter</h2>
                         <div>
                             <?php if($form_id = get_field('footer_newsletter_form_id','options')) { ?>

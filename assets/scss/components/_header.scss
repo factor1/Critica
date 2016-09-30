@@ -17,7 +17,7 @@ header
         line-height: 1;
     }
     
-    @include breakpoint(medium down)
+    @include breakpoint(large down)
     { 
         .row
         {

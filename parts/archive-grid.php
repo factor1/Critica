@@ -47,9 +47,9 @@ if(!$blocks) {
 
             <div class="row">
 
-                <div class="large-8 columns"<?php echo get_theme_background_image_style($block['image']); ?>></div>
+                <div class="medium-9 large-8 columns"<?php echo get_theme_background_image_style($block['image']); ?>></div>
 
-                <div class="large-16 columns">
+                <div class="medium-15 large-16 columns">
 
                     <h2>
                         <?php echo get_sanitized_heading($block['title']); ?>

@@ -15,5 +15,10 @@
         margin-right: auto;
         margin-bottom: 40px;
         background-color: $theme-gold;
-    }   
+        
+        @include breakpoint(small down)
+        {
+            height: 6px;
+        }        
+    }    
 }

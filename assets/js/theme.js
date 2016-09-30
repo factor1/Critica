@@ -3154,6 +3154,8 @@ $("[class^=flex-basis-]").each(function(){
             $(this).closest('header').toggleClass('mobile');
             $(this).toggleClass('active');
 
+            window.scrollTo(0,0);
+
             var headerHeight = $('header').offset().top+$('header').outerHeight();
 
             $('body > .nifty-panel').css({

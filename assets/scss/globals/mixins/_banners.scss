@@ -37,15 +37,7 @@
     background-size: cover;
     background-position: center bottom;
     background-repeat: no-repeat;
-    color: $theme-white;
-
-    > .row
-    {
-        text-align: center;
-        position: relative;
-        z-index: 2;
-
-    } // row    
+    color: $theme-white;    
     
     h1, h2
     {
@@ -64,6 +56,10 @@
     
     > .row
     {
+        text-align: center;
+        position: relative;
+        z-index: 2;
+        
         > .columns
         {
             line-height: 600px;
@@ -78,6 +74,25 @@
     }
     
     @include theme-banner-mask;    
+    
+    @include breakpoint(small down)
+    { 
+        height: auto;
+        background-size: 100% auto;
+        background-position: center top;
+        padding: 0px;
+
+        > .row
+        {
+            padding-top: 250px;
+            
+            > .columns
+            {
+                line-height: 1;
+                padding: 25px 25px;
+            }
+        }
+    }    
 }
 
 @mixin theme-page-title
@@ -112,11 +127,12 @@
         {
             height: 100%;
         }
-        
+
         @include breakpoint(small down)
         { 
-
-        }       
+            height: auto;
+        }
+              
     }
     
     .slick-list, .slick-track, .slick-slide
@@ -142,6 +158,15 @@
         line-height: 540px;
         text-align: center;
         z-index: 9999;
+        
+        @include breakpoint(small down)
+        { 
+            background-size: 100% auto;
+            background-position: center top;
+            padding: 0px;
+            line-height: 1;
+            padding-top: 250px;
+        }
 
         > .row
         {
@@ -153,6 +178,13 @@
             line-height: 1;
             vertical-align: middle;
             padding: 0px 20px;
+
+            @include breakpoint(small down)
+            { 
+                vertical-align: bottom;
+                background-color: $theme-navy;
+                padding: 40px 30px 60px 30px;
+            } 
 
             > h1
             {

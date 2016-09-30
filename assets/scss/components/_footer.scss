@@ -25,6 +25,11 @@ footer
         {
             display: none;
         }
+        
+        @include breakpoint(small down)
+        {
+            margin-bottom: 25px;
+        }
     }
     
     address
@@ -62,7 +67,8 @@ footer
                 + li
                 {
                     margin-left: 30px;
-                }                
+                }
+                              
             }
         }    
     }
@@ -110,6 +116,12 @@ footer
                         opacity: 1;
                     }
                 }
+                
+                @include breakpoint(small down)
+                {
+                    display: inline-block;
+                    width: 45%;
+                }                  
             }
         }
     }
@@ -143,6 +155,19 @@ footer
         > .columns:first-child
         {
             float: right;
+        }
+        
+        @include breakpoint(medium down)
+        {
+            .columns .columns
+            {
+                padding-bottom: 80px;
+            }
+            
+            > .columns:last-child
+            {
+                padding-bottom: 60px;
+            }
         }
     }
     

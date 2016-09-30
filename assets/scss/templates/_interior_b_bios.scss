@@ -26,6 +26,11 @@ section.page.interior-b.bios
                 background-position: center center;
                 background-repeat: no-repeat;
             }
+            
+            @include breakpoint(small down)
+            {
+                padding: 0px 15px 60px 15px;
+            }
         }
     }
     

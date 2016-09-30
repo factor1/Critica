@@ -85,10 +85,29 @@
                     + li
                     {
                         margin-left: 25px;
+                        
+                        @include breakpoint(small down)
+                        {
+                            margin-left: 8px;
+                        }                        
                     }                    
                 }
+
+                @include breakpoint(small down)
+                {
+                    > li:first-child
+                    {
+                        display: block;
+                    }
+                    
+                    > li:nth-child(2)
+                    {
+                        margin-left: 0px;
+                    }
+                }                
             }
-        }    
+        }
+        
     }
     
 }

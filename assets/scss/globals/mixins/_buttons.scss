@@ -35,7 +35,8 @@
     
     @include breakpoint(small down)
     {
-        padding: 8px 30px 7px 30px;
+        padding: 16px 30px 15px 30px;
+        font-size: 1.25rem;
     }    
 }
 
