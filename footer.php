@@ -27,7 +27,7 @@
                         <h2>Newsletter</h2>
                         <div>
                             <?php if($form_id = get_field('footer_newsletter_form_id','options')) { ?>
-                                <?php gravity_form(intval($form_id)); ?>
+                                <?php gravity_form(intval($form_id),false,false,false,null,true); ?>
                             <?php } ?>
                         </div>
                     </div>

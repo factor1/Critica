@@ -45,6 +45,18 @@
         margin-left: auto;
         margin-right: auto;
     }
+    
+    dl, ul, ol
+    {
+        max-width: 580px;
+        margin-left: auto;
+        margin-right: auto;    
+        
+        dl, ul, ol
+        {
+            margin-left: 25px;
+        }
+    }
 }
 
 @mixin theme-flexible-content
