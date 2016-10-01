@@ -129,11 +129,13 @@
         font-size: inherit;
         padding: 20px;
         line-height: 1.6;
+        color: $theme-gold;
+        border-color: $theme-gold;
     }
     
     div.validation_message
     {
-        color: $theme-gold;
+        color: $theme-blue50;
     }
 
     .gform_confirmation_wrapper

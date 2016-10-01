@@ -19,6 +19,16 @@ section.page.interior-b.bios
         {
             padding: 0px 40px;
             
+            h1, h2
+            {
+                padding-top: 30px;
+                
+                &:before
+                {
+                    display: none;
+                }
+            }
+            
             > div:first-child
             {
                 height: 400px;

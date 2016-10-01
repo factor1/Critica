@@ -20,7 +20,7 @@ get_header();
             <div class="row">
                 <div class="small-24 medium-22 large-20 small-centered columns">
                     <?php if($form_id = get_field('contact_form_id')) { ?>
-                        <?php gravity_form(intval($form_id)); ?>
+                        <?php gravity_form(intval($form_id),false,false,false,null,true); ?>
                     <?php } ?>
                 </div>
             </div>
