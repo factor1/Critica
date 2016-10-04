@@ -15,8 +15,13 @@ $heading = get_field('featured_post_heading');
             <h1><?php echo get_sanitized_heading($heading); ?></h1>
             <?php } ?>
             
+<<<<<<< HEAD
             <?php if (get_field('intro')): 
 	            the_field('intro');?>
+=======
+            <?php if (get_field('intro')): ?>
+				<img src="<?php the_field('intro');?>">
+>>>>>>> develop
 			<?php endif;?>
             
             
@@ -29,9 +34,16 @@ $heading = get_field('featured_post_heading');
             <?php endif;?>
         </div>
         <div class="large-9 columns">
+<<<<<<< HEAD
             <?php if (get_field('featured_image')): ?>
 				<img src="<?php the_field('featured_image');?>">
 			<?php endif;?>
+=======
+            <?php if(has_post_thumbnail()) {
+			the_post_thumbnail('large');
+			} else {	}
+			?>
+>>>>>>> develop
         </div>
     </div>
 </section>
