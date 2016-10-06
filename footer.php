@@ -11,13 +11,13 @@
                         <nav class="purchase">
                             <ul>
                                 <li>
-                                    <a href="http://www.amazon.com/"><img src="<?php echo esc_attr(get_stylesheet_directory_uri().'/assets/img/footer_buy_amazon.png'); ?>" alt="" title="Amazon.com" /></a>
+                                    <a href="http://amzn.to/2d3JPzM"><img src="<?php echo esc_attr(get_stylesheet_directory_uri().'/assets/img/footer_buy_amazon.png'); ?>" alt="" title="Amazon.com" /></a>
                                 </li>
                                 <li>
-                                    <a href="http://www.barnesandnoble.com/"><img src="<?php echo esc_attr(get_stylesheet_directory_uri().'/assets/img/footer_buy_barnes.png'); ?>" alt="" title="Barnes &amp; Noble" /></a>
+                                    <a href="http://bit.ly/2dxvH3N"><img src="<?php echo esc_attr(get_stylesheet_directory_uri().'/assets/img/footer_buy_barnes.png'); ?>" alt="" title="Barnes &amp; Noble" /></a>
                                 </li>
                                 <li>
-                                    <a href="http://global.oup.com/"><img src="<?php echo esc_attr(get_stylesheet_directory_uri().'/assets/img/footer_buy_oxford.png'); ?>" alt="" title="Oxford University Press" /></a>
+                                    <a href="http://bit.ly/2d8OGiv"><img src="<?php echo esc_attr(get_stylesheet_directory_uri().'/assets/img/footer_buy_oxford.png'); ?>" alt="" title="Oxford University Press" /></a>
                                 </li>
                             </ul>
                         </nav>
