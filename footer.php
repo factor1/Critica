@@ -19,6 +19,10 @@
                                 <li>
                                     <a href="http://bit.ly/2d8OGiv"><img src="<?php echo esc_attr(get_stylesheet_directory_uri().'/assets/img/footer_buy_oxford.png'); ?>" alt="" title="Oxford University Press" /></a>
                                 </li>
+                                
+                                <li>
+                                    <a href="http://bit.ly/2dffrlH"><img src="<?php echo esc_attr(get_stylesheet_directory_uri().'/assets/img/footer_buy_indie.png'); ?>" width="110px" alt="" title="IndieBound" /></a>
+                                </li>
                             </ul>
                         </nav>
                     </div>
