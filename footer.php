@@ -55,8 +55,10 @@
                     <?php wp_nav_menu( [ 'theme_location' => 'social' ] ); ?>
                 </nav>
                 <div class="copyright">
+	                <?php wp_nav_menu( [ 'theme_location' => 'footer' ] ); ?>
+	                
                     <p><?php echo get_field('footer_copyright_text','option'); ?></p>
-                    <p>Site design by <a href="#">Rule29</a>.</p>
+                    <p>Site design by <a href="http://rule29.com">Rule29</a>.</p>
                 </div>
             </div>
 

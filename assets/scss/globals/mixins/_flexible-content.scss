@@ -5,7 +5,7 @@
 @mixin theme-content
 {
     @include theme-section-padding;
-    padding-top: 0px;
+    padding-top: 80px;
     padding-bottom: 0px;
 
     @include breakpoint(small down)
