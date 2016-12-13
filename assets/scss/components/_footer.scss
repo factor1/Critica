@@ -171,4 +171,32 @@ footer
         }
     }
     
+    
+    .copyright .menu {
+	    ul  {
+		    list-style: none;
+		    margin: 10px 0;
+		    padding: 0;
+		    
+		    li {
+			    margin: 0;
+			    padding: 0;
+			    display: inline-block;
+			    
+			    a
+				{
+                color: $theme-blue50;
+                padding: 5px 10px;
+                font-size: 12px;
+                
+	                &:hover
+	                {
+	                    color: $theme-white;
+	                }
+            	}
+
+		    }
+		    }
+    }
+    
 }    
