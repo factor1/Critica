@@ -13,10 +13,14 @@
     <meta name="robots" content="noindex, nofollow" />
     <?php } ?>
     <?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
-    <?php wp_head(); ?>
     
     <script src="https://use.typekit.net/dte5akk.js"></script>
 	<script>try{Typekit.load({ async: true });}catch(e){}</script>
+	
+	
+    <?php wp_head(); ?>
+    
+    
 </head>
 <body <?php body_class(); ?>>
 
