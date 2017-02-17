@@ -174,13 +174,14 @@ gulp.task('scss',function() {
         .pipe(gulp.dest(assets.css));
 
     if(app.production) {
-        task.pipe(cssnano({
-            discardComments: {
-                removeAll: true
-            }
-        }));
-    }
-
+            task.pipe(cssnano({
+                discardComments: {
+                    removeAll: true
+                },
+        minifyFontValues: false
+            }));
+        }
+        
     return task
         .pipe(rename({
             extname: '.min.css'
