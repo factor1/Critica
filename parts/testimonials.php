@@ -21,4 +21,12 @@ if(!$testimonials) {
             <?php } ?>
         </div>
     </div>
+
+    <?php if (true == get_field( 'show_button' )) : ?>
+    <div class="row">
+        <div class="small-centered small-24 text-center">
+            <a class="button" href="<?php echo get_acf_link('button_internal', 'button_external'); ?>"><?php the_field( 'button_text' ); ?></a>
+        </div>
+    </div>
+    <?php endif; ?>
 </section>

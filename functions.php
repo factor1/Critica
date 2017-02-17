@@ -89,6 +89,28 @@ function gform_tabindexer( $tab_index, $form = false ) {
     return GFCommon::$tab_index >= $starting_index ? GFCommon::$tab_index : $starting_index;
 }
 
+/**
+ * A function to grab fields from Advanced Custom Fields.
+ *
+ * Use case: Using ACF you need to link to either an internal page in the site or an external URL
+ *
+ * @param string         $field1  The name of the first field to check for
+ * @param string         $field2  The name of the second field to check for
+ * @param string|integer $page_id Alternate page ID, if the fields being checked are from a different page
+ */
+function get_acf_link( $field1, $field2, $page_id = null ) {
+    $field1 = get_field( $field1, $page_id ) ? get_field( $field1, $page_id ) : get_sub_field( $field1, $page_id );
+    $field2 = get_field( $field2, $page_id ) ? get_field( $field2, $page_id ) : get_sub_field( $field2, $page_id );
+
+    if ( $field1 ) {
+        return esc_url( $field1 );
+    }
+
+    if ( $field2 ) {
+        return esc_url( $field2 );
+    }
+}
+
 
 /**
 * Load autoloader
