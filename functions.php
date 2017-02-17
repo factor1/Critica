@@ -111,6 +111,17 @@ function get_acf_link( $field1, $field2, $page_id = null ) {
     }
 }
 
+/**
+ * Debug some piece of code.
+ * Remove the die; if you want the rest of the code on the page to execute
+ *
+ * @param $code The code that you want to check.
+ */
+function debug( $code ) {
+    printf( '<pre>%s</pre>', print_r( $code, true ) );
+    die;
+}
+
 
 /**
 * Load autoloader
