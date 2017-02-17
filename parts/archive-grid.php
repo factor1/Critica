@@ -57,7 +57,7 @@ if(!$blocks) {
 
                     <?php if($block['author']) { ?>
                     <div>
-                        Posted by <a href="<?php echo esc_attr(get_author_posts_url( $block['author']->ID, $block['author']->user_nicename )); ?>"><?php echo esc_html($block['author']->user_nicename); ?></a>
+                        Posted by <?php the_author_link(); ?>
                         <?php if($block['categories']) { ?>
                         in <?php echo implode(', ',$block['categories']); ?>
                         <?php } ?>

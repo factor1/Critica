@@ -30,7 +30,9 @@ $authors = get_users([
                 <ul>
                     <li><a href="#" data-value="">All Authors</a></li>
                     <?php foreach($authors as $author) { ?>
-                    <li><a href="#" data-value="<?php echo $author->ID; ?>"><?php echo esc_html($author->user_nicename); ?></a></li>
+                        <?php if ('0' !== count_user_posts($author->ID)) : ?>
+                            <li><a href="#" data-value="<?php echo $author->ID; ?>"><?php echo esc_html($author->display_name); ?></a></li>
+                        <?php endif; ?>
                     <?php } ?>
                 </ul>
             </div>

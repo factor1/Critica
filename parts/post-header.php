@@ -21,7 +21,7 @@ $categories = array_map(function($term) {
 
     <?php if($author) { ?>
     <div class="author">
-        Posted by <a href="<?php echo esc_attr(get_author_posts_url( $author->ID, $author->user_nicename )); ?>"><?php echo esc_html($author->user_nicename); ?></a>
+        Posted by <?php the_author_link(); ?>
         <?php if($categories) { ?>
         in <?php echo implode(', ',$categories); ?>
         <?php } ?>
