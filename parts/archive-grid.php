@@ -19,7 +19,7 @@ $blocks = array_map(function($post) {
     $block['image'] = get_featured_image_url('large',$post);
     $block['title'] = get_the_title($post);
     $block['date'] = get_the_time( 'F jS, Y', $post);
-    $block['content'] = apply_filters( 'get_the_excerpt', $post->post_excerpt );
+    $block['content'] = get_post_excerpt($post->ID);
     $block['learn_more_url'] = get_permalink($post);
     $block['author'] = get_user_by('id',$post->post_author);
 
