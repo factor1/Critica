@@ -57,7 +57,7 @@ if(!$blocks) {
 
                     <?php if($block['author']) { ?>
                     <div>
-                        Posted by <?php the_author_link(); ?>
+                        Posted by <?php echo $block['author']->data->display_name; ?>
                         <?php if($block['categories']) { ?>
                         in <?php echo implode(', ',$block['categories']); ?>
                         <?php } ?>
