@@ -95,6 +95,72 @@
     }    
 }
 
+@mixin theme-our-services-banner
+{
+    position: relative;
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    @include breakpoint(large down)
+    {
+        border-top: 1px solid $theme-white;
+        text-align: center;
+    }
+
+    .columns
+    {
+        padding: 0 25px;
+
+        &.left
+        {
+            h1
+            {
+                font-style: italic;
+                line-height: 1;
+                font-size: 42px;
+                
+                &::before
+                {
+                    display: none;
+                }
+            }
+
+            p
+            {
+                text-align: left;
+                font-size: 1.25em;
+                padding-top: 10px;
+                margin-bottom: 0;
+
+                @include breakpoint(large down)
+                {
+                    text-align: center;
+                    font-size: 1em;
+                }
+            }
+        }
+
+        &.right
+        {
+            @include breakpoint(large up)
+            {
+                .vert-center
+                {
+                    position: absolute;
+                    top: 50%;
+                    transform: translate3d(0, -50%, 0);
+                    padding: 0;
+                }
+            }
+
+            @include breakpoint(large down)
+            {
+                width: 100%;
+            }
+        }
+    }
+}
+
 @mixin theme-page-title
 {
     @include theme-section-padding;
