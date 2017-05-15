@@ -101,7 +101,7 @@
     padding-top: 40px;
     padding-bottom: 40px;
 
-    @include breakpoint(large down)
+    @include breakpoint(medium down)
     {
         border-top: 1px solid $theme-white;
         text-align: center;
@@ -132,7 +132,7 @@
                 padding-top: 10px;
                 margin-bottom: 0;
 
-                @include breakpoint(large down)
+                @include breakpoint(medium down)
                 {
                     text-align: center;
                     font-size: 1em;
@@ -153,7 +153,7 @@
                 }
             }
 
-            @include breakpoint(large down)
+            @include breakpoint(medium down)
             {
                 width: 100%;
             }
