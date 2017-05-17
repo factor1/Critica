@@ -29,7 +29,7 @@ function get_post_excerpt($p) {
         $text = strip_shortcodes( $text );
         $text = str_replace(']]>', ']]&gt;', apply_filters( 'the_content', $text ));
         $excerpt_length = apply_filters( 'excerpt_length', 55 );
-        $excerpt_more = apply_filters( 'excerpt_more', ' ' . '[&hellip;]' );
+        $excerpt_more = apply_filters( 'excerpt_more', ' ' . '[&hellip;]', $p->ID );
         $text = wp_trim_words( $text, $excerpt_length, $excerpt_more );
     }
 

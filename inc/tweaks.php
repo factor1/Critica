@@ -15,17 +15,17 @@ function prelude_page_excerpt() {
 add_action( 'init', 'prelude_page_excerpt' );
 
 // Customize the default read more link
-function prelude_continue_reading_link() {
-    return ' <a href="' . get_permalink() . '">' .
+function prelude_continue_reading_link( $id ) {
+    return ' <a href="' . get_permalink( $id ) . '">' .
      __( 'Continue reading <span class="meta-nav">&rarr;</span>', THEME_SLUG ) .
      '</a>';
 }
 
 // Customize the default ellipsis (...)
-function prelude_auto_excerpt_more( $more ) {
-    return '&hellip;' . prelude_continue_reading_link();
+function prelude_auto_excerpt_more( $more, $id = null ) {
+    return '&hellip;' . prelude_continue_reading_link( $id );
 }
-add_filter( 'excerpt_more', 'prelude_auto_excerpt_more' );
+add_filter( 'excerpt_more', 'prelude_auto_excerpt_more', 10, 2 );
 
 // Remove the default gallery styling
 function prelude_remove_gallery_css( $css ) {
