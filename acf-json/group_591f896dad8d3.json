@@ -1,0 +1,264 @@
+{
+    "key": "group_591f896dad8d3",
+    "title": "Topic Post",
+    "fields": [
+        {
+            "key": "field_591f8a33eca97",
+            "label": "About the Issue",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_591f8a8eeca98",
+            "label": "Written Content",
+            "name": "about_content",
+            "type": "wysiwyg",
+            "instructions": "Enter the written content of the \"About the Issue\" section of this Topic Post.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
+            "key": "field_591f8abceca99",
+            "label": "Author Name",
+            "name": "about_author_name",
+            "type": "text",
+            "instructions": "Enter the author's name for this Topic Post's \"About the Issue\" section.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_591f8b0beca9a",
+            "label": "Author Title",
+            "name": "about_author_title",
+            "type": "text",
+            "instructions": "Enter the author's title for this Topic Post's \"About the Issue\" section.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_591f8b43eca9b",
+            "label": "Expert Opinions",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_591f8b54eca9c",
+            "label": "Expert Opinions",
+            "name": "expert_opinions",
+            "type": "repeater",
+            "instructions": "Add new Expert Opinions for this Topic Post.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "row",
+            "button_label": "Add Opinion",
+            "sub_fields": [
+                {
+                    "key": "field_591f8b84eca9d",
+                    "label": "Written Content",
+                    "name": "content",
+                    "type": "wysiwyg",
+                    "instructions": "Enter the written content of this Expert Opinion.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0
+                },
+                {
+                    "key": "field_591f8bbeeca9e",
+                    "label": "Author Name",
+                    "name": "author_name",
+                    "type": "text",
+                    "instructions": "Enter the author's name for this Expert Opinion.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_591f8bdbeca9f",
+                    "label": "Author Title",
+                    "name": "author_title",
+                    "type": "text",
+                    "instructions": "Enter the author's title for this Expert Opinion.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                }
+            ]
+        },
+        {
+            "key": "field_591f8bfbecaa0",
+            "label": "Thoughts from Critica",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_591f8c14ecaa2",
+            "label": "Written Content",
+            "name": "thoughts_content",
+            "type": "wysiwyg",
+            "instructions": "Enter the written content of the \"Thoughts from Critica\" section of this Topic Post.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
+            "key": "field_591f8c20ecaa3",
+            "label": "Author Name",
+            "name": "thoughts_author_name",
+            "type": "text",
+            "instructions": "Enter the author's name for this Topic Post's \"Thoughts from Critica\" section.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_591f8c26ecaa4",
+            "label": "Author Title",
+            "name": "thoughts_author_title",
+            "type": "text",
+            "instructions": "Enter the author's title for this Topic Post's \"Thoughts from Critica\" section.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "topic_post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1495241332
+}

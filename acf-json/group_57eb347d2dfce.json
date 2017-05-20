@@ -31,6 +31,13 @@
                 "operator": "==",
                 "value": "post"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "topic_post"
+            }
         ]
     ],
     "menu_order": 0,
@@ -41,5 +48,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1475032238
+    "modified": 1495240110
 }
