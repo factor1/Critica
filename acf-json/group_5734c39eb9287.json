@@ -30,7 +30,7 @@
                             "label": "Background Color",
                             "name": "background_color",
                             "type": "color_picker",
-                            "instructions": "Pick a background color. ",
+                            "instructions": "Pick a background color.",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -69,7 +69,7 @@
                             "label": "Content",
                             "name": "full_width_content",
                             "type": "wysiwyg",
-                            "instructions": "Enter the content for the full width row. ",
+                            "instructions": "Enter the content for the full width row.",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -80,7 +80,8 @@
                             "default_value": "",
                             "tabs": "all",
                             "toolbar": "full",
-                            "media_upload": 1
+                            "media_upload": 1,
+                            "delay": 0
                         }
                     ],
                     "min": "",
@@ -136,7 +137,7 @@
                             "label": "Left Content",
                             "name": "fifty_left_content",
                             "type": "wysiwyg",
-                            "instructions": "Enter the content for the left side of the row. ",
+                            "instructions": "Enter the content for the left side of the row.",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -147,14 +148,15 @@
                             "default_value": "",
                             "tabs": "all",
                             "toolbar": "full",
-                            "media_upload": 1
+                            "media_upload": 1,
+                            "delay": 0
                         },
                         {
                             "key": "field_5734ce8aea8c9",
                             "label": "Right Content",
                             "name": "fifty_right_content",
                             "type": "wysiwyg",
-                            "instructions": "Enter the content for the right side of the row. ",
+                            "instructions": "Enter the content for the right side of the row.",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -165,7 +167,8 @@
                             "default_value": "",
                             "tabs": "all",
                             "toolbar": "full",
-                            "media_upload": 1
+                            "media_upload": 1,
+                            "delay": 0
                         }
                     ],
                     "min": "",
@@ -182,7 +185,7 @@
                             "label": "Background Color",
                             "name": "background_color",
                             "type": "color_picker",
-                            "instructions": "Choose a background color. ",
+                            "instructions": "Choose a background color.",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -197,7 +200,7 @@
                             "label": "Background Image",
                             "name": "background_image",
                             "type": "image",
-                            "instructions": "Upload or choose a background image. ",
+                            "instructions": "Upload or choose a background image.",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -221,7 +224,7 @@
                             "label": "Image Placement",
                             "name": "image_placement",
                             "type": "radio",
-                            "instructions": "Pick if the image should be to the left or the right of the content. ",
+                            "instructions": "Pick if the image should be to the left or the right of the content.",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -236,14 +239,16 @@
                             "other_choice": 0,
                             "save_other_choice": 0,
                             "default_value": "",
-                            "layout": "horizontal"
+                            "layout": "horizontal",
+                            "allow_null": 0,
+                            "return_format": "value"
                         },
                         {
                             "key": "field_5734d1e05740a",
                             "label": "Image",
                             "name": "fifty_image",
                             "type": "image",
-                            "instructions": "Upload or choose an image. ",
+                            "instructions": "Upload or choose an image.",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -267,7 +272,7 @@
                             "label": "Content",
                             "name": "fifty_content",
                             "type": "wysiwyg",
-                            "instructions": "Enter the content for the row. ",
+                            "instructions": "Enter the content for the row.",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -278,7 +283,8 @@
                             "default_value": "",
                             "tabs": "all",
                             "toolbar": "full",
-                            "media_upload": 1
+                            "media_upload": 1,
+                            "delay": 0
                         }
                     ],
                     "min": "",
@@ -295,7 +301,7 @@
                             "label": "Background Color",
                             "name": "background_color",
                             "type": "color_picker",
-                            "instructions": "Choose a background color for the row. ",
+                            "instructions": "Choose a background color for the row.",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -334,7 +340,7 @@
                             "label": "Image Placement",
                             "name": "image_placement",
                             "type": "radio",
-                            "instructions": "Choose if the image should be to the left or right of the content. ",
+                            "instructions": "Choose if the image should be to the left or right of the content.",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -349,14 +355,16 @@
                             "other_choice": 0,
                             "save_other_choice": 0,
                             "default_value": "",
-                            "layout": "horizontal"
+                            "layout": "horizontal",
+                            "allow_null": 0,
+                            "return_format": "value"
                         },
                         {
                             "key": "field_5734d5c1ae2d0",
                             "label": "Image",
                             "name": "image",
                             "type": "image",
-                            "instructions": "Upload or choose an image. ",
+                            "instructions": "Upload or choose an image.",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -380,7 +388,7 @@
                             "label": "Content",
                             "name": "content",
                             "type": "wysiwyg",
-                            "instructions": "Enter the content for the row. ",
+                            "instructions": "Enter the content for the row.",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -391,7 +399,8 @@
                             "default_value": "",
                             "tabs": "all",
                             "toolbar": "full",
-                            "media_upload": 1
+                            "media_upload": 1,
+                            "delay": 0
                         }
                     ],
                     "min": "",
@@ -408,7 +417,7 @@
                             "label": "Background Color",
                             "name": "background_color",
                             "type": "color_picker",
-                            "instructions": "Add a background color. ",
+                            "instructions": "Add a background color.",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -458,7 +467,8 @@
                             "default_value": "",
                             "tabs": "all",
                             "toolbar": "full",
-                            "media_upload": 1
+                            "media_upload": 1,
+                            "delay": 0
                         },
                         {
                             "key": "field_5734d8ee0b026",
@@ -476,7 +486,8 @@
                             "default_value": "",
                             "tabs": "all",
                             "toolbar": "full",
-                            "media_upload": 1
+                            "media_upload": 1,
+                            "delay": 0
                         },
                         {
                             "key": "field_5734d8f60b027",
@@ -494,7 +505,8 @@
                             "default_value": "",
                             "tabs": "all",
                             "toolbar": "full",
-                            "media_upload": 1
+                            "media_upload": 1,
+                            "delay": 0
                         },
                         {
                             "key": "field_5734d9020b028",
@@ -512,7 +524,8 @@
                             "default_value": "",
                             "tabs": "all",
                             "toolbar": "full",
-                            "media_upload": 1
+                            "media_upload": 1,
+                            "delay": 0
                         }
                     ],
                     "min": "",
@@ -538,8 +551,8 @@
                                 "id": ""
                             },
                             "collapsed": "",
-                            "min": "",
-                            "max": "",
+                            "min": 0,
+                            "max": 0,
                             "layout": "row",
                             "button_label": "Add Accordion",
                             "sub_fields": [
@@ -548,7 +561,7 @@
                                     "label": "Accordion Title",
                                     "name": "accordion_title",
                                     "type": "text",
-                                    "instructions": "Enter the title for the accordion. ",
+                                    "instructions": "Enter the title for the accordion.",
                                     "required": 0,
                                     "conditional_logic": 0,
                                     "wrapper": {
@@ -569,7 +582,7 @@
                                     "label": "Accordion Content",
                                     "name": "accordion_content_editor",
                                     "type": "wysiwyg",
-                                    "instructions": "Enter accordion content. ",
+                                    "instructions": "Enter accordion content.",
                                     "required": 0,
                                     "conditional_logic": 0,
                                     "wrapper": {
@@ -580,7 +593,8 @@
                                     "default_value": "",
                                     "tabs": "all",
                                     "toolbar": "full",
-                                    "media_upload": 1
+                                    "media_upload": 1,
+                                    "delay": 0
                                 }
                             ]
                         }
@@ -627,13 +641,6 @@
                 "operator": "==",
                 "value": "page-interior-b-book.php"
             }
-        ],
-        [
-            {
-                "param": "post_type",
-                "operator": "==",
-                "value": "post"
-            }
         ]
     ],
     "menu_order": 0,
@@ -646,5 +653,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1475287433
+    "modified": 1495238711
 }
