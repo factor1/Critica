@@ -9,6 +9,11 @@
     {
         @include theme-hero-slider-banner;
     }
+
+    section.callout.our-services-banner
+    {
+        @include theme-our-services-banner;
+    }
     
     section.featured-post
     {

@@ -14,6 +14,7 @@ get_header();
         <article id="post-<?php the_ID(); ?>" class="post">
 
             <?php get_template_part('parts/hero-slider'); ?>
+            <?php get_template_part('parts/our-services-banner'); ?>
             <?php get_template_part('parts/featured-post'); ?>
             <?php get_template_part('parts/meet-the-authors'); ?>
             <?php get_template_part('parts/featured-statement'); ?>
