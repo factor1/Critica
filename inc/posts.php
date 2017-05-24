@@ -25,7 +25,7 @@ function get_post_excerpt($p) {
     $text = $raw_excerpt = $p->post_excerpt;
 
     if(!$text) {
-        $text = $p->post_content;
+        $text = $p->post_content ? $p->post_content : get_field( 'about_content', $p->ID );
         $text = strip_shortcodes( $text );
         $text = str_replace(']]>', ']]&gt;', apply_filters( 'the_content', $text ));
         $excerpt_length = apply_filters( 'excerpt_length', 55 );

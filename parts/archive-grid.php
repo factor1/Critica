@@ -19,9 +19,14 @@ $blocks = array_map(function($post) {
     $block['image'] = get_featured_image_url('large',$post);
     $block['title'] = get_the_title($post);
     $block['date'] = get_the_time( 'F jS, Y', $post);
-    $block['content'] = get_post_excerpt($post->ID);
+    $block['content'] = get_post_excerpt($post);
     $block['learn_more_url'] = get_permalink($post);
     $block['author'] = get_user_by('id',$post->post_author);
+    $block['post_type'] = get_post_type($post);
+
+    if ($block['post_type'] === TOPIC_POST_TYPE) {
+        $block['n_opinions'] = count(get_field('expert_opinions', $post));
+    }
 
     $block['categories'] = array_map(function($term) {
         return '<a href="'.esc_attr(get_term_link($term->term_id,'category')).'">'.esc_html($term->name).'</a>';
@@ -43,7 +48,7 @@ if(!$blocks) {
     <div class="row large-up-1">
 
         <?php foreach($blocks as $k => $block) { ?>
-        <div class="column">
+        <div class="column <? echo $block['post_type'] === TOPIC_POST_TYPE ? 'topic-post' : ''; ?>">
 
             <div class="row">
 
@@ -55,12 +60,16 @@ if(!$blocks) {
                         <?php echo get_sanitized_heading($block['title']); ?>
                     </h2>
 
-                    <?php if($block['author']) { ?>
+                    <?php if($block['post_type'] !== TOPIC_POST_TYPE && $block['author']) { ?>
                     <div>
                         Posted by <?php echo $block['author']->data->display_name; ?>
                         <?php if($block['categories']) { ?>
                         in <?php echo implode(', ',$block['categories']); ?>
                         <?php } ?>
+                    </div>
+                    <?php } else { ?>
+                    <div class="counts">
+                        <?php if($block['n_opinions'] > 0) echo '<span>' . $block['n_opinions'] . ' Expert Opinions</span>' ?>
                     </div>
                     <?php } ?>
 

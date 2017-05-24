@@ -4,6 +4,20 @@
 
 .page.archive
 {
+    section.hero
+    {
+        h1.topic-post::before {
+            content: 'Critica Topic: ';
+            display: inline-block;
+            font-weight: bold;
+            width: auto;
+            height: auto;
+            margin: 0 10px 0 0;
+            background-color: transparent;
+            font-style: normal;
+        }
+    }
+
     section.post-filters
     {
         @include theme-section-padding;
@@ -97,5 +111,48 @@
             }
         }
     }
-    
+
+    section.archive-grid
+    {
+        .column
+        {
+            .row
+            {
+                padding: 25px;
+            }
+
+            &.topic-post .row
+            {
+                background-color: $theme-navy;
+                border-radius: 5px;
+                color: $theme-white;
+
+                .counts
+                {
+                    margin-top: 10px;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    letter-spacing: 2px;
+                }
+
+                h2::before {
+                    content: 'Critica Topic: ';
+                    display: inline-block;
+                    font-weight: bold;
+                    width: auto;
+                    height: auto;
+                    margin: 0;
+                    background-color: transparent;
+                    font-style: normal;
+                }
+
+                h2, 
+                p,
+                a:not(.button)
+                {
+                    color: $theme-white;
+                }
+            }
+        }
+    }
 }

@@ -37,7 +37,7 @@ $wp_query->posts = array_filter($wp_query->posts,function($post) use($featured_p
 
             <div>
 
-                <h1><?php echo get_the_title($featured_post); ?></h1>
+                <h1 class="<?php echo get_post_type() === TOPIC_POST_TYPE ? 'topic-post' : ''; ?>"><?php echo get_the_title($featured_post); ?></h1>
 
                 <?php if($subtitle=get_field('subtitle',$featured_post->ID)) { ?>
                 <h2><?php echo get_sanitized_heading($subtitle); ?></h2>
