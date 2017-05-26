@@ -3295,6 +3295,13 @@ $("[class^=flex-basis-]").each(function(){
             window.location.href = href;
         });
 
+        // Enable Topic Post "Continue Reading" links
+        $('.topic-post .expandable .continue-reading').on('click', function(e) {
+            e.preventDefault();
+            $(e.target.parentElement).toggleClass('expanded');
+            e.target.remove();
+        });
+
     });
 
 })(jQuery);

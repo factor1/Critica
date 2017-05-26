@@ -7024,6 +7024,92 @@ section.page {
     .page.single section.share-links nav.social ul > li:nth-child(2) {
       margin-left: 0px; } }
 
+.page.single.topic-post section.featured-image::before {
+  opacity: .7; }
+
+.page.single.topic-post section.featured-image h1 {
+  padding: 1em;
+  border-bottom: 1px solid #FFFFFF;
+  margin-bottom: 1em; }
+  .page.single.topic-post section.featured-image h1::before {
+    content: 'Critica Topic: ';
+    display: inline-block;
+    font-weight: bold;
+    width: auto;
+    height: auto;
+    margin: 0 .25em 0 0;
+    background-color: transparent;
+    font-style: normal; }
+
+.page.single.topic-post section.flexible-content {
+  padding-top: 20px; }
+  .page.single.topic-post section.flexible-content h2 {
+    position: relative;
+    padding: 0 calc(50% - 4em);
+    background-color: #FFFFFF;
+    background-clip: content-box;
+    font-weight: bold;
+    color: #83A7B8; }
+    .page.single.topic-post section.flexible-content h2::before {
+      position: absolute;
+      top: 55%;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      z-index: -1;
+      background-color: #83A7B8; }
+  .page.single.topic-post section.flexible-content p {
+    max-width: none;
+    text-align: justify;
+    font-size: .9em; }
+  .page.single.topic-post section.flexible-content .expandable:not(.expanded) article {
+    max-height: 250px;
+    overflow: hidden;
+    position: relative; }
+    .page.single.topic-post section.flexible-content .expandable:not(.expanded) article::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0) 67%, white); }
+  .page.single.topic-post section.flexible-content .expandable .continue-reading {
+    display: inline-block;
+    margin-top: .5em;
+    font-family: "Times New Roman", sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    color: #83A7B8;
+    transition: opacity .2s; }
+    .page.single.topic-post section.flexible-content .expandable .continue-reading:hover {
+      opacity: .8; }
+    .page.single.topic-post section.flexible-content .expandable .continue-reading::after {
+      content: '▾';
+      display: inline-block;
+      margin-left: .5em; }
+
+.page.single.topic-post .attribution {
+  margin-bottom: 1em;
+  text-align: right;
+  color: #83A7B8; }
+  .page.single.topic-post .attribution::before {
+    content: '';
+    display: inline-block;
+    width: 1.5em;
+    height: 1px;
+    margin-bottom: .25em;
+    margin-right: .5em;
+    background-color: #83A7B8; }
+  .page.single.topic-post .attribution .author-name {
+    font-weight: bold;
+    letter-spacing: .25px; }
+  .page.single.topic-post .attribution .author-title {
+    font-style: italic;
+    font-weight: 100;
+    letter-spacing: .5px;
+    font-size: .95em; }
+
 /*------------------------------------------------------------------------------
   Error 404 Template
 ------------------------------------------------------------------------------*/
