@@ -7024,22 +7024,27 @@ section.page {
     .page.single section.share-links nav.social ul > li:nth-child(2) {
       margin-left: 0px; } }
 
-.page.single.topic-post section.featured-image::before {
-  opacity: .7; }
-
-.page.single.topic-post section.featured-image h1 {
-  padding: 1em;
-  border-bottom: 1px solid #FFFFFF;
-  margin-bottom: 1em; }
-  .page.single.topic-post section.featured-image h1::before {
-    content: 'Critica Topic: ';
-    display: inline-block;
-    font-weight: bold;
-    width: auto;
-    height: auto;
-    margin: 0 .25em 0 0;
-    background-color: transparent;
-    font-style: normal; }
+.page.single.topic-post section.featured-image {
+  height: auto;
+  background-position: center; }
+  .page.single.topic-post section.featured-image::before {
+    opacity: .7; }
+  .page.single.topic-post section.featured-image > .row > .columns {
+    line-height: 1;
+    margin: 2em auto 4em auto; }
+  .page.single.topic-post section.featured-image h1 {
+    padding: 1em;
+    border-bottom: 1px solid #FFFFFF;
+    margin-bottom: 1em; }
+    .page.single.topic-post section.featured-image h1::before {
+      content: 'Critica Topic: ';
+      display: inline-block;
+      font-weight: bold;
+      width: auto;
+      height: auto;
+      margin: 0 .25em 0 0;
+      background-color: transparent;
+      font-style: normal; }
 
 .page.single.topic-post section.flexible-content {
   padding-top: 20px; }

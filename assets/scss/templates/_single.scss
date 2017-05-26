@@ -114,9 +114,18 @@
     {
         section.featured-image
         {
+            height: auto;
+            background-position: center;
+
             &::before
             {
                 opacity: .7;
+            }
+
+            > .row > .columns
+            {
+                line-height: 1;
+                margin: 2em auto 4em auto;
             }
 
             h1
