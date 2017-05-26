@@ -7062,18 +7062,25 @@ section.page {
     max-width: none;
     text-align: justify;
     font-size: .9em; }
-  .page.single.topic-post section.flexible-content .expandable:not(.expanded) article {
-    max-height: 250px;
+  .page.single.topic-post section.flexible-content .expandable article {
+    max-height: 10000px;
     overflow: hidden;
-    position: relative; }
-    .page.single.topic-post section.flexible-content .expandable:not(.expanded) article::after {
+    position: relative;
+    transition: max-height 1.5s ease-in; }
+    .page.single.topic-post section.flexible-content .expandable article::after {
       content: '';
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
+      opacity: 0;
+      transition: opacity .5s;
       background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0) 67%, white); }
+  .page.single.topic-post section.flexible-content .expandable:not(.expanded) article {
+    max-height: 250px; }
+    .page.single.topic-post section.flexible-content .expandable:not(.expanded) article::after {
+      opacity: 1; }
   .page.single.topic-post section.flexible-content .expandable .continue-reading {
     display: inline-block;
     margin-top: .5em;
