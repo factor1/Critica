@@ -7024,6 +7024,9 @@ section.page {
     .page.single section.share-links nav.social ul > li:nth-child(2) {
       margin-left: 0px; } }
 
+/*
+*   Styles for the Topic Post template.
+*/
 .page.single.topic-post section.featured-image {
   height: auto;
   background-position: center; }

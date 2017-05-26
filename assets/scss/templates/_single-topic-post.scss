@@ -1,0 +1,172 @@
+
+/*
+*   Styles for the Topic Post template.
+*/
+
+.page.single.topic-post
+{
+    section.featured-image
+    {
+        height: auto;
+        background-position: center;
+
+        &::before
+        {
+            opacity: .7;
+        }
+
+        > .row > .columns
+        {
+            line-height: 1;
+            margin: 2em auto 4em auto;
+        }
+
+        h1
+        {
+            padding: 1em;
+            border-bottom: 1px solid $theme-white;
+            margin-bottom: 1em;
+
+            &::before
+            {
+                content: 'Critica Topic: ';
+                display: inline-block;
+                font-weight: bold;
+                width: auto;
+                height: auto;
+                margin: 0 .25em 0 0;
+                background-color: transparent;
+                font-style: normal;
+            }
+        }
+    }
+
+    section.flexible-content
+    {
+        padding-top: 20px;
+
+        h2
+        {
+            position: relative;
+            padding: 0 calc(50% - 4em);
+            background-color: $theme-white;
+            background-clip: content-box;
+            font-weight: bold;
+            color: $theme-blue50;
+
+            &::before
+            {
+                position: absolute;
+                top: 55%;
+                left: 0;
+                width: 100%;
+                height: 1px;
+                z-index: -1;
+                background-color: $theme-blue50;
+            }
+        }
+
+        p
+        {
+            max-width: none;
+            text-align: justify;
+            font-size: .9em;
+        }
+
+        .expandable
+        {
+            
+            article
+            {
+                max-height: 10000px;
+                overflow: hidden;
+                position: relative;
+                transition: max-height 1.5s ease-in;
+
+                &::after
+                {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    opacity: 0;
+                    transition: opacity .5s;
+                    background: linear-gradient(
+                        to bottom,
+                        rgba(255, 255, 255, 0),
+                        rgba(255, 255, 255, 0) 67%,
+                        rgba(255, 255, 255, 1)
+                    );
+                }
+            }
+
+            &:not(.expanded) article
+            {
+                max-height: 250px;
+                
+                &::after
+                {
+                    opacity: 1;
+                }
+                
+            }
+
+            .continue-reading
+            {
+                display: inline-block;
+                margin-top: .5em;
+                font-family: $TimesNewRoman;
+                font-weight: bold;
+                font-style: italic;
+                color: $theme-blue50;
+                transition: opacity .2s;
+
+                &:hover
+                {
+                    opacity: .8;
+                }
+
+                &::after
+                {
+                    content: '▾';
+                    display: inline-block;
+                    margin-left: .5em;
+                }
+            }
+        }
+    }
+
+    .attribution
+    {
+        margin-bottom: 1em;
+        text-align: right;
+        color: $theme-blue50;
+
+        &::before
+        {
+            content: '';
+            display: inline-block;
+            width: 1.5em;
+            height: 1px;
+            margin-bottom: .25em;
+            margin-right: .5em;
+            background-color: $theme-blue50;
+        }
+
+        .author-name
+        {
+            font-weight: bold;
+            letter-spacing: .25px;
+        }
+
+        .author-title
+        {
+            font-style: italic;
+            font-weight: 100;
+            letter-spacing: .5px;
+            font-size: .95em;
+        }
+    }
+}
