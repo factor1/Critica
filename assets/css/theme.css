@@ -7036,9 +7036,9 @@ section.page {
     line-height: 1;
     margin: 2em auto 4em auto; }
   .page.single.topic-post section.featured-image h1 {
-    padding: 1em;
+    padding: .5em 1em;
     border-bottom: 1px solid #FFFFFF;
-    margin-bottom: 1em; }
+    margin-bottom: .5em; }
     .page.single.topic-post section.featured-image h1::before {
       content: 'Critica Topic: ';
       display: inline-block;
@@ -7050,22 +7050,36 @@ section.page {
       font-style: normal; }
 
 .page.single.topic-post section.flexible-content {
-  padding-top: 20px; }
+  padding-top: 60px;
+  padding-bottom: 60px; }
   .page.single.topic-post section.flexible-content h2 {
-    position: relative;
-    padding: 0 calc(50% - 4em);
-    background-color: #FFFFFF;
-    background-clip: content-box;
-    font-weight: bold;
-    color: #83A7B8; }
+    position: relative; }
     .page.single.topic-post section.flexible-content h2::before {
+      display: none; }
+    .page.single.topic-post section.flexible-content h2 hr {
       position: absolute;
       top: 55%;
       left: 0;
       width: 100%;
       height: 1px;
-      z-index: -1;
-      background-color: #83A7B8; }
+      margin: 0;
+      background-color: #83A7B8;
+      border: none;
+      z-index: 1; }
+    .page.single.topic-post section.flexible-content h2 span {
+      position: relative;
+      padding: 0 1em;
+      background-color: #FFFFFF;
+      font-weight: bold;
+      color: #83A7B8;
+      z-index: 2; }
+  .page.single.topic-post section.flexible-content.dark {
+    background-color: #081F2C; }
+    .page.single.topic-post section.flexible-content.dark h2 hr {
+      background-color: #FFFFFF; }
+    .page.single.topic-post section.flexible-content.dark h2 span {
+      background-color: #081F2C;
+      color: #FFFFFF; }
   .page.single.topic-post section.flexible-content p {
     max-width: none;
     text-align: justify;
@@ -7103,27 +7117,37 @@ section.page {
       content: '▾';
       display: inline-block;
       margin-left: .5em; }
-
-.page.single.topic-post .attribution {
-  margin-bottom: 1em;
-  text-align: right;
-  color: #83A7B8; }
-  .page.single.topic-post .attribution::before {
-    content: '';
-    display: inline-block;
-    width: 1.5em;
-    height: 1px;
-    margin-bottom: .25em;
-    margin-right: .5em;
-    background-color: #83A7B8; }
-  .page.single.topic-post .attribution .author-name {
-    font-weight: bold;
-    letter-spacing: .25px; }
-  .page.single.topic-post .attribution .author-title {
-    font-style: italic;
-    font-weight: 100;
-    letter-spacing: .5px;
-    font-size: .95em; }
+  .page.single.topic-post section.flexible-content .attribution {
+    text-align: right;
+    color: #83A7B8; }
+    .page.single.topic-post section.flexible-content .attribution::before {
+      content: '';
+      display: inline-block;
+      width: 1.5em;
+      height: 1px;
+      margin-bottom: .25em;
+      margin-right: .5em;
+      background-color: #83A7B8; }
+    .page.single.topic-post section.flexible-content .attribution .author-name {
+      font-weight: bold;
+      letter-spacing: .25px; }
+    .page.single.topic-post section.flexible-content .attribution .author-title {
+      font-style: italic;
+      font-weight: 100;
+      letter-spacing: .5px;
+      font-size: .95em; }
+  .page.single.topic-post section.flexible-content.dark .attribution {
+    color: #FFFFFF; }
+    .page.single.topic-post section.flexible-content.dark .attribution::before {
+      background-color: #FFFFFF; }
+  .page.single.topic-post section.flexible-content.opinions ul {
+    max-width: none;
+    margin: 0;
+    list-style: none; }
+    .page.single.topic-post section.flexible-content.opinions ul li {
+      margin-top: 2em; }
+      .page.single.topic-post section.flexible-content.opinions ul li article p {
+        text-align: left; }
 
 /*------------------------------------------------------------------------------
   Error 404 Template

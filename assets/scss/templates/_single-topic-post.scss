@@ -23,9 +23,9 @@
 
         h1
         {
-            padding: 1em;
+            padding: .5em 1em;
             border-bottom: 1px solid $theme-white;
-            margin-bottom: 1em;
+            margin-bottom: .5em;
 
             &::before
             {
@@ -43,26 +43,59 @@
 
     section.flexible-content
     {
-        padding-top: 20px;
+        padding-top: 60px;
+        padding-bottom: 60px;
 
         h2
         {
             position: relative;
-            padding: 0 calc(50% - 4em);
-            background-color: $theme-white;
-            background-clip: content-box;
-            font-weight: bold;
-            color: $theme-blue50;
 
             &::before
+            {
+                display: none;
+            }
+            
+            hr
             {
                 position: absolute;
                 top: 55%;
                 left: 0;
                 width: 100%;
                 height: 1px;
-                z-index: -1;
+                margin: 0;
                 background-color: $theme-blue50;
+                border: none;
+                z-index: 1;
+            }
+
+            span
+            {
+                position: relative;
+                padding: 0 1em;
+                background-color: $theme-white;
+                font-weight: bold;
+                color: $theme-blue50;
+                z-index: 2;
+            }
+
+        }
+
+        &.dark
+        {
+            background-color: $theme-navy;
+
+            h2
+            {
+                hr
+                {
+                    background-color: $theme-white;
+                }
+
+                span
+                {
+                    background-color: $theme-navy;
+                    color: $theme-white;
+                }
             }
         }
 
@@ -136,37 +169,63 @@
                 }
             }
         }
-    }
 
-    .attribution
-    {
-        margin-bottom: 1em;
-        text-align: right;
-        color: $theme-blue50;
-
-        &::before
+        .attribution
         {
-            content: '';
-            display: inline-block;
-            width: 1.5em;
-            height: 1px;
-            margin-bottom: .25em;
-            margin-right: .5em;
-            background-color: $theme-blue50;
+            text-align: right;
+            color: $theme-blue50;
+
+            &::before
+            {
+                content: '';
+                display: inline-block;
+                width: 1.5em;
+                height: 1px;
+                margin-bottom: .25em;
+                margin-right: .5em;
+                background-color: $theme-blue50;
+            }
+
+            .author-name
+            {
+                font-weight: bold;
+                letter-spacing: .25px;
+            }
+
+            .author-title
+            {
+                font-style: italic;
+                font-weight: 100;
+                letter-spacing: .5px;
+                font-size: .95em;
+            }
         }
 
-        .author-name
+        &.dark .attribution
         {
-            font-weight: bold;
-            letter-spacing: .25px;
+            color: $theme-white;
+
+            &::before
+            {
+                background-color: $theme-white;
+            }
         }
 
-        .author-title
+        &.opinions ul
         {
-            font-style: italic;
-            font-weight: 100;
-            letter-spacing: .5px;
-            font-size: .95em;
+            max-width: none;
+            margin: 0;
+            list-style: none;            
+
+            li
+            {
+                margin-top: 2em;
+
+                article p
+                {
+                    text-align: left;
+                }
+            }
         }
     }
 }

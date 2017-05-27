@@ -172,3 +172,8 @@ require __DIR__ . '/inc/posts.php';
 * Load added formatting functions
 */
 require __DIR__ . '/inc/formatting.php';
+
+/**
+* Load Facebook API
+*/
+require __DIR__ . '/inc/facebook.php';

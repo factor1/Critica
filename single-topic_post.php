@@ -14,10 +14,31 @@ get_header();
     
     <?php get_template_part("parts/featured-image"); ?>
     <?php get_template_part("parts/share-links"); ?>
-    <section class="flexible-content">
+    <section class="flexible-content about">
         <div class="row">
             <div class="small-centered small-24 medium-20 large-18 columns">
                 <?php get_template_part("parts/topic-about"); ?>
+            </div>
+        </div>
+    </section>
+    <section class="flexible-content dark opinions">
+        <div class="row">
+            <div class="small-centered small-24 medium-20 large-18 columns">
+                <?php get_template_part("parts/topic-opinions"); ?>
+            </div>
+        </div>
+    </section>
+    <section class="flexible-content thoughts">
+        <div class="row">
+            <div class="small-centered small-24 medium-20 large-18 columns">
+                <?php get_template_part("parts/topic-thoughts"); ?>
+            </div>
+        </div>
+    </section>
+    <section class="flexible-content comments">
+        <div class="row">
+            <div class="small-centered small-24 medium-20 large-18 columns">
+                <?php get_template_part("parts/topic-comments"); ?>
             </div>
         </div>
     </section>
