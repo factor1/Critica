@@ -133,6 +133,11 @@
                     font-weight: bold;
                     text-transform: uppercase;
                     letter-spacing: 2px;
+
+                    > span
+                    {
+                        margin-right: 1em;
+                    }
                 }
 
                 h2::before {
@@ -151,6 +156,11 @@
                 a:not(.button)
                 {
                     color: $theme-white;
+                }
+
+                > .columns > p
+                {
+                    margin-bottom: 0;
                 }
             }
         }

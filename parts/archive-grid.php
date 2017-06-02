@@ -69,7 +69,8 @@ if(!$blocks) {
                     </div>
                     <?php } else { ?>
                     <div class="counts">
-                        <?php if($block['n_opinions'] > 0) echo '<span>' . $block['n_opinions'] . ' Expert Opinions</span>' ?>
+                        <span><?php echo $block['n_opinions']; ?> Expert Opinion<?php echo ($block['n_opinions'] !== 1 ? 's' : ''); ?></span>
+                        <span><span class="fb-comments-count" data-href="<?php echo esc_attr($block['learn_more_url']); ?>"></span> Reader Comments</span>
                     </div>
                     <?php } ?>
 
