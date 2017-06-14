@@ -10,7 +10,6 @@
     margin: 0;
     overflow: visible;
     position: relative;
-    
    
     a
     {
@@ -22,7 +21,8 @@
         font-size: 12px;
     } 
     
-    .current_page_item a {
+    .current_page_item a,
+    .current_page_parent a {
 	    color: #fff;
     }   
     
@@ -30,10 +30,11 @@
     {
         position: relative;
         display: inline-block;
+        padding: 0;
         line-height: 12px; 
         vertical-align: middle;
         font-size: 12px;
-        
+
         ul
         {
             display: none;
@@ -43,24 +44,24 @@
         {
             list-style-type: none;
             position: absolute;
-            top: 100%;
+            top: calc(100% + 18px);
             right: 0;
-            padding-top: 5px;
+            min-width: 100%;
+            margin: 0;
+            background-color: $theme-gold;
             
             > li
             {
-                background-color: $theme-gold;
-                padding: 5px 10px 5px 10px;
-                border-bottom: 1px solid $theme-blue10;
+                
+                padding: 0;
+                line-height: 1;
+                margin: 16px;
                 text-align: right;
-                border-left: 1px solid $theme-blue10;
-                border-right: 1px solid $theme-blue10;
                 
                 > a
                 {
                     white-space: nowrap;
                     color: $theme-navy;
-                    padding: 0px 10px;
                     font-size: 12px;
                     
                     &:hover
@@ -69,24 +70,25 @@
                     }
                 }
 
-            }
-            
-            > li:first-child
-            {
-                border-top-left-radius: 10px;
-                border-top: 1px solid $theme-blue10;
-            }
-            
-            > li:last-child
-            {
-                border-bottom-right-radius: 10px;
-                border-bottom: 1px solid $theme-blue10;
-            }            
+                &.current_page_item > a
+                {
+                    color: $theme-white;
+                }
+
+            }           
         }
         
         > a
         {
             font-size: 12px;
+            padding: 16px;
+        }
+
+        &.menu-item-has-children:hover > a
+        {
+            background-color: $theme-gold;
+            border-bottom: 1px solid $theme-white;
+
         }
         
         &:hover
@@ -104,20 +106,8 @@
         
         + li
         {
-            margin-left: 8px;
-            
-            &:before
-            {
-                content: "|";
-                display: inline-block;
-                line-height: 1;
-                font-size: 80%;
-                vertical-align: middle;
-                margin-right: 16px;
-                color: $theme-blue;
-                position: relative;
-                top: 1px;
-            }
+            border-left: 1px solid $theme-blue;
+            margin-left: -4px;
         }
     }    
 }
