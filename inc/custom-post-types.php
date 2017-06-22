@@ -7,7 +7,7 @@
 *   Registers the Topic Post custom post type.
 */
 
-define( TOPIC_POST_TYPE, 'topic_post' );
+define( 'TOPIC_POST_TYPE', 'topic_post' );
 function register_topic_post_type() {
 
     register_post_type( TOPIC_POST_TYPE, array(
