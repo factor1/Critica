@@ -62,4 +62,47 @@ function add_topic_posts_to_query( $query ) {
 
 }
 
-add_action('pre_get_posts','add_topic_posts_to_query');
+add_action( 'pre_get_posts', 'add_topic_posts_to_query' );
+
+
+/*
+*   Registers the Recent Engagement custom post type.
+*/
+
+define( 'RECENT_ENGAGEMENT_POST_TYPE', 'recent_engagement' );
+function register_recent_engagement_post_type() {
+
+    register_post_type( RECENT_ENGAGEMENT_POST_TYPE, array(
+
+        'labels' => array(
+
+            'name' => 'Recent Engagements',
+            'singular_name' => 'Recent Engagement',
+            'add_new_item' => 'Add New Recent Engagement',
+            'edit_item' => 'Edit Recent Engagement',
+            'new_item' => 'New Recent Engagement',
+            'view_item' => 'View Recent Engagement',
+            'view_items' => 'View Recent Engagement',
+            'search_items' => 'Search Recent Engagements',
+            'all_items' => 'All Recent Engagements',
+            'archives' => 'Recent Engagement Archives',
+            'attributes' => 'Recent Engagement Attributes',
+
+        ),
+
+        'public' => true,
+        'menu_position' => 5,
+        'supports' => array(
+
+            'title',
+            'editor',
+            'excerpt',
+
+        ),
+        'rewrite' => array( 'slug' => 'recent-engagements', 'with_front' => false ),
+
+    ) );
+
+}
+
+add_action( 'init', 'register_recent_engagement_post_type' );
