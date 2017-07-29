@@ -92,6 +92,7 @@ function register_recent_engagement_post_type() {
 
         'public' => true,
         'menu_position' => 5,
+        'has_archive' => true,
         'supports' => array(
 
             'title',
