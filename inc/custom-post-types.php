@@ -70,6 +70,7 @@ add_action( 'pre_get_posts', 'add_topic_posts_to_query' );
 */
 
 define( 'RECENT_ENGAGEMENT_POST_TYPE', 'recent_engagement' );
+define( 'RECENT_ENGAGEMENT_ARCHIVE_PAGE_SLUG', 'recent-engagement-archive' );
 function register_recent_engagement_post_type() {
 
     register_post_type( RECENT_ENGAGEMENT_POST_TYPE, array(
@@ -107,3 +108,41 @@ function register_recent_engagement_post_type() {
 }
 
 add_action( 'init', 'register_recent_engagement_post_type' );
+
+
+/*
+*   Adjust nav menu highlighting to correctly highlight for custom post type.
+*/
+
+function highlight_menus_for_recent_engagements( $classes, $item ) {
+
+    global $post;
+    if ( $post->post_type === RECENT_ENGAGEMENT_POST_TYPE ) {
+
+        unset($classes[array_search('current_page_parent', $classes)]);
+        if ( $item->post_title === 'About Critica' ) {
+
+            $classes[] = "current-menu-item";
+            $classes[] = "current_page_item";
+            $classes[] = "current-menu-ancestor";
+            $classes[] = "current-menu-parent";
+            $classes[] = "current_page_parent";
+            $classes[] = "current_page_ancestor";
+        
+        }
+
+        if ( $item->object === RECENT_ENGAGEMENT_POST_TYPE ) {
+
+            $classes[] = "current-menu-item";
+            $classes[] = "current_page_item";
+
+        }
+
+    }
+
+    return $classes; 
+
+} 
+
+
+add_filter( 'nav_menu_css_class', 'highlight_menus_for_recent_engagements', 10, 2 );

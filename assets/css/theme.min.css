@@ -7213,6 +7213,76 @@ section.page.single.recent-engagement .learn-more-link {
   text-decoration: underline; }
 
 /*------------------------------------------------------------------------------
+  Our Advisors Template
+------------------------------------------------------------------------------*/
+section.page.interior-b.recent-engagements .recent-engagement-list {
+  list-style: none;
+  max-width: none;
+  margin-top: 5em;
+  max-width: 900px; }
+  section.page.interior-b.recent-engagements .recent-engagement-list .recent-engagement {
+    padding: 0 0 2em 0;
+    border-bottom: 1.5px solid #C5B783;
+    margin: 5em 0;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: end;
+    align-items: flex-end; }
+    @media only screen and (max-width: 639px) {
+      section.page.interior-b.recent-engagements .recent-engagement-list .recent-engagement {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -ms-flex-pack: center;
+        justify-content: center;
+        text-align: center; } }
+    section.page.interior-b.recent-engagements .recent-engagement-list .recent-engagement .engagement-image {
+      height: 12.5em; }
+      @media only screen and (min-width: 640px) {
+        section.page.interior-b.recent-engagements .recent-engagement-list .recent-engagement .engagement-image {
+          margin-right: 2em; } }
+    @media only screen and (min-width: 640px) {
+      section.page.interior-b.recent-engagements .recent-engagement-list .recent-engagement .engagement-text {
+        position: relative;
+        bottom: -.2em; } }
+    @media only screen and (max-width: 639px) {
+      section.page.interior-b.recent-engagements .recent-engagement-list .recent-engagement .engagement-text {
+        margin-top: 1.5em; } }
+    section.page.interior-b.recent-engagements .recent-engagement-list .recent-engagement .engagement-text .engagement-title,
+    section.page.interior-b.recent-engagements .recent-engagement-list .recent-engagement .engagement-text .engagement-date {
+      font-family: "Times New Roman", sans-serif;
+      margin-bottom: 1.25rem;
+      line-height: 1; }
+    section.page.interior-b.recent-engagements .recent-engagement-list .recent-engagement .engagement-text .engagement-title {
+      font-style: italic;
+      font-size: 1.5em; }
+    section.page.interior-b.recent-engagements .recent-engagement-list .recent-engagement .engagement-text .engagement-date {
+      font-weight: bold;
+      font-size: 1.125em; }
+    section.page.interior-b.recent-engagements .recent-engagement-list .recent-engagement .engagement-text .engagement-excerpt,
+    section.page.interior-b.recent-engagements .recent-engagement-list .recent-engagement .engagement-text .engagement-excerpt p {
+      font-size: .95em;
+      margin-left: 0;
+      margin-right: 0;
+      max-width: none; }
+      section.page.interior-b.recent-engagements .recent-engagement-list .recent-engagement .engagement-text .engagement-excerpt p:last-child,
+      section.page.interior-b.recent-engagements .recent-engagement-list .recent-engagement .engagement-text .engagement-excerpt p p:last-child {
+        margin-bottom: 0; }
+
+section.page.interior-b.recent-engagements .pagination {
+  padding-top: 20px;
+  padding-bottom: 40px; }
+  section.page.interior-b.recent-engagements .pagination .row {
+    display: block; }
+
+section.page.interior-b.recent-engagements .learn-more-link {
+  display: block;
+  text-align: center;
+  margin-bottom: 3em;
+  font-family: "Times New Roman", sans-serif;
+  font-style: italic;
+  text-decoration: underline; }
+
+/*------------------------------------------------------------------------------
   Error 404 Template
 ------------------------------------------------------------------------------*/
 section.page.error-404 {

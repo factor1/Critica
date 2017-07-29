@@ -1,0 +1,116 @@
+/*------------------------------------------------------------------------------
+  Our Advisors Template
+------------------------------------------------------------------------------*/
+
+section.page.interior-b.recent-engagements
+{
+    .recent-engagement-list
+    {
+        list-style: none;
+        max-width: none;
+        margin-top: 5em;
+        max-width: 900px;
+
+        .recent-engagement
+        {
+            padding: 0 0 2em 0;
+            border-bottom: 1.5px solid $theme-gold;
+            margin: 5em 0;
+            display: flex;
+            align-items: flex-end;
+
+            @media only screen and (max-width: 639px)
+            {
+                flex-wrap: wrap;
+                justify-content: center;
+                text-align: center;
+            }
+
+            .engagement-image
+            {
+                
+                height: 12.5em;
+            
+                @media only screen and (min-width: 640px)
+                {
+                    margin-right: 2em;
+                }
+
+            }
+
+            .engagement-text
+            {
+                @media only screen and (min-width: 640px)
+                {
+                    position: relative;
+                    bottom: -.2em;
+                }
+
+                @media only screen and (max-width: 639px)
+                {
+                    margin-top: 1.5em;
+                }
+
+                .engagement-title,
+                .engagement-date
+                {
+                    font-family: $TimesNewRoman;
+                    margin-bottom: 1.25rem;
+                    line-height: 1;
+                }
+
+                .engagement-title
+                {
+                    font-style: italic;
+                    font-size: 1.5em;
+                }
+
+                .engagement-date
+                {
+                    font-weight: bold;
+                    font-size: 1.125em;
+                }
+
+                .engagement-excerpt,
+                .engagement-excerpt p
+                {
+
+                    font-size: .95em;
+                    margin-left: 0;
+                    margin-right: 0;
+                    max-width: none;
+
+                    p:last-child
+                    {
+                        margin-bottom: 0;
+                    }
+                
+                }
+            }
+        }
+    }
+
+    .pagination 
+    {
+        
+        padding-top: 20px;
+        padding-bottom: 40px;
+
+        .row
+        {
+            display: block;
+        }
+
+    }
+
+    .learn-more-link
+    {
+        display: block;
+        text-align: center;
+        margin-bottom: 3em;
+        font-family: $TimesNewRoman;
+        font-style: italic;
+        text-decoration: underline;
+    }
+
+}
