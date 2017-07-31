@@ -12,8 +12,8 @@ if ( !have_posts() ) {
 }
 
 //  Retrieves the content from the recent-engagement-archive dummy page
+$title = get_post_type_object( RECENT_ENGAGEMENT_POST_TYPE )->labels->name;
 $page = get_page_by_path( RECENT_ENGAGEMENT_ARCHIVE_PAGE_SLUG );
-$title = $page ? $page->post_title : get_post_type_object( RECENT_ENGAGEMENT_POST_TYPE )->labels->name;
 $content = $page ? $page->post_content : '';
 
 //  Retrieves link to Our Services page

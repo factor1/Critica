@@ -6611,6 +6611,72 @@ section.page {
         padding: 16px 30px 15px 30px;
         font-size: 1.25rem; } }
 
+/*
+*   Styles for the Recent Engagements teaser section on the Home
+*   page.
+*/
+.home section.hero-slider > div.slider {
+  height: auto !important; }
+  .home section.hero-slider > div.slider section > .row > div.recent-engagements {
+    position: relative;
+    margin-top: 4em;
+    border: 2px solid #fff;
+    border-top: none;
+    border-radius: 10px;
+    padding: 2em 1.5em 1.5em 1.5em; }
+    @media (max-width: 700px) {
+      .home section.hero-slider > div.slider section > .row > div.recent-engagements {
+        font-size: .75em; } }
+    .home section.hero-slider > div.slider section > .row > div.recent-engagements .title-in-border {
+      display: -ms-flexbox;
+      display: flex;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%; }
+      .home section.hero-slider > div.slider section > .row > div.recent-engagements .title-in-border .title {
+        transform: translateY(-50%);
+        margin-left: .75em;
+        margin-right: .75em;
+        text-transform: uppercase;
+        letter-spacing: .15em;
+        font-size: 1.5em; }
+        @media (max-width: 450px) {
+          .home section.hero-slider > div.slider section > .row > div.recent-engagements .title-in-border .title {
+            font-size: .9em; } }
+      .home section.hero-slider > div.slider section > .row > div.recent-engagements .title-in-border .border-top-left, .home section.hero-slider > div.slider section > .row > div.recent-engagements .title-in-border .border-top-right {
+        -ms-flex-positive: 1;
+        flex-grow: 1;
+        border-top: 2px solid #fff; }
+      .home section.hero-slider > div.slider section > .row > div.recent-engagements .title-in-border .border-top-left {
+        border-top-left-radius: 10px; }
+      .home section.hero-slider > div.slider section > .row > div.recent-engagements .title-in-border .border-top-right {
+        border-top-right-radius: 10px; }
+    .home section.hero-slider > div.slider section > .row > div.recent-engagements .latest-recent-engagement {
+      text-align: left; }
+      .home section.hero-slider > div.slider section > .row > div.recent-engagements .latest-recent-engagement .engagement-title {
+        font-family: "Times New Roman", sans-serif;
+        font-weight: bold;
+        font-style: italic;
+        font-size: 1.5em;
+        margin-bottom: .5em; }
+      .home section.hero-slider > div.slider section > .row > div.recent-engagements .latest-recent-engagement .engagement-excerpt {
+        font-size: 1.15em;
+        line-height: 1.25; }
+        .home section.hero-slider > div.slider section > .row > div.recent-engagements .latest-recent-engagement .engagement-excerpt a {
+          color: #fff;
+          text-decoration: underline; }
+    .home section.hero-slider > div.slider section > .row > div.recent-engagements hr {
+      border-bottom: 2px solid #fff;
+      margin: 1.5em 0; }
+    .home section.hero-slider > div.slider section > .row > div.recent-engagements .see-more-link {
+      color: #fff;
+      text-transform: uppercase;
+      text-decoration: underline;
+      letter-spacing: .15em;
+      font-size: 1.25em;
+      line-height: 1.25; }
+
 /*------------------------------------------------------------------------------
   Home Template
 ------------------------------------------------------------------------------*/

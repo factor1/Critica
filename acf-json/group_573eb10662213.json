@@ -16,8 +16,8 @@
                 "id": ""
             },
             "collapsed": "",
-            "min": "",
-            "max": "",
+            "min": 0,
+            "max": 0,
             "layout": "row",
             "button_label": "Add Slide",
             "sub_fields": [
@@ -82,7 +82,8 @@
                     "default_value": "",
                     "tabs": "all",
                     "toolbar": "full",
-                    "media_upload": 1
+                    "media_upload": 1,
+                    "delay": 0
                 },
                 {
                     "key": "field_57e6d25b81983",
@@ -105,7 +106,9 @@
                     "other_choice": 0,
                     "save_other_choice": 0,
                     "default_value": "None",
-                    "layout": "horizontal"
+                    "layout": "horizontal",
+                    "allow_null": 0,
+                    "return_format": "value"
                 },
                 {
                     "key": "field_573eb215cf08b",
@@ -196,6 +199,44 @@
                     "ui": 1
                 }
             ]
+        },
+        {
+            "key": "field_597eb29c1edd1",
+            "label": "Recent Engagements Link Label",
+            "name": "recent_engagements_link_label",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_597eb2b71edd2",
+            "label": "Recent Engagements Link Destination",
+            "name": "recent_engagements_link_destination",
+            "type": "page_link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [],
+            "taxonomy": [],
+            "allow_null": 0,
+            "allow_archives": 1,
+            "multiple": 0
         }
     ],
     "location": [
@@ -222,5 +263,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1474759639
+    "modified": 1501475528
 }

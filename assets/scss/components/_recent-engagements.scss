@@ -1,0 +1,105 @@
+/*
+*   Styles for the Recent Engagements teaser section on the Home
+*   page.
+*/
+
+.home section.hero-slider > div.slider
+{
+    height: auto !important;
+
+    section > .row > div.recent-engagements
+    {
+        position: relative;
+        margin-top: 4em;
+        border: 2px solid #fff;
+        border-top: none;
+        border-radius: 10px;
+        padding: 2em 1.5em 1.5em 1.5em;
+
+        @media (max-width: 700px) {
+            font-size: .75em;
+        }
+
+        .title-in-border
+        {
+            display: flex;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+
+            .title
+            {
+                transform: translateY(-50%);
+                margin-left: .75em;
+                margin-right: .75em;
+                text-transform: uppercase;
+                letter-spacing: .15em;
+                font-size: 1.5em;
+
+                @media (max-width: 450px) {
+                    font-size: .9em;
+                } 
+            }
+
+            .border-top-left, .border-top-right
+            {
+                flex-grow: 1;
+                border-top: 2px solid #fff;
+            }
+
+            .border-top-left
+            {
+                border-top-left-radius: 10px;
+            }
+
+            .border-top-right
+            {
+                border-top-right-radius: 10px;
+            }
+        }
+
+        .latest-recent-engagement
+        {
+            
+            text-align: left;
+
+            .engagement-title
+            {
+                font-family: $TimesNewRoman;
+                font-weight: bold;
+                font-style: italic;
+                font-size: 1.5em;
+                margin-bottom: .5em;
+            }
+
+            .engagement-excerpt
+            {
+                font-size: 1.15em;
+                line-height: 1.25;
+
+                a
+                {
+                    color: #fff;
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        hr
+        {
+            border-bottom: 2px solid #fff;
+            margin: 1.5em 0;
+        }
+
+        .see-more-link
+        {
+            color: #fff;
+            text-transform: uppercase;
+            text-decoration: underline;
+            letter-spacing: .15em;
+            font-size: 1.25em;
+            line-height: 1.25;
+        }
+    }
+}
