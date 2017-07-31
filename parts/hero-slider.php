@@ -66,7 +66,7 @@ $slides = array_filter(array_map(function($slide) {
                             <?php } ?>
                         </p>
                     </div>
-                    <?php get_template_part('parts/recent-engagements'); ?>
+                    <?php get_template_part('parts/recent-engagements-teaser'); ?>
                 </div>
             </section>
         </div>
